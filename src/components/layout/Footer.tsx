@@ -4,8 +4,8 @@ export default function Footer() {
       <span className="text-[8px] tracking-[0.15em] uppercase text-muted">
         Dani López González © {new Date().getFullYear()}
       </span>
-      <span className="text-[8px] tracking-[0.15em] uppercase text-border">
-        Next.js · GSAP · <span className="text-coral">Tailwind</span>
+      <span className="text-[8px] tracking-[0.15em] uppercase text-muted">
+        Next.js · GSAP · Tailwind
       </span>
     </footer>
   )

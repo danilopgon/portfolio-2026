@@ -34,12 +34,4 @@ export const projects: Project[] = [
     tags: ['React', '.NET', 'AWS'],
     gradient: 'from-[#3a0a0a] to-[#1a1a0a]',
   },
-  {
-    slug: 'backline-builder',
-    name: 'Backline Builder',
-    type: 'Herramienta técnica',
-    year: 2024,
-    tags: ['React', 'NestJS', 'Docker'],
-    gradient: 'from-[#0a1a2a] to-[#0a2a20]',
-  },
 ]

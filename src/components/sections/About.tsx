@@ -5,24 +5,28 @@ const stack = ['TypeScript', 'Angular', 'React', 'Next.js', 'Node.js', '.NET', '
 export default function About() {
   return (
     <section id="about" className="border-b border-border">
-      <div className="flex justify-between items-center px-16 py-5 border-b border-border">
+      <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <span className="text-[8px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Sobre mí</span>
         <span className="font-bebas text-[11px] text-border tracking-[0.1em]">01</span>
       </div>
-      <div className="grid grid-cols-2">
-        <RevealOnScroll className="px-16 py-12 border-r border-border space-y-4">
-          <p className="text-[13px] text-[#888] leading-[1.8]">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
+          <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
             Developer con base en <strong className="text-cream font-medium">Angular, React y Next.js</strong> en el front, y Node.js y .NET en el back.
             Trabajo en el diseño de sistemas de componentes, arquitectura de aplicaciones y en la capa donde
             el código y la experiencia de usuario se tienen que entender.
           </p>
-          <p className="text-[13px] text-[#888] leading-[1.8]">
+          <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
             Antes de programar, trabajé en <strong className="text-cream font-medium">comunicación digital y producción de contenido</strong>.
             Tengo un máster en narrativa transmedia — la coherencia que convierte un producto funcional en uno memorable.
           </p>
+          <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
+            Actualmente en Servinet, con responsabilidades de <strong className="text-cream font-medium">mid-level</strong> y la vista puesta
+            en arquitectura y liderazgo técnico de frontend.
+          </p>
         </RevealOnScroll>
 
-        <RevealOnScroll className="px-12 py-12 flex flex-col gap-8" delay={100}>
+        <RevealOnScroll className="px-6 py-8 md:px-12 md:py-12 flex flex-col gap-8" delay={100}>
           <div>
             <p className="text-[8px] tracking-[0.25em] uppercase text-coral mb-3">Stack técnico</p>
             <div className="flex flex-wrap gap-1.5">

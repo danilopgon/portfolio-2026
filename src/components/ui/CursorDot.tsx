@@ -14,7 +14,7 @@ export default function CursorDot() {
     const grow = () => { dot.style.transform = 'translate(-50%,-50%) scale(3)'; dot.style.opacity = '0.4' }
     const shrink = () => { dot.style.transform = 'translate(-50%,-50%) scale(1)'; dot.style.opacity = '1' }
     document.addEventListener('mousemove', move)
-    document.querySelectorAll('a,button,[data-cursor]').forEach(el => {
+    document.querySelectorAll('a,button,[data-cursor],.project-card,.skill-card').forEach(el => {
       el.addEventListener('mouseenter', grow)
       el.addEventListener('mouseleave', shrink)
     })

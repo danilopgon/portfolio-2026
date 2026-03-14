@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../styles/variables.css';
+:root {
+  --coral:  #f55033;
+  --cream:  #f0ede8;
+  --black:  #0c0c0b;
+  --dark:   #111110;
+  --muted:  #4a4a47;
+  --border: #2a2a28;
+  --faint:  #222220;
+}
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
@@ -12,6 +20,8 @@ body {
   background: theme('colors.black');
   color: theme('colors.cream');
   font-family: var(--font-dm-mono), monospace;
+  font-size: 13px;
+  line-height: 1.6;
   cursor: crosshair;
   overflow-x: hidden;
 }
@@ -23,4 +33,9 @@ body {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

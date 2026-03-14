@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dani López González — Frontend Developer',
     description: 'Construyo interfaces donde diseño y arquitectura no se negocian por separado.',
-    url: 'https://danilopgue.com',
+    url: 'https://danilopgon.com',
     siteName: 'Dani López González',
     locale: 'es_ES',
     type: 'website',

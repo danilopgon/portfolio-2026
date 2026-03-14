@@ -49,7 +49,7 @@ export default function Contact() {
           </p>
           <div className="mt-auto flex flex-col gap-3">
             {[
-              { icon: '✉', text: 'contacto@danilopgue.com', href: 'mailto:contacto@danilopgue.com' },
+              { icon: '✉', text: 'contacto@danilopgon.com', href: 'mailto:contacto@danilopgon.com' },
               { icon: '☎', text: '+34 685 014 718',          href: 'tel:+34685014718' },
             ].map(({ icon, text, href }) => (
               <a key={text} href={href}

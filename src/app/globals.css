@@ -7,7 +7,7 @@
   --cream:  #f0ede8;
   --black:  #0c0c0b;
   --dark:   #111110;
-  --muted:  #4a4a47;
+  --muted:  #7e7e7c;
   --border: #2a2a28;
   --faint:  #222220;
 }
@@ -29,6 +29,22 @@ body {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: theme('colors.black'); }
 ::-webkit-scrollbar-thumb { background: theme('colors.coral'); }
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }

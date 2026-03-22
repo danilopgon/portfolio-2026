@@ -18,7 +18,7 @@ export default function Skills() {
   return (
     <section id="skills" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[8px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Lo que hago</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Lo que hago</span>
         <span className="font-bebas text-[11px] text-border tracking-[0.1em]">02</span>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4">

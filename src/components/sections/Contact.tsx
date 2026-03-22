@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <section id="contact" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[8px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Contacto</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Contacto</span>
         <span className="font-bebas text-[11px] text-border tracking-[0.1em]">04</span>
       </div>
 
@@ -51,7 +51,7 @@ export default function Contact() {
             {[
               { icon: '✉', text: 'contacto@danilopgon.com', href: 'mailto:contacto@danilopgon.com' },
               { icon: '☎', text: '+34 685 014 718',          href: 'tel:+34685014718' },
-              { icon: '◎', text: 'Madrid, España',            href: undefined },
+              { icon: '◎', text: 'Cuenca, España',             href: undefined },
             ].map(({ icon, text, href }) => {
               const cls = 'flex items-center gap-3 text-[10px] text-muted hover:text-cream transition-colors group'
               const inner = (
@@ -85,7 +85,7 @@ export default function Contact() {
                 className={`${inputClass} resize-none`} />
             </div>
             <button type="submit" disabled={sending}
-              className="mt-2 bg-coral text-black font-mono text-[9px] font-medium tracking-[0.22em] uppercase px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed">
+              className="mt-2 bg-coral text-black font-mono text-[11px] font-medium tracking-[0.22em] uppercase px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed">
               <span>{sending ? 'Enviando...' : 'Enviar mensaje'}</span>
               <span>→</span>
             </button>

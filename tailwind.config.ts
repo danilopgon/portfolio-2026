@@ -9,7 +9,7 @@ const config: Config = {
         cream:  '#f0ede8',
         black:  '#0c0c0b',
         dark:   '#111110',
-        muted:  '#4a4a47',
+        muted:  '#7e7e7c',
         border: '#2a2a28',
         faint:  '#222220',
       },

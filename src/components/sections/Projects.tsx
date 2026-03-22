@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="projects" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[8px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Trabajo seleccionado</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">Trabajo seleccionado</span>
         <span className="font-bebas text-[11px] text-border tracking-[0.1em]">03</span>
       </div>
 
@@ -44,18 +44,18 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.012)_20px,rgba(255,255,255,0.012)_21px)]" />
                 {/* hover line */}
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-coral scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
-                <span className="absolute top-4 left-4 text-[8px] tracking-[0.2em] uppercase text-white/40 z-10">
+                <span className="absolute top-4 left-4 text-[10px] tracking-[0.2em] uppercase text-white/40 z-10">
                   {type} · {year}
                 </span>
               </div>
               {/* Info */}
               <div className="flex justify-between items-end px-6 py-5 border-t border-border shrink-0">
                 <div>
-                  <p className="text-[8px] tracking-[0.2em] uppercase text-muted mb-1">{type}</p>
+                  <p className="text-[10px] tracking-[0.2em] uppercase text-muted mb-1">{type}</p>
                   <h3 className="font-bebas text-[24px] tracking-[0.04em] text-cream mb-2.5 leading-none">{name}</h3>
                   <div className="flex flex-wrap gap-1">
                     {tags.map(tag => (
-                      <span key={tag} className="text-[7px] px-1.5 py-0.5 border border-faint text-muted tracking-[0.1em]">{tag}</span>
+                      <span key={tag} className="text-[10px] px-1.5 py-0.5 border border-faint text-muted tracking-[0.1em]">{tag}</span>
                     ))}
                   </div>
                 </div>

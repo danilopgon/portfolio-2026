@@ -15,7 +15,6 @@ export default function ScrambleText({ text, duration = 600, delay = 0, classNam
 
   useEffect(() => {
     if (!ref.current) return
-    ref.current.style.opacity = '0'
     const cleanup = scramble(ref.current, text, duration, delay)
     return cleanup
   }, [text, duration, delay])

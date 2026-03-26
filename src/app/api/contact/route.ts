@@ -9,7 +9,10 @@ export async function POST(req: Request) {
   const result = contactSchema.safeParse(body)
 
   if (!result.success) {
-    return NextResponse.json({ ok: false, errors: result.error.flatten().fieldErrors }, { status: 400 })
+    return NextResponse.json(
+      { ok: false, errors: result.error.flatten().fieldErrors },
+      { status: 400 }
+    )
   }
 
   const { name, email, message } = result.data

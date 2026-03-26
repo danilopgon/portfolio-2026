@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/Label'
 import { contactSchema, type ContactFormData } from '@/lib/schemas/contact'
 
 const inputClass =
-  'bg-transparent border-b border-border pb-2 text-[12px] text-cream placeholder:text-[#555] outline-none focus:border-coral transition-colors font-mono w-full'
+  'bg-transparent border-b border-border py-2 px-2 text-[12px] text-cream placeholder:text-[#555] outline-none focus:border-coral transition-colors font-mono w-full'
 
 export default function Contact() {
   const {
@@ -98,9 +98,7 @@ export default function Contact() {
                 {...register('name')}
                 className={inputClass}
               />
-              {errors.name && (
-                <span className="text-[10px] text-coral">{errors.name.message}</span>
-              )}
+              {errors.name && <span className="text-[10px] text-coral">{errors.name.message}</span>}
             </div>
             <div className="flex flex-col gap-2">
               <Label htmlFor="email">Email</Label>

@@ -13,16 +13,15 @@ export default function About() {
         <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
           <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
             Developer con base en <strong className="text-cream font-medium">Angular, React y Next.js</strong> en el front, y Node.js y .NET en el back.
-            Trabajo en el diseño de sistemas de componentes, arquitectura de aplicaciones y en la capa donde
-            el código y la experiencia de usuario se tienen que entender.
+            Trabajo en el diseño de sistemas de componentes, arquitectura de aplicaciones y en la capa
+            donde código y experiencia se encuentran.
           </p>
           <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
-            Antes de programar, trabajé en <strong className="text-cream font-medium">comunicación digital y producción de contenido</strong>.
+            Antes de programar, trabajé creando contenido en <strong className="text-cream font-medium">medios digitales</strong>.
             Tengo un máster en narrativa transmedia — la coherencia que convierte un producto funcional en uno memorable.
           </p>
           <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
-            Actualmente en Servinet, con responsabilidades de <strong className="text-cream font-medium">mid-level</strong> y la vista puesta
-            en arquitectura y liderazgo técnico de frontend.
+            Actualmente en Servinet como <strong className="text-cream font-medium">mid-level</strong>, creciendo hacia arquitectura y liderazgo técnico de frontend.
           </p>
         </RevealOnScroll>
 

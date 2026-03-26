@@ -45,7 +45,7 @@ export default function Contact() {
             Hablemos.
           </h2>
           <p className="text-[11px] text-[#a0a0a0] leading-[1.7] mb-10 max-w-xs">
-            Proyectos, colaboraciones, ideas a medio terminar. Si tiene sentido construirlo, aquí estoy.
+            Proyectos, colaboraciones, ideas a medio terminar. Si tiene sentido, lo construimos.
           </p>
           <div className="mt-auto flex flex-col gap-3">
             {[

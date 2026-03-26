@@ -4,7 +4,7 @@ const skills = [
   { n: '01', name: 'Front-end',        desc: 'Interfaces accesibles, reactivas y con intención. Angular, React, Next.js. Sistemas de diseño, motion, rendimiento y arquitectura de componentes.' },
   { n: '02', name: 'Back-end',         desc: 'APIs con Node.js, NestJS y .NET. Infraestructura con Supabase, AWS y Docker/Coolify. Del modelo de datos al despliegue.' },
   { n: '03', name: 'UX / UI',          desc: 'Prototipado en Figma hasta implementación final. Sistemas de diseño, accesibilidad y experiencia de usuario como parte del proceso técnico.' },
-  { n: '04', name: 'Narrativa digital', desc: 'Background en periodismo y producción de contenido. El contexto que distingue un developer con criterio de uno sin él.' },
+  { n: '04', name: 'Narrativa digital', desc: 'Background en periodismo y producción de contenido. La perspectiva que conecta producto con personas.' },
 ]
 
 const borderClass = (i: number) => {

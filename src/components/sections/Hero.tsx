@@ -110,8 +110,7 @@ export default function Hero() {
           <p ref={descRef} className="max-w-[460px] text-[12px] text-[#a0a0a0] leading-[1.75] mt-7">
             Construyo interfaces donde{' '}
             <strong className="text-cream font-medium">diseño y arquitectura</strong>{' '}
-            no se negocian por separado. Background en comunicación digital y
-            narrativa transmedia — el contexto que convierte código en experiencia.
+            no se negocian por separado. Código que no solo funciona, cuenta una historia.
           </p>
 
           <div ref={ctasRef} className="flex mt-10">

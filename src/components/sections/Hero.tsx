@@ -65,7 +65,7 @@ export default function Hero() {
       {/* Photo — outer clips, inner se mueve con parallax */}
       <div
         ref={photoRef}
-        className="hidden md:block absolute right-0 top-0 bottom-0 w-[52%] mix-blend-luminosity overflow-hidden"
+        className="hidden lg:block absolute right-0 top-0 bottom-0 w-[52%] mix-blend-luminosity overflow-hidden"
       >
         <div ref={imgInnerRef} className="absolute left-0 right-0 top-0 bottom-[-35%]">
           <Image

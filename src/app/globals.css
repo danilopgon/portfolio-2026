@@ -3,18 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --coral:  #f55033;
-  --cream:  #f0ede8;
-  --black:  #0c0c0b;
-  --dark:   #111110;
-  --muted:  #7e7e7c;
+  --coral: #f55033;
+  --cream: #f0ede8;
+  --black: #0c0c0b;
+  --dark: #111110;
+  --muted: #7e7e7c;
   --border: #2a2a28;
-  --faint:  #222220;
+  --faint: #222220;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: theme('colors.black');
@@ -26,9 +34,15 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: theme('colors.black'); }
-::-webkit-scrollbar-thumb { background: theme('colors.coral'); }
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.black');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.coral');
+}
 
 /* Focus styles */
 :focus-visible {
@@ -38,7 +52,9 @@ body {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -46,8 +62,11 @@ body {
   }
 }
 
-
 @keyframes ticker {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

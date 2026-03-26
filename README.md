@@ -13,11 +13,11 @@ npm run dev
 
 ## Dependencias externas (mínimas y justificadas)
 
-| Paquete | Por qué |
-|---|---|
-| `@radix-ui/react-label` | `<Label>` accesible con `htmlFor` y ARIA correctos |
-| `sonner` | Toast de feedback del formulario |
-| `clsx` + `tailwind-merge` | `cn()` helper para clases condicionales |
+| Paquete                   | Por qué                                            |
+| ------------------------- | -------------------------------------------------- |
+| `@radix-ui/react-label`   | `<Label>` accesible con `htmlFor` y ARIA correctos |
+| `sonner`                  | Toast de feedback del formulario                   |
+| `clsx` + `tailwind-merge` | `cn()` helper para clases condicionales            |
 
 Todo lo demás es vanilla — sin shadcn, sin component libraries.
 

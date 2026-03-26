@@ -34,5 +34,9 @@ export default function RevealOnScroll({ children, className, delay = 0 }: Props
     return () => mm.revert()
   }, [delay])
 
-  return <div ref={ref} className={className}>{children}</div>
+  return (
+    <div ref={ref} className={className}>
+      {children}
+    </div>
+  )
 }

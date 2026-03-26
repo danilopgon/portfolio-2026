@@ -1,41 +1,41 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+'use client'
+import { useEffect, useRef } from 'react'
+import Image from 'next/image'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
-  const photoRef    = useRef<HTMLDivElement>(null);
-  const imgInnerRef = useRef<HTMLDivElement>(null);
-  const labelRef    = useRef<HTMLDivElement>(null);
-  const daniRef     = useRef<HTMLSpanElement>(null);
-  const lopezRef    = useRef<HTMLSpanElement>(null);
-  const descRef     = useRef<HTMLParagraphElement>(null);
-  const ctasRef     = useRef<HTMLDivElement>(null);
+  const photoRef = useRef<HTMLDivElement>(null)
+  const imgInnerRef = useRef<HTMLDivElement>(null)
+  const labelRef = useRef<HTMLDivElement>(null)
+  const daniRef = useRef<HTMLSpanElement>(null)
+  const lopezRef = useRef<HTMLSpanElement>(null)
+  const descRef = useRef<HTMLParagraphElement>(null)
+  const ctasRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    gsap.set(labelRef.current,                             { opacity: 0, y: 8  });
-    gsap.set([daniRef.current, lopezRef.current],          { opacity: 0, y: 20 });
-    gsap.set([descRef.current, ctasRef.current],           { opacity: 0, y: 10 });
-    gsap.set(photoRef.current,                             { opacity: 0, scale: 1.04 });
+    gsap.set(labelRef.current, { opacity: 0, y: 8 })
+    gsap.set([daniRef.current, lopezRef.current], { opacity: 0, y: 20 })
+    gsap.set([descRef.current, ctasRef.current], { opacity: 0, y: 10 })
+    gsap.set(photoRef.current, { opacity: 0, scale: 1.04 })
 
-    const mm = gsap.matchMedia();
+    const mm = gsap.matchMedia()
 
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
 
-      tl.to(labelRef.current,  { opacity: 1, y: 0, duration: 0.5 }, 0.1)
-        .to(daniRef.current,   { opacity: 1, y: 0, duration: 0.6 }, 0.4)
-        .to(lopezRef.current,  { opacity: 1, y: 0, duration: 0.6 }, 0.55)
-        .to(descRef.current,   { opacity: 1, y: 0, duration: 0.6 }, 0.9)
-        .to(ctasRef.current,   { opacity: 1, y: 0, duration: 0.5 }, 1.1)
-        .to(photoRef.current,  { opacity: 1, scale: 1, duration: 1.1, ease: 'power2.inOut' }, 0.3);
+      tl.to(labelRef.current, { opacity: 1, y: 0, duration: 0.5 }, 0.1)
+        .to(daniRef.current, { opacity: 1, y: 0, duration: 0.6 }, 0.4)
+        .to(lopezRef.current, { opacity: 1, y: 0, duration: 0.6 }, 0.55)
+        .to(descRef.current, { opacity: 1, y: 0, duration: 0.6 }, 0.9)
+        .to(ctasRef.current, { opacity: 1, y: 0, duration: 0.5 }, 1.1)
+        .to(photoRef.current, { opacity: 1, scale: 1, duration: 1.1, ease: 'power2.inOut' }, 0.3)
 
       gsap.to(imgInnerRef.current, {
         yPercent: -10,
-        zoom: 1.20,
+        zoom: 1.2,
         ease: 'none',
         scrollTrigger: {
           trigger: '#hero',
@@ -43,16 +43,19 @@ export default function Hero() {
           end: 'bottom top',
           scrub: true,
         },
-      });
-    });
+      })
+    })
 
     mm.add('(prefers-reduced-motion: reduce)', () => {
-      gsap.set([labelRef.current, daniRef.current, lopezRef.current, descRef.current, ctasRef.current], { opacity: 1, y: 0 });
-      gsap.set(photoRef.current, { opacity: 1, scale: 1 });
-    });
+      gsap.set(
+        [labelRef.current, daniRef.current, lopezRef.current, descRef.current, ctasRef.current],
+        { opacity: 1, y: 0 }
+      )
+      gsap.set(photoRef.current, { opacity: 1, scale: 1 })
+    })
 
-    return () => mm.revert();
-  }, []);
+    return () => mm.revert()
+  }, [])
 
   return (
     <section
@@ -103,14 +106,18 @@ export default function Hero() {
           </div>
 
           <h1 className="font-bebas leading-[0.88] tracking-[0.01em] text-[clamp(64px,10vw,140px)] select-none">
-            <span ref={daniRef} className="block text-cream">DANI</span>
-            <span ref={lopezRef} className="block text-coral">LÓPEZ</span>
+            <span ref={daniRef} className="block text-cream">
+              DANI
+            </span>
+            <span ref={lopezRef} className="block text-coral">
+              LÓPEZ
+            </span>
           </h1>
 
           <p ref={descRef} className="max-w-[460px] text-[12px] text-[#a0a0a0] leading-[1.75] mt-7">
             Construyo interfaces donde{' '}
-            <strong className="text-cream font-medium">diseño y arquitectura</strong>{' '}
-            no se negocian por separado. Código que no solo funciona, cuenta una historia.
+            <strong className="text-cream font-medium">diseño y arquitectura</strong> no se negocian
+            por separado. Código que no solo funciona, cuenta una historia.
           </p>
 
           <div ref={ctasRef} className="flex mt-10">
@@ -130,5 +137,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

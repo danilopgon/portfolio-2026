@@ -19,9 +19,7 @@ export function scramble(
       const resolved = Math.floor(progress * len)
       el.textContent = finalText
         .split('')
-        .map((c, i) =>
-          i < resolved ? c : CHARS[Math.floor(Math.random() * CHARS.length)]
-        )
+        .map((c, i) => (i < resolved ? c : CHARS[Math.floor(Math.random() * CHARS.length)]))
         .join('')
       if (++step > steps) {
         clearInterval(interval)

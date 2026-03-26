@@ -1,37 +1,43 @@
 export type Project = {
   slug: string
   name: string
-  type: string
+  description: string
   year: number
   tags: string[]
   gradient: string
+  image?: string
   url?: string
 }
 
 export const projects: Project[] = [
   {
-    slug: 'dia-de-gachas',
-    name: 'Día de Gachas',
-    type: 'App interactiva',
-    year: 2024,
-    tags: ['Angular', 'Next.js', 'Supabase'],
-    gradient: 'from-[#1a3a20] to-[#3a3a10]',
-  },
-  {
     slug: 'hotel-sur',
     name: 'Hotel Sur',
-    type: 'Identidad web',
-    year: 2024,
-    tags: ['Next.js', 'GSAP', 'Lenis'],
+    description: 'Landing page para la banda de art-rock Hotel Sur. Diseño y desarrollo de la página.',
+    year: 2025,
+    tags: ['Next.js', 'Tailwind', 'GSAP'],
     gradient: 'from-[#0a0a20] to-[#0a1a30]',
-    url: 'https://hotelsur.band',
+    image: '/images/projects/hotel-sur.png',
+    url: 'https://hotelsur.es',
   },
   {
     slug: 'holy-seitan',
     name: 'Holy Seitan',
-    type: 'E-commerce',
-    year: 2024,
-    tags: ['React', '.NET', 'AWS'],
+    description: 'Holy Seitan, nuestro recetario vegano en markdown: simple, bonito y totalmente funcional.',
+    year: 2025,
+    tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'Shadcn/UI'],
     gradient: 'from-[#3a0a0a] to-[#1a1a0a]',
+    image: '/images/projects/holy-seitan.webp',
+    url: 'https://holy-seitan.danilopgon.com/',
+  },
+  {
+    slug: 'dia-de-gachas',
+    name: 'Día de Gachas',
+    description: 'Si hace frío, viento o llueve... la respuesta está clara: ¡Hoy es día de gachas!',
+    year: 2025,
+    tags: ['Angular', 'Nest', 'PrimeNG', 'GSAP'],
+    gradient: 'from-[#1a3a20] to-[#3a3a10]',
+    image: '/images/projects/dia-de-gachas.png',
+    url: 'https://www.diadegachas.com/',
   },
 ]

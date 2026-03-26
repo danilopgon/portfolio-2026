@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const links = [
-  { href: '#about', label: 'Sobre mí' },
-  { href: '#skills', label: 'Servicios' },
-  { href: '#projects', label: 'Trabajo' },
-  { href: '#contact', label: 'Contacto' },
+  { href: '/#about', label: 'Sobre mí' },
+  { href: '/#skills', label: 'Servicios' },
+  { href: '/#projects', label: 'Trabajo' },
+  { href: '/#contact', label: 'Contacto' },
 ]
 
 export default function Navbar() {
@@ -54,9 +54,9 @@ export default function Navbar() {
           <Link
             key={href}
             href={href}
-            aria-current={active === href.slice(1) ? 'true' : undefined}
+            aria-current={active === href.slice(2) ? 'true' : undefined}
             className={`flex items-center px-4 text-[11px] tracking-[0.22em] uppercase border-l border-border transition-colors whitespace-nowrap
-              ${active === href.slice(1) ? 'text-coral' : 'text-muted hover:text-cream hover:bg-faint'}`}
+              ${active === href.slice(2) ? 'text-coral' : 'text-muted hover:text-cream hover:bg-faint'}`}
           >
             {label}
           </Link>

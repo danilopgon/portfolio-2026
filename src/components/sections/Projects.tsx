@@ -11,12 +11,12 @@ export default function Projects() {
 
       {/* Ticker */}
       <div className="overflow-hidden border-b border-border h-12 flex items-center bg-dark">
-        <div className="flex animate-[ticker_18s_linear_infinite] whitespace-nowrap">
+        <div className="flex animate-[ticker_22s_linear_infinite] whitespace-nowrap">
           {[0, 1].map(i => (
-            <span key={i} className="flex items-center">
-              {projects.flatMap(({ slug, name }) => [
-                <span key={`${i}-${slug}`} className="font-bebas text-[28px] tracking-[0.04em] px-6 text-cream">{name}</span>,
-                <span key={`${i}-sep-${slug}`} className="font-bebas text-[20px] text-coral px-2">·</span>,
+            <span key={i} className="flex items-center shrink-0">
+              {Array.from({ length: 8 }).flatMap((_, j) => [
+                <span key={`${i}-${j}`} className="font-bebas text-[28px] tracking-[0.04em] px-6 text-cream">PROYECTOS</span>,
+                <span key={`${i}-sep-${j}`} className="font-bebas text-[20px] text-coral px-2">·</span>,
               ])}
             </span>
           ))}

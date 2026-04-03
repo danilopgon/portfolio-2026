@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
+import Ticker from '@/components/ui/Ticker'
 import { projects } from '@/lib/projects'
 
 export default function Projects() {
@@ -9,29 +10,24 @@ export default function Projects() {
         <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
           Trabajo seleccionado
         </span>
-        <span className="font-bebas text-[11px] text-border tracking-[0.1em]">03</span>
+        <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">03</span>
       </div>
 
-      {/* Ticker */}
-      <div className="overflow-hidden border-b border-border h-12 flex items-center bg-dark">
-        <div className="flex animate-[ticker_50s_linear_infinite] whitespace-nowrap">
-          {[0, 1].map((i) => (
-            <span key={i} className="flex items-center shrink-0">
-              {Array.from({ length: 8 }).flatMap((_, j) => [
-                <span
-                  key={`${i}-${j}`}
-                  className="font-bebas text-[28px] tracking-[0.04em] px-6 text-cream"
-                >
-                  PROYECTOS
-                </span>,
-                <span key={`${i}-sep-${j}`} className="font-bebas text-[20px] text-coral px-2">
-                  ·
-                </span>,
-              ])}
+      <Ticker className="border-b border-border h-12 bg-dark">
+        {Array.from({ length: 10 }).map((_, j) => (
+          <div key={j} className="flex items-center h-12">
+            <span
+              className="font-bebas text-[28px] tracking-[0.04em] px-6 text-cream"
+              style={{ lineHeight: 1 }}
+            >
+              PROYECTOS
             </span>
-          ))}
-        </div>
-      </div>
+            <span className="font-bebas text-[20px] text-coral px-1" style={{ lineHeight: 1 }}>
+              ·
+            </span>
+          </div>
+        ))}
+      </Ticker>
 
       {/* Bento grid: columna grande izquierda + 2 apiladas derecha en desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -57,7 +53,7 @@ export default function Projects() {
               <Wrapper className="flex flex-col flex-1" {...wrapperProps}>
                 {/* Thumb */}
                 <div
-                  className={`relative overflow-hidden ${isLarge ? 'h-[260px] lg:flex-1 lg:min-h-[200px]' : 'h-[200px]'}`}
+                  className={`relative overflow-hidden ${isLarge ? 'h-[320px] lg:flex-1 lg:min-h-[300px]' : 'h-[280px]'}`}
                 >
                   {image ? (
                     <Image
@@ -104,9 +100,11 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  <span className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4">
-                    ↗
-                  </span>
+                  {url && (
+                    <span className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4">
+                      ↗
+                    </span>
+                  )}
                 </div>
               </Wrapper>
             </RevealOnScroll>

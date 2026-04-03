@@ -48,7 +48,9 @@ export default function Navbar() {
           yPercent: -100,
           duration: 0.28,
           ease: 'power3.in',
-          onComplete: () => gsap.set(menu, { display: 'none' }),
+          onComplete: () => {
+            gsap.set(menu, { display: 'none' })
+          },
         })
         gsap.to(overlay, { opacity: 0, duration: 0.2, ease: 'none' })
       }

@@ -35,7 +35,7 @@ export default function Hero() {
 
       gsap.to(imgInnerRef.current, {
         yPercent: -10,
-        zoom: 1.2,
+        scale: 1.2,
         ease: 'none',
         scrollTrigger: {
           trigger: '#hero',
@@ -114,7 +114,10 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p ref={descRef} className="max-w-[460px] text-[12px] text-[#a0a0a0] leading-[1.75] mt-7">
+          <p
+            ref={descRef}
+            className="max-w-[460px] text-[14px] text-[var(--dim)] leading-[1.75] mt-7"
+          >
             Construyo interfaces donde{' '}
             <strong className="text-cream font-medium">diseño y arquitectura</strong> no se negocian
             por separado. Código que no solo funciona, cuenta una historia.

@@ -43,7 +43,7 @@ export default function Contact() {
         <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
           Contacto
         </span>
-        <span className="font-bebas text-[11px] text-border tracking-[0.1em]">04</span>
+        <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">04</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -51,7 +51,7 @@ export default function Contact() {
           <h2 className="font-bebas text-[clamp(48px,6vw,80px)] leading-[0.9] text-cream mb-6">
             Hablemos.
           </h2>
-          <p className="text-[11px] text-[#a0a0a0] leading-[1.7] mb-10 max-w-xs">
+          <p className="text-[13px] text-[var(--dim)] leading-[1.7] mb-10 max-w-xs">
             Proyectos, colaboraciones, ideas a medio terminar. Si tiene sentido, lo construimos.
           </p>
           <div className="mt-auto flex flex-col gap-3">

@@ -19,26 +19,26 @@ export default function About() {
         <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
           Sobre mí
         </span>
-        <span className="font-bebas text-[11px] text-border tracking-[0.1em]">01</span>
+        <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">01</span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
-          <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
-            Developer con base en{' '}
-            <strong className="text-cream font-medium">Angular, React y Next.js</strong> en el
-            front, y Node.js y .NET en el back. Trabajo en el diseño de sistemas de componentes,
-            arquitectura de aplicaciones y en la capa donde código y experiencia se encuentran.
+          <p className="text-[14px] text-[var(--dim)] leading-[1.8]">
+            Estudié periodismo y trabajé en{' '}
+            <strong className="text-cream font-medium">medios digitales</strong>. El máster en
+            narrativa transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso,
+            sin buscarlo demasiado, fue lo que me llevó a la programación.
           </p>
-          <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
-            Antes de programar, trabajé creando contenido en{' '}
-            <strong className="text-cream font-medium">medios digitales</strong>. Tengo un máster en
-            narrativa transmedia — la coherencia que convierte un producto funcional en uno
-            memorable.
+          <p className="text-[14px] text-[var(--dim)] leading-[1.8]">
+            Trabajo principalmente en <strong className="text-cream font-medium">frontend</strong>{' '}
+            con Angular, React y Next.js, y en backend cuando hace falta. Me importa que el código
+            sea claro, que la interfaz responda a quien la usa y que el resultado tenga coherencia
+            de principio a fin.
           </p>
-          <p className="text-[13px] text-[#a0a0a0] leading-[1.8]">
-            Actualmente en Servinet como{' '}
-            <strong className="text-cream font-medium">mid-level</strong>, creciendo hacia
-            arquitectura y liderazgo técnico de frontend.
+          <p className="text-[14px] text-[var(--dim)] leading-[1.8]">
+            Mid-level en <strong className="text-cream font-medium">Servinet</strong>, trabajando en
+            proyectos que me piden crecer, con la mirada puesta en arquitectura y decisiones
+            técnicas de mayor alcance.
           </p>
         </RevealOnScroll>
 

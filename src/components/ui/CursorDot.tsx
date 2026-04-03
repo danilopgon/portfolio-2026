@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 
 export default function CursorDot() {
   const ref = useRef<HTMLDivElement>(null)
@@ -7,30 +8,47 @@ export default function CursorDot() {
   useEffect(() => {
     const dot = ref.current
     if (!dot) return
+
+    // Use GSAP quickSetter for transform — no layout recalculation
+    const setX = gsap.quickSetter(dot, 'x', 'px')
+    const setY = gsap.quickSetter(dot, 'y', 'px')
+
     const move = (e: MouseEvent) => {
-      dot.style.left = e.clientX + 'px'
-      dot.style.top = e.clientY + 'px'
+      setX(e.clientX)
+      setY(e.clientY)
     }
+
     const grow = () => {
-      dot.style.transform = 'translate(-50%,-50%) scale(3)'
-      dot.style.opacity = '0.4'
+      gsap.to(dot, { scale: 3, opacity: 0.4, duration: 0.15, ease: 'power2.out', overwrite: true })
     }
     const shrink = () => {
-      dot.style.transform = 'translate(-50%,-50%) scale(1)'
-      dot.style.opacity = '1'
+      gsap.to(dot, { scale: 1, opacity: 1, duration: 0.2, ease: 'power2.out', overwrite: true })
     }
+
+    const interactives = document.querySelectorAll(
+      'a, button, [data-cursor], .project-card, .skill-card'
+    )
+
     document.addEventListener('mousemove', move)
-    document.querySelectorAll('a,button,[data-cursor],.project-card,.skill-card').forEach((el) => {
+    interactives.forEach((el) => {
       el.addEventListener('mouseenter', grow)
       el.addEventListener('mouseleave', shrink)
     })
-    return () => document.removeEventListener('mousemove', move)
+
+    return () => {
+      document.removeEventListener('mousemove', move)
+      interactives.forEach((el) => {
+        el.removeEventListener('mouseenter', grow)
+        el.removeEventListener('mouseleave', shrink)
+      })
+    }
   }, [])
 
   return (
     <div
       ref={ref}
-      className="fixed w-1.5 h-1.5 bg-coral rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-[transform,opacity] duration-75"
+      className="fixed top-0 left-0 w-1.5 h-1.5 bg-coral rounded-full pointer-events-none z-[9999]"
+      style={{ transform: 'translate(-50%, -50%)' }}
     />
   )
 }

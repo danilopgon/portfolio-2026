@@ -44,15 +44,11 @@ export default function EnlacesPage() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="mb-10 text-center">
-          <p className="text-[10px] tracking-[0.3em] uppercase text-coral mb-3">
-            {'// enlaces'}
-          </p>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-coral mb-3">{'// enlaces'}</p>
           <h1 className="font-bebas text-[40px] tracking-[0.06em] text-cream leading-none">
             Dani López González
           </h1>
-          <p className="text-[11px] text-muted mt-2 tracking-[0.05em]">
-            Frontend Developer
-          </p>
+          <p className="text-[11px] text-muted mt-2 tracking-[0.05em]">Frontend Developer</p>
         </div>
 
         {/* Links */}
@@ -61,9 +57,7 @@ export default function EnlacesPage() {
             <li key={label} className="border-b border-border last:border-b-0">
               <a
                 href={href}
-                {...(external
-                  ? { target: '_blank', rel: 'noopener noreferrer' }
-                  : {})}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 className="group flex items-center justify-between px-5 py-4 hover:bg-faint transition-colors"
               >
                 <div>

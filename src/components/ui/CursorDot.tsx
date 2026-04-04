@@ -47,6 +47,7 @@ export default function CursorDot() {
   return (
     <div
       ref={ref}
+      aria-hidden="true"
       className="fixed top-0 left-0 w-1.5 h-1.5 bg-coral rounded-full pointer-events-none z-[9999]"
       style={{ transform: 'translate(-50%, -50%)' }}
     />

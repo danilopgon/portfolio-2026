@@ -10,7 +10,7 @@ export default function Footer() {
         rel="noopener noreferrer"
         className="text-[10px] tracking-[0.15em] uppercase text-muted hover:text-cream transition-colors"
       >
-        GitHub
+        GitHub<span className="sr-only"> (abre en nueva pestaña)</span>
       </a>
     </footer>
   )

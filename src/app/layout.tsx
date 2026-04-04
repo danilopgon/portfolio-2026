@@ -20,9 +20,13 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://danilopgon.com'),
   title: 'Dani López González — Frontend Developer',
   description:
     'Frontend Developer. TypeScript · Angular · React · Next.js · UX/UI · Node.js · .NET',
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.ico',
   },
@@ -33,6 +37,11 @@ export const metadata: Metadata = {
     siteName: 'Dani López González',
     locale: 'es_ES',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dani López González — Frontend Developer',
+    description: 'Construyo interfaces donde diseño y arquitectura no se negocian por separado.',
   },
 }
 
@@ -46,6 +55,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Saltar al contenido
         </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Dani López González',
+              url: 'https://danilopgon.com',
+              jobTitle: 'Frontend Developer',
+              sameAs: ['https://linkedin.com/in/danilopgon', 'https://github.com/danilopgon'],
+            }),
+          }}
+        />
         <CursorDot />
         <Navbar />
         <main id="main-content">{children}</main>

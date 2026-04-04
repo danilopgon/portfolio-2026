@@ -3,6 +3,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Enlaces — Dani López González',
   description: 'GitHub, LinkedIn, Instagram, Spotify y más.',
+  alternates: {
+    canonical: '/enlaces',
+  },
 }
 
 const links = [

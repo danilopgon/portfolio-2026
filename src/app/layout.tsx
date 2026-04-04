@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: 'Dani López González — Frontend Developer',
   description:
     'Frontend Developer. TypeScript · Angular · React · Next.js · UX/UI · Node.js · .NET',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: 'Dani López González — Frontend Developer',
     description: 'Construyo interfaces donde diseño y arquitectura no se negocian por separado.',

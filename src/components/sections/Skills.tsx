@@ -3,11 +3,14 @@ import { dev, foundations } from '@/lib/skills'
 
 export default function Skills() {
   return (
-    <section id="skills" className="border-b border-border">
+    <section id="skills" aria-labelledby="skills-heading" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
+        <h2
+          id="skills-heading"
+          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+        >
           Lo que hago
-        </span>
+        </h2>
         <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">02</span>
       </div>
 

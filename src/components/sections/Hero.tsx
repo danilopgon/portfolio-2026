@@ -89,6 +89,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
+      aria-labelledby="hero-heading"
       className="min-h-screen pt-11 flex flex-col justify-center relative overflow-hidden"
     >
       {/* Grainy coral gradient — capa atmosférica independiente, anima a distinta velocidad que la foto */}
@@ -181,7 +182,10 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-bebas leading-[0.88] tracking-[0.01em] text-[clamp(64px,10vw,140px)] select-none">
+          <h1
+            id="hero-heading"
+            className="font-bebas leading-[0.88] tracking-[0.01em] text-[clamp(64px,10vw,140px)] select-none"
+          >
             <span ref={daniRef} className="block text-cream">
               DANI
             </span>
@@ -204,7 +208,7 @@ export default function Hero() {
               href="#projects"
               className="bg-coral text-black font-mono text-[11px] font-medium tracking-[0.22em] uppercase px-7 py-3 border border-coral hover:bg-cream hover:border-cream transition-colors flex items-center gap-2.5"
             >
-              Ver trabajo →
+              Ver trabajo <span aria-hidden="true">→</span>
             </a>
             <a
               href="#contact"

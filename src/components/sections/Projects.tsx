@@ -5,11 +5,14 @@ import { projects } from '@/lib/projects'
 
 export default function Projects() {
   return (
-    <section id="projects" className="border-b border-border">
+    <section id="projects" aria-labelledby="projects-heading" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
+        <h2
+          id="projects-heading"
+          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+        >
           Trabajo seleccionado
-        </span>
+        </h2>
         <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">03</span>
       </div>
 
@@ -101,7 +104,10 @@ export default function Projects() {
                     </div>
                   </div>
                   {url && (
-                    <span className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4">
+                    <span
+                      aria-hidden="true"
+                      className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4"
+                    >
                       ↗
                     </span>
                   )}

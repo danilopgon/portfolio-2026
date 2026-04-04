@@ -14,11 +14,14 @@ const stack = [
 
 export default function About() {
   return (
-    <section id="about" className="border-b border-border">
+    <section id="about" aria-labelledby="about-heading" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
+        <h2
+          id="about-heading"
+          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+        >
           Sobre mí
-        </span>
+        </h2>
         <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">01</span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -117,8 +120,9 @@ export default function About() {
                 <a
                   key={label}
                   href={href}
-                  aria-label={label}
+                  aria-label={`${label} (abre en nueva pestaña)`}
                   rel="noopener noreferrer"
+                  target="_blank"
                   className="w-9 h-9 border border-border border-r-0 last:border-r flex items-center justify-center text-muted hover:bg-coral hover:text-black hover:border-coral transition-all"
                 >
                   {icon}

@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/Label'
 import { contactSchema, type ContactFormData } from '@/lib/schemas/contact'
 
 const inputClass =
-  'bg-transparent border-b border-border py-2 px-2 text-[12px] text-cream placeholder:text-[#555] outline-none focus:border-coral transition-colors font-mono w-full'
+  'bg-transparent border-b border-border py-2 px-2 text-[12px] text-cream placeholder:text-[#777] outline-none focus:border-coral transition-colors font-mono w-full'
 
 export default function Contact() {
   const {
@@ -38,19 +38,22 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="border-b border-border">
+    <section id="contact" aria-labelledby="contact-heading" className="border-b border-border">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-muted before:content-['//'] before:text-coral before:mr-2">
+        <h2
+          id="contact-heading"
+          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+        >
           Contacto
-        </span>
+        </h2>
         <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">04</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <RevealOnScroll className="px-6 py-10 md:px-16 md:py-16 flex flex-col border-b border-border lg:border-b-0 lg:border-r">
-          <h2 className="font-bebas text-[clamp(48px,6vw,80px)] leading-[0.9] text-cream mb-6">
+          <p className="font-bebas text-[clamp(48px,6vw,80px)] leading-[0.9] text-cream mb-6">
             Hablemos.
-          </h2>
+          </p>
           <p className="text-[13px] text-[var(--dim)] leading-[1.7] mb-10 max-w-xs">
             Proyectos, colaboraciones, ideas a medio terminar. Si tiene sentido, lo construimos.
           </p>
@@ -96,9 +99,15 @@ export default function Contact() {
                 type="text"
                 placeholder="Tu nombre"
                 {...register('name')}
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? 'name-error' : undefined}
                 className={inputClass}
               />
-              {errors.name && <span className="text-[10px] text-coral">{errors.name.message}</span>}
+              {errors.name && (
+                <span id="name-error" role="alert" className="text-[10px] text-coral">
+                  {errors.name.message}
+                </span>
+              )}
             </div>
             <div className="flex flex-col gap-2">
               <Label htmlFor="email">Email</Label>
@@ -107,10 +116,14 @@ export default function Contact() {
                 type="email"
                 placeholder="tu@email.com"
                 {...register('email')}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? 'email-error' : undefined}
                 className={inputClass}
               />
               {errors.email && (
-                <span className="text-[10px] text-coral">{errors.email.message}</span>
+                <span id="email-error" role="alert" className="text-[10px] text-coral">
+                  {errors.email.message}
+                </span>
               )}
             </div>
             <div className="flex flex-col gap-2">
@@ -120,10 +133,14 @@ export default function Contact() {
                 placeholder="Cuéntame..."
                 rows={4}
                 {...register('message')}
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? 'message-error' : undefined}
                 className={`${inputClass} resize-none`}
               />
               {errors.message && (
-                <span className="text-[10px] text-coral">{errors.message.message}</span>
+                <span id="message-error" role="alert" className="text-[10px] text-coral">
+                  {errors.message.message}
+                </span>
               )}
             </div>
             <button
@@ -132,7 +149,7 @@ export default function Contact() {
               className="mt-2 bg-coral text-black font-mono text-[11px] font-medium tracking-[0.22em] uppercase px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span>{isSubmitting ? 'Enviando...' : 'Enviar mensaje'}</span>
-              <span>→</span>
+              <span aria-hidden="true">→</span>
             </button>
           </form>
         </RevealOnScroll>

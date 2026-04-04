@@ -16,6 +16,8 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
   const itemsRef = useRef<HTMLAnchorElement[]>([])
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const wasOpenRef = useRef(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -68,6 +70,39 @@ export default function Navbar() {
     })
 
     return () => mm.revert()
+  }, [open])
+
+  // Focus management: focus first item on open, restore to hamburger on close
+  useEffect(() => {
+    if (open) {
+      wasOpenRef.current = true
+      const timer = setTimeout(() => itemsRef.current[0]?.focus(), 50)
+      return () => clearTimeout(timer)
+    } else if (wasOpenRef.current) {
+      wasOpenRef.current = false
+      hamburgerRef.current?.focus()
+    }
+  }, [open])
+
+  // Tab trap inside mobile menu
+  useEffect(() => {
+    if (!open) return
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      const focusable = itemsRef.current.filter(Boolean)
+      if (!focusable.length) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+    document.addEventListener('keydown', handleTab)
+    return () => document.removeEventListener('keydown', handleTab)
   }, [open])
 
   // Close on Escape
@@ -144,6 +179,7 @@ export default function Navbar() {
 
           {/* Hamburger — mobile only */}
           <button
+            ref={hamburgerRef}
             type="button"
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={open}
@@ -178,6 +214,7 @@ export default function Navbar() {
         ref={menuRef}
         id="mobile-menu"
         role="dialog"
+        aria-modal="true"
         aria-label="Menú de navegación"
         className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black/95 backdrop-blur-sm md:hidden"
         style={{ display: 'none' }}

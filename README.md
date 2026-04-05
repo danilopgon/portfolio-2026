@@ -1,6 +1,11 @@
 # Portfolio — Dani López González
 
-Stack: Next.js 16 · TypeScript · Tailwind CSS · GSAP · Lenis
+> Interfaces donde diseño y arquitectura no se negocian por separado.  
+> Código que no solo funciona, cuenta una historia.
+
+![Preview del portfolio](public/images/preview.png)
+
+Stack: Next.js 16 · TypeScript · Tailwind CSS · GSAP
 
 ## Arrancar
 
@@ -33,6 +38,9 @@ src/
 │   ├── layout.tsx              # fuentes, Toaster global
 │   ├── page.tsx
 │   ├── globals.css
+│   ├── opengraph-image.tsx
+│   ├── sitemap.ts
+│   ├── robots.ts
 │   ├── enlaces/page.tsx        # página de links (bio link)
 │   └── api/contact/route.ts    # Resend
 ├── components/
@@ -46,7 +54,7 @@ src/
 │   │   ├── Projects.tsx        # datos desde lib/projects.ts
 │   │   └── Contact.tsx         # react-hook-form + zod + Sonner
 │   └── ui/
-│       ├── ScrambleText.tsx
+│       ├── Ticker.tsx
 │       ├── CursorDot.tsx
 │       ├── RevealOnScroll.tsx
 │       ├── Label.tsx           # Radix Label
@@ -55,7 +63,8 @@ src/
 │   └── ContactEmail.tsx        # template React Email
 └── lib/
     ├── utils.ts                # cn()
-    ├── scramble.ts
     ├── projects.ts
+    ├── skills.ts
+    ├── rate-limit.ts
     └── schemas/contact.ts      # schema Zod compartido
 ```

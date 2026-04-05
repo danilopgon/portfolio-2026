@@ -1,6 +1,6 @@
 # Portfolio — Dani López González
 
-Stack: Next.js 15 · TypeScript · Tailwind CSS · GSAP · Lenis
+Stack: Next.js 16 · TypeScript · Tailwind CSS · GSAP · Lenis
 
 ## Arrancar
 

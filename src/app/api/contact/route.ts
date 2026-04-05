@@ -18,6 +18,7 @@ const resend = new Resend(apiKey)
 
 const ALLOWED_ORIGINS = [
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://danilopgon.com',
+  'https://www.danilopgon.com',
   'http://localhost:3000',
 ]
 

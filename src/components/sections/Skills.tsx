@@ -7,11 +7,11 @@ export default function Skills() {
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="skills-heading"
-          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+          className="text-[14px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
         >
           Lo que hago
         </h2>
-        <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">02</span>
+        <span className="font-bebas text-[13px] text-muted tracking-[0.1em]">02</span>
       </div>
 
       {/* Row 1: Desarrollo — 2 cards */}
@@ -27,10 +27,10 @@ export default function Skills() {
               {n}
             </span>
             <div className="w-6 h-0.5 bg-coral mb-4 transition-all duration-300 group-hover:w-10" />
-            <h3 className="text-[11px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
+            <h3 className="text-[13px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
               {name}
             </h3>
-            <p className="text-[12px] text-[var(--dim)] leading-[1.65]">{desc}</p>
+            <p className="text-[14px] text-[var(--dim)] leading-[1.65]">{desc}</p>
           </RevealOnScroll>
         ))}
       </div>
@@ -48,10 +48,10 @@ export default function Skills() {
               {n}
             </span>
             <div className="w-6 h-0.5 bg-coral mb-4 transition-all duration-300 group-hover:w-10" />
-            <h3 className="text-[11px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
+            <h3 className="text-[13px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
               {name}
             </h3>
-            <p className="text-[12px] text-[var(--dim)] leading-[1.65]">{desc}</p>
+            <p className="text-[14px] text-[var(--dim)] leading-[1.65]">{desc}</p>
           </RevealOnScroll>
         ))}
       </div>

@@ -159,7 +159,7 @@ export default function Navbar() {
               key={href}
               href={href}
               aria-current={active === href.slice(2) ? 'page' : undefined}
-              className={`flex items-center px-4 text-[11px] tracking-[0.22em] uppercase border-l border-border transition-colors whitespace-nowrap
+              className={`flex items-center px-4 text-[13px] tracking-[0.22em] uppercase border-l border-border transition-colors whitespace-nowrap
                 ${active === href.slice(2) ? 'text-coral' : 'text-muted hover:text-cream hover:bg-faint'}`}
             >
               {label}
@@ -169,7 +169,7 @@ export default function Navbar() {
 
         <div className="flex items-center ml-auto md:ml-0">
           {/* Disponible badge */}
-          <div className="flex items-center gap-2 px-4 md:px-5 border-l border-border h-full text-[10px] tracking-[0.15em] uppercase text-muted shrink-0">
+          <div className="flex items-center gap-2 px-4 md:px-5 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted shrink-0">
             <span
               aria-hidden="true"
               className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
@@ -228,7 +228,7 @@ export default function Navbar() {
             }}
             aria-current={active === href.slice(2) ? 'page' : undefined}
             onClick={closeMenu}
-            className={`flex items-center px-6 h-12 text-[11px] tracking-[0.22em] uppercase border-b border-border transition-colors
+            className={`flex items-center px-6 h-12 text-[13px] tracking-[0.22em] uppercase border-b border-border transition-colors
               ${active === href.slice(2) ? 'text-coral border-l-2 border-l-coral pl-[22px]' : 'text-muted hover:text-cream hover:bg-faint'}`}
           >
             {label}

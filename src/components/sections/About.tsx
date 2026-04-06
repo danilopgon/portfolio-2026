@@ -18,41 +18,41 @@ export default function About() {
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="about-heading"
-          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
         >
           Sobre mí
         </h2>
-        <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">01</span>
+        <span className="font-bebas text-[13px] text-muted tracking-[0.1em]">01</span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
-          <p className="text-[14px] text-[var(--dim)] leading-[1.8]">
+          <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
             Estudié periodismo y trabajé en{' '}
             <strong className="text-cream font-medium">medios digitales</strong>. El máster en
             narrativa transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso,
             sin buscarlo demasiado, fue lo que me llevó a la programación.
           </p>
-          <p className="text-[14px] text-[var(--dim)] leading-[1.8]">
+          <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
             Trabajo principalmente en <strong className="text-cream font-medium">frontend</strong>{' '}
-            con Angular, React y Next.js, y en backend cuando hace falta. Me importa que el código
+            con Angular, React y Next.js, y en backend con soltura. Me importa que el código
             sea claro, que la interfaz responda a quien la usa y que el resultado tenga coherencia
             de principio a fin.
           </p>
-          <p className="text-[14px] text-[var(--dim)] leading-[1.8]">
-            Mid-level en <strong className="text-cream font-medium">Servinet</strong>, trabajando en
-            proyectos que me piden crecer, con la mirada puesta en arquitectura y decisiones
-            técnicas de mayor alcance.
+          <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
+            Con más de dos años de experiencia, trabajo como mid-level en{' '}
+            <strong className="text-cream font-medium">Servinet</strong>, en proyectos que me piden
+            crecer, con la mirada puesta en arquitectura y decisiones técnicas de mayor alcance.
           </p>
         </RevealOnScroll>
 
         <RevealOnScroll className="px-6 py-8 md:px-12 md:py-12 flex flex-col gap-8" delay={100}>
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-coral mb-3">Stack técnico</p>
+            <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">Stack técnico</p>
             <div className="flex flex-wrap gap-1.5">
               {stack.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] tracking-[0.1em] px-2.5 py-1 border border-border text-muted hover:border-coral hover:text-cream transition-colors cursor-default"
+                  className="text-[13px] tracking-[0.1em] px-2.5 py-1 border border-border text-muted hover:border-coral hover:text-cream transition-colors cursor-default"
                 >
                   {tag}
                 </span>
@@ -60,7 +60,7 @@ export default function About() {
             </div>
           </div>
           <div>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-coral mb-3">
+            <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">
               Contacto directo
             </p>
             <div className="flex">

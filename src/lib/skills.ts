@@ -13,7 +13,7 @@ export const dev: Skill[] = [
   {
     n: '02',
     name: 'Back-end',
-    desc: 'Suficiente para ir de la base de datos al deploy sin bloquearme. APIs sólidas, infraestructura que no da sorpresas y datos modelados con la vista puesta en el frontend.',
+    desc: 'De la base de datos al deploy con criterio. APIs sólidas, infraestructura que no da sorpresas y datos modelados con la vista puesta en el producto.',
   },
 ]
 
@@ -21,7 +21,7 @@ export const foundations: Skill[] = [
   {
     n: '03',
     name: 'UX / UI',
-    desc: 'El diseño no termina en Figma. Entiendo qué hace que una experiencia funcione — y me encargo de que eso sobreviva a la implementación.',
+    desc: 'El diseño no termina en Figma. Entiendo qué hace que una experiencia funcione y me encargo de que eso sobreviva a la implementación.',
   },
   {
     n: '04',

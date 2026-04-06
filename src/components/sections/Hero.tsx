@@ -177,7 +177,7 @@ export default function Hero() {
             ref={labelRef}
             className="mb-5 flex items-center gap-3 before:block before:w-8 before:h-px before:bg-coral"
           >
-            <span className="text-[11px] tracking-[0.3em] uppercase text-muted">
+            <span className="text-[13px] tracking-[0.3em] uppercase text-muted">
               Frontend Developer
             </span>
           </div>
@@ -196,7 +196,7 @@ export default function Hero() {
 
           <p
             ref={descRef}
-            className="max-w-[460px] text-[14px] text-[var(--dim)] leading-[1.75] mt-7"
+            className="max-w-[460px] text-[16px] text-[var(--dim)] leading-[1.75] mt-7"
           >
             Construyo interfaces donde{' '}
             <strong className="text-cream font-medium">diseño y arquitectura</strong> no se negocian
@@ -206,13 +206,13 @@ export default function Hero() {
           <div ref={ctasRef} className="flex mt-10">
             <a
               href="#projects"
-              className="bg-coral text-black font-mono text-[11px] font-medium tracking-[0.22em] uppercase px-7 py-3 border border-coral hover:bg-cream hover:border-cream transition-colors flex items-center gap-2.5"
+              className="bg-coral text-black font-mono text-[13px] font-medium tracking-[0.22em] uppercase px-7 py-3 border border-coral hover:bg-cream hover:border-cream transition-colors flex items-center gap-2.5"
             >
               Ver trabajo <span aria-hidden="true">→</span>
             </a>
             <a
               href="#contact"
-              className="text-muted font-mono text-[11px] tracking-[0.22em] uppercase px-7 py-3 border border-border border-l-0 hover:text-cream hover:border-muted transition-colors"
+              className="text-muted font-mono text-[13px] tracking-[0.22em] uppercase px-7 py-3 border border-border border-l-0 hover:text-cream hover:border-muted transition-colors"
             >
               Hablemos
             </a>

@@ -6,6 +6,8 @@ export default function CursorDot() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (!window.matchMedia('(pointer: fine)').matches) return
+
     const dot = ref.current
     if (!dot) return
 
@@ -48,7 +50,7 @@ export default function CursorDot() {
     <div
       ref={ref}
       aria-hidden="true"
-      className="fixed top-0 left-0 w-1.5 h-1.5 bg-coral rounded-full pointer-events-none z-[9999]"
+      className="hidden [@media(pointer:fine)]:block [@media(pointer:fine)]:fixed top-0 left-0 w-1.5 h-1.5 bg-coral rounded-full pointer-events-none z-[9999]"
       style={{ transform: 'translate(-50%, -50%)' }}
     />
   )

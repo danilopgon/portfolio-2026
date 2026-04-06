@@ -29,10 +29,15 @@ body {
   background: theme('colors.black');
   color: theme('colors.cream');
   font-family: var(--font-dm-mono), monospace;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
-  cursor: crosshair;
   overflow-x: hidden;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: crosshair;
+  }
 }
 
 ::-webkit-scrollbar {

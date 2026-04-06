@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/Label'
 import { contactSchema, type ContactFormData } from '@/lib/schemas/contact'
 
 const inputClass =
-  'bg-transparent border-b border-border py-2 px-2 text-[12px] text-cream placeholder:text-[#777] outline-none focus:border-coral transition-colors font-mono w-full'
+  'bg-transparent border-b border-border py-2 px-2 text-[14px] text-cream placeholder:text-[#777] outline-none focus:border-coral transition-colors font-mono w-full'
 
 export default function Contact() {
   const {
@@ -42,11 +42,11 @@ export default function Contact() {
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="contact-heading"
-          className="text-[10px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+          className="text-[14px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
         >
           Contacto
         </h2>
-        <span className="font-bebas text-[11px] text-muted tracking-[0.1em]">04</span>
+        <span className="font-bebas text-[15px] text-muted tracking-[0.1em]">04</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -54,7 +54,7 @@ export default function Contact() {
           <p className="font-bebas text-[clamp(48px,6vw,80px)] leading-[0.9] text-cream mb-6">
             Hablemos.
           </p>
-          <p className="text-[13px] text-[var(--dim)] leading-[1.7] mb-10 max-w-xs">
+          <p className="text-[15px] text-[var(--dim)] leading-[1.7] mb-10 max-w-xs">
             Proyectos, colaboraciones, ideas a medio terminar. Si tiene sentido, lo construimos.
           </p>
           <div className="mt-auto flex flex-col gap-3">
@@ -68,7 +68,7 @@ export default function Contact() {
               { icon: '◎', text: 'Cuenca, España', href: undefined },
             ].map(({ icon, text, href }) => {
               const cls =
-                'flex items-center gap-3 text-[10px] text-muted hover:text-cream transition-colors group'
+                'flex items-center gap-3 text-[14px] text-muted hover:text-cream transition-colors group'
               const inner = (
                 <>
                   <span className="w-7 h-7 border border-border flex items-center justify-center group-hover:bg-coral group-hover:border-coral group-hover:text-black transition-all shrink-0">
@@ -104,7 +104,7 @@ export default function Contact() {
                 className={inputClass}
               />
               {errors.name && (
-                <span id="name-error" role="alert" className="text-[10px] text-coral">
+                <span id="name-error" role="alert" className="text-[14px] text-coral">
                   {errors.name.message}
                 </span>
               )}
@@ -121,7 +121,7 @@ export default function Contact() {
                 className={inputClass}
               />
               {errors.email && (
-                <span id="email-error" role="alert" className="text-[10px] text-coral">
+                <span id="email-error" role="alert" className="text-[14px] text-coral">
                   {errors.email.message}
                 </span>
               )}
@@ -138,7 +138,7 @@ export default function Contact() {
                 className={`${inputClass} resize-none`}
               />
               {errors.message && (
-                <span id="message-error" role="alert" className="text-[10px] text-coral">
+                <span id="message-error" role="alert" className="text-[14px] text-coral">
                   {errors.message.message}
                 </span>
               )}
@@ -146,7 +146,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-2 bg-coral text-black font-mono text-[11px] font-medium tracking-[0.22em] uppercase px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-2 bg-coral text-black font-mono text-[15px] font-medium tracking-[0.22em] uppercase px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span>{isSubmitting ? 'Enviando...' : 'Enviar mensaje'}</span>
               <span aria-hidden="true">→</span>

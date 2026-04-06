@@ -42,7 +42,7 @@ export default function Contact() {
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="contact-heading"
-          className="text-[14px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
         >
           Contacto
         </h2>

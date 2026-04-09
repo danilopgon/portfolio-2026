@@ -28,7 +28,7 @@ export default function CursorDot() {
     }
 
     const interactives = document.querySelectorAll(
-      'a, button, [data-cursor], .project-card, .skill-card'
+      'a, button, [data-cursor], .project-card, .skill-card, .experience-card'
     )
 
     document.addEventListener('mousemove', move)

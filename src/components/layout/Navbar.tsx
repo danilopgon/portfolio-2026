@@ -7,6 +7,7 @@ const links = [
   { href: '/#about', label: 'Sobre mí' },
   { href: '/#skills', label: 'Servicios' },
   { href: '/#projects', label: 'Trabajo' },
+  { href: '/#experience', label: 'Experiencia' },
   { href: '/#contact', label: 'Contacto' },
 ]
 

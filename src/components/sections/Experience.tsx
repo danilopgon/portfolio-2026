@@ -17,16 +17,6 @@ export default function Experience() {
 
       <RevealOnScroll className="experience-card">
         <div className="p-6 md:p-10 lg:px-16">
-          {/* Terminal chrome — decorative, hidden from screen readers */}
-          <div aria-hidden="true" className="flex items-center gap-2 border-b border-border pb-3 mb-4">
-            <div className="flex gap-1.5">
-              <span className="w-2.5 h-2.5 bg-border" />
-              <span className="w-2.5 h-2.5 bg-border" />
-              <span className="w-2.5 h-2.5 bg-border" />
-            </div>
-            <span className="text-[11px] tracking-[0.15em] text-muted ml-2">experience.log</span>
-          </div>
-
           {/* Terminal body */}
           <div className="bg-dark border border-border">
             {/* Command line — decorative, hidden from screen readers */}

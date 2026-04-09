@@ -3,7 +3,7 @@ import { experiences } from '@/lib/experience'
 
 export default function Experience() {
   return (
-    <section id="experience" aria-labelledby="experience-heading" className="border-b border-border">
+    <section id="experience" aria-labelledby="experience-heading" className="border-b border-border min-h-[60vh] flex flex-col">
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="experience-heading"
@@ -15,8 +15,8 @@ export default function Experience() {
         <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">04</span>
       </div>
 
-      <RevealOnScroll className="experience-card">
-        <div className="p-6 md:p-10 lg:px-16">
+      <RevealOnScroll className="experience-card flex-1 flex items-center">
+        <div className="p-6 md:p-10 lg:px-16 w-full">
           {/* Terminal body */}
           <div className="bg-dark border border-border">
             {/* Command line — decorative, hidden from screen readers */}

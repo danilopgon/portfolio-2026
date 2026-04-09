@@ -44,10 +44,14 @@ export default function Contact() {
           id="contact-heading"
           className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
-          <span aria-hidden="true" className="text-coral mr-2">//</span>
+          <span aria-hidden="true" className="text-coral mr-2">
+            {"//"}
+          </span>
           Contacto
         </h2>
-        <span aria-hidden="true" className="font-bebas text-[15px] text-muted tracking-[0.1em]">05</span>
+        <span aria-hidden="true" className="font-bebas text-[15px] text-muted tracking-[0.1em]">
+          05
+        </span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2">

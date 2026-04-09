@@ -11,10 +11,14 @@ export default function Projects() {
           id="projects-heading"
           className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
-          <span aria-hidden="true" className="text-coral mr-2">//</span>
+          <span aria-hidden="true" className="text-coral mr-2">
+            {"//"}
+          </span>
           Trabajo seleccionado
         </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">03</span>
+        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
+          03
+        </span>
       </div>
 
       <Ticker className="border-b border-border h-12 bg-dark">

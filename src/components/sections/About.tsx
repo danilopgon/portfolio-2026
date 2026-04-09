@@ -20,10 +20,14 @@ export default function About() {
           id="about-heading"
           className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
-          <span aria-hidden="true" className="text-coral mr-2">//</span>
+          <span aria-hidden="true" className="text-coral mr-2">
+            {"//"}
+          </span>
           Sobre mí
         </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">01</span>
+        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
+          01
+        </span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
@@ -35,9 +39,9 @@ export default function About() {
           </p>
           <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
             Trabajo principalmente en <strong className="text-cream font-medium">frontend</strong>{' '}
-            con Angular, React y Next.js, y en backend con soltura. Me importa que el código
-            sea claro, que la interfaz responda a quien la usa y que el resultado tenga coherencia
-            de principio a fin.
+            con Angular, React y Next.js, y en backend con soltura. Me importa que el código sea
+            claro, que la interfaz responda a quien la usa y que el resultado tenga coherencia de
+            principio a fin.
           </p>
           <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
             Con más de dos años de experiencia, trabajo como mid-level en{' '}

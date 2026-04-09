@@ -9,10 +9,14 @@ export default function Skills() {
           id="skills-heading"
           className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
-          <span aria-hidden="true" className="text-coral mr-2">//</span>
+          <span aria-hidden="true" className="text-coral mr-2">
+            {"//"}
+          </span>
           Lo que hago
         </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">02</span>
+        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
+          02
+        </span>
       </div>
 
       {/* Row 1: Desarrollo — 2 cards */}

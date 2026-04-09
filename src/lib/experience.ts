@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
   {
     slug: 'servinet',
     role: 'Frontend Developer',
-    company: 'Servinet Sistemas',
+    company: 'Servinet Sistemas y Comunicación',
     period: 'dic 2023 — presente',
     filename: 'servinet.log',
     description: [

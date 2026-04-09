@@ -249,7 +249,10 @@ export default function Navbar() {
               if (el) itemsRef.current[i] = el
             }}
             aria-current={active === href.slice(2) ? 'page' : undefined}
-            onClick={() => { setActive(href.slice(2)); closeMenu() }}
+            onClick={() => {
+              setActive(href.slice(2))
+              closeMenu()
+            }}
             className={`flex items-center px-6 h-12 text-[13px] tracking-[0.22em] uppercase border-b border-border transition-colors
               ${active === href.slice(2) ? 'text-coral border-l-2 border-l-coral pl-[22px]' : 'text-muted hover:text-cream hover:bg-faint'}`}
           >

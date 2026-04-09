@@ -9,11 +9,12 @@ export default function Projects() {
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="projects-heading"
-          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
+          <span aria-hidden="true" className="text-coral mr-2">//</span>
           Trabajo seleccionado
         </h2>
-        <span className="font-bebas text-[13px] text-muted tracking-[0.1em]">03</span>
+        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">03</span>
       </div>
 
       <Ticker className="border-b border-border h-12 bg-dark">

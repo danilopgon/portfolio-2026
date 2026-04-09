@@ -7,11 +7,12 @@ export default function Skills() {
       <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
         <h2
           id="skills-heading"
-          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal before:content-['//'] before:text-coral before:mr-2"
+          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
+          <span aria-hidden="true" className="text-coral mr-2">//</span>
           Lo que hago
         </h2>
-        <span className="font-bebas text-[13px] text-muted tracking-[0.1em]">02</span>
+        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">02</span>
       </div>
 
       {/* Row 1: Desarrollo — 2 cards */}

@@ -21,12 +21,32 @@ export default function Navbar() {
   const wasOpenRef = useRef(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
-      { threshold: 0.4 }
-    )
-    document.querySelectorAll('section[id]').forEach((s) => observer.observe(s))
-    return () => observer.disconnect()
+    const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]'))
+
+    const onScroll = () => {
+      // Edge case: at the very bottom of the page → last section wins
+      const atBottom =
+        window.innerHeight + Math.round(window.scrollY) >= document.body.scrollHeight - 2
+      if (atBottom) {
+        setActive(sections[sections.length - 1]?.id ?? '')
+        return
+      }
+
+      // Active section = last one whose top has entered the first 100px below the viewport top.
+      // Using a small fixed threshold prevents the next section from stealing active state
+      // when the current section is shorter than a percentage-based trigger would require.
+      let current = ''
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= 100) {
+          current = section.id
+        }
+      }
+      if (current) setActive(current)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   useEffect(() => {
@@ -159,6 +179,7 @@ export default function Navbar() {
             <Link
               key={href}
               href={href}
+              onClick={() => setActive(href.slice(2))}
               aria-current={active === href.slice(2) ? 'page' : undefined}
               className={`flex items-center px-4 text-[13px] tracking-[0.22em] uppercase border-l border-border transition-colors whitespace-nowrap
                 ${active === href.slice(2) ? 'text-coral' : 'text-muted hover:text-cream hover:bg-faint'}`}
@@ -228,7 +249,7 @@ export default function Navbar() {
               if (el) itemsRef.current[i] = el
             }}
             aria-current={active === href.slice(2) ? 'page' : undefined}
-            onClick={closeMenu}
+            onClick={() => { setActive(href.slice(2)); closeMenu() }}
             className={`flex items-center px-6 h-12 text-[13px] tracking-[0.22em] uppercase border-b border-border transition-colors
               ${active === href.slice(2) ? 'text-coral border-l-2 border-l-coral pl-[22px]' : 'text-muted hover:text-cream hover:bg-faint'}`}
           >

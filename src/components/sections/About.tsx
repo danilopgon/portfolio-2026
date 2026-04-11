@@ -1,47 +1,38 @@
+'use client'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { stack } from '@/lib/about'
+import { useLanguage } from '@/lib/i18n/context'
 
 export default function About() {
+  const { t } = useLanguage()
   return (
     <section id="about" aria-labelledby="about-heading" className="border-b border-border">
-      <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <h2
-          id="about-heading"
-          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
-        >
-          <span aria-hidden="true" className="text-coral mr-2">
-            {'//'}
-          </span>
-          Sobre mí
-        </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
-          01
-        </span>
-      </div>
+      <SectionHeader id="about-heading" title={t.about.title} number="01" />
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
           <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
-            Estudié periodismo y trabajé en{' '}
-            <strong className="text-cream font-medium">medios digitales</strong>. El máster en
-            narrativa transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso,
-            sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.
+            {t.about.p1Before}
+            <strong className="text-cream font-medium">{t.about.p1Highlight}</strong>
+            {t.about.p1After}
           </p>
           <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
-            Trabajo principalmente en <strong className="text-cream font-medium">frontend</strong>{' '}
-            con Angular, React y Next.js, y en backend con soltura. Me importa que el código sea
-            claro, que la interfaz responda a quien la usa y que el resultado tenga coherencia de
-            principio a fin.
+            {t.about.p2Before}
+            <strong className="text-cream font-medium">{t.about.p2Highlight}</strong>
+            {t.about.p2After}
           </p>
           <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
-            Con más de dos años de experiencia, trabajo como mid-level en{' '}
-            <strong className="text-cream font-medium">Servinet</strong>, en proyectos que me piden
-            crecer, con la mirada puesta en arquitectura y decisiones técnicas de mayor alcance.
+            {t.about.p3Before}
+            <strong className="text-cream font-medium">{t.about.p3Highlight}</strong>
+            {t.about.p3After}
           </p>
         </RevealOnScroll>
 
         <RevealOnScroll className="px-6 py-8 md:px-12 md:py-12 flex flex-col gap-8" delay={100}>
           <div>
-            <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">Stack técnico</p>
+            <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">
+              {t.about.stack}
+            </p>
             <div className="flex flex-wrap gap-1.5">
               {stack.map((tag) => (
                 <span
@@ -55,7 +46,7 @@ export default function About() {
           </div>
           <div>
             <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">
-              Contacto directo
+              {t.about.directContact}
             </p>
             <div className="flex">
               {[
@@ -114,7 +105,7 @@ export default function About() {
                 <a
                   key={label}
                   href={href}
-                  aria-label={`${label} (abre en nueva pestaña)`}
+                  aria-label={`${label} (${t.about.newTab})`}
                   rel="noopener noreferrer"
                   target="_blank"
                   className="w-9 h-9 border border-border border-r-0 last:border-r flex items-center justify-center text-muted hover:bg-coral hover:text-black hover:border-coral transition-all"

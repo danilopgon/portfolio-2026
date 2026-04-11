@@ -1,25 +1,18 @@
+'use client'
 import Image from 'next/image'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
+import SectionHeader from '@/components/ui/SectionHeader'
 import Ticker from '@/components/ui/Ticker'
-import { projects } from '@/lib/projects'
+import { getProjects } from '@/lib/projects'
+import { useLanguage } from '@/lib/i18n/context'
 
 export default function Projects() {
+  const { locale, t } = useLanguage()
+  const projects = getProjects(locale)
+
   return (
     <section id="projects" aria-labelledby="projects-heading" className="border-b border-border">
-      <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <h2
-          id="projects-heading"
-          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
-        >
-          <span aria-hidden="true" className="text-coral mr-2">
-            {"//"}
-          </span>
-          Trabajo seleccionado
-        </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
-          03
-        </span>
-      </div>
+      <SectionHeader id="projects-heading" title={t.projects.title} number="03" />
 
       <Ticker className="border-b border-border h-12 bg-dark">
         {Array.from({ length: 10 }).map((_, j) => (
@@ -28,7 +21,7 @@ export default function Projects() {
               className="font-bebas text-[28px] tracking-[0.04em] px-6 text-cream"
               style={{ lineHeight: 1 }}
             >
-              PROYECTOS
+              {t.projects.ticker}
             </span>
             <span className="font-bebas text-[20px] text-coral px-1" style={{ lineHeight: 1 }}>
               ·

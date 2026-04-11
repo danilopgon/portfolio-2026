@@ -5,6 +5,8 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CursorDot from '@/components/ui/CursorDot'
 import { Toaster } from '@/components/ui/Toaster'
+import { LanguageProvider } from '@/lib/i18n/context'
+import SkipLink from '@/components/ui/SkipLink'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -23,25 +25,32 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://danilopgon.com'),
   title: 'Dani López González — Frontend Developer',
   description:
-    'Frontend Developer. TypeScript · Angular · React · Next.js · UX/UI · Node.js · .NET',
+    'Frontend Developer based in Cuenca, Spain. TypeScript · Angular · React · Next.js · UX/UI · Node.js · .NET',
   alternates: {
     canonical: '/',
+    languages: {
+      'es-ES': '/',
+      'en-US': '/',
+    },
   },
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: 'Dani López González — Frontend Developer',
-    description: 'Construyo interfaces donde diseño y arquitectura no se negocian por separado.',
+    description:
+      'Frontend Developer based in Cuenca, Spain. Interfaces where design and architecture are non-negotiable.',
     url: 'https://danilopgon.com',
     siteName: 'Dani López González',
     locale: 'es_ES',
+    alternateLocale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dani López González — Frontend Developer',
-    description: 'Construyo interfaces donde diseño y arquitectura no se negocian por separado.',
+    description:
+      'Frontend Developer based in Cuenca, Spain. Interfaces where design and architecture are non-negotiable.',
   },
 }
 
@@ -49,12 +58,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${bebasNeue.variable} ${dmMono.variable}`}>
       <body>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-coral focus:text-black focus:text-xs focus:font-mono focus:tracking-widest focus:uppercase"
-        >
-          Saltar al contenido
-        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -64,15 +67,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'Dani López González',
               url: 'https://danilopgon.com',
               jobTitle: 'Frontend Developer',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Cuenca',
+                addressRegion: 'Castilla-La Mancha',
+                addressCountry: 'ES',
+              },
               sameAs: ['https://linkedin.com/in/danilopgon', 'https://github.com/danilopgon'],
             }),
           }}
         />
-        <CursorDot />
-        <Navbar />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <Toaster />
+        <LanguageProvider>
+          <SkipLink />
+          <CursorDot />
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <Toaster />
+        </LanguageProvider>
       </body>
     </html>
   )

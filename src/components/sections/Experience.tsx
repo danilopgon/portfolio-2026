@@ -1,27 +1,20 @@
+'use client'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
-import { experiences } from '@/lib/experience'
+import SectionHeader from '@/components/ui/SectionHeader'
+import { getExperiences } from '@/lib/experience'
+import { useLanguage } from '@/lib/i18n/context'
 
 export default function Experience() {
+  const { locale, t } = useLanguage()
+  const experiences = getExperiences(locale)
+
   return (
     <section
       id="experience"
       aria-labelledby="experience-heading"
       className="border-b border-border min-h-[55vh] flex flex-col"
     >
-      <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <h2
-          id="experience-heading"
-          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
-        >
-          <span aria-hidden="true" className="text-coral mr-2">
-            {"//"}
-          </span>
-          Experiencia
-        </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
-          04
-        </span>
-      </div>
+      <SectionHeader id="experience-heading" title={t.experience.title} number="04" />
 
       <RevealOnScroll className="experience-card flex-1 flex items-center">
         <div className="p-6 md:p-10 lg:px-16 w-full">
@@ -61,13 +54,16 @@ export default function Experience() {
                         {company}
                       </p>
                       <p className="text-[12px] text-muted tracking-[0.08em]">
-                        <span className="sr-only">Periodo: </span>
+                        <span className="sr-only">{t.experience.period}: </span>
                         {period}
                       </p>
                     </div>
 
                     {/* Description lines */}
-                    <ul className="flex flex-col gap-1.5" aria-label={`${company} — highlights`}>
+                    <ul
+                      className="flex flex-col gap-1.5"
+                      aria-label={`${company} — ${t.experience.highlights}`}
+                    >
                       {description.map((line) => (
                         <li key={line} className="text-[13px] text-[var(--dim)] flex gap-2">
                           <span aria-hidden="true" className="text-border select-none shrink-0">
@@ -80,7 +76,7 @@ export default function Experience() {
 
                     {/* Stack tags */}
                     <ul
-                      aria-label={`${company} — tecnologías`}
+                      aria-label={`${company} — ${t.experience.technologies}`}
                       className="flex flex-wrap gap-1.5 pt-1"
                     >
                       {stack.map((tag) => (

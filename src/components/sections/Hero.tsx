@@ -3,10 +3,12 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLanguage } from '@/lib/i18n/context'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
+  const { t } = useLanguage()
   const photoRef = useRef<HTMLDivElement>(null)
   const imgInnerRef = useRef<HTMLDivElement>(null)
   const glowRef = useRef<SVGSVGElement>(null)
@@ -21,7 +23,7 @@ export default function Hero() {
     gsap.set([daniRef.current, lopezRef.current], { opacity: 0, y: 20 })
     gsap.set([descRef.current, ctasRef.current], { opacity: 0, y: 10 })
     gsap.set(photoRef.current, { opacity: 0, scale: 1.04 })
-    gsap.set(glowRef.current, { opacity: 0, scale: 0.88, transformOrigin: '70% 38%' })
+    gsap.set(glowRef.current, { opacity: 0, transformOrigin: '70% 38%' })
 
     const mm = gsap.matchMedia()
 
@@ -35,7 +37,7 @@ export default function Hero() {
         .to(ctasRef.current, { opacity: 1, y: 0, duration: 0.5 }, 1.1)
         .to(photoRef.current, { opacity: 1, scale: 1, duration: 1.1, ease: 'power2.inOut' }, 0.3)
         // Glow entra antes que la foto, más lento — sensación de que la luz precede a la persona
-        .to(glowRef.current, { opacity: 1, scale: 1, duration: 1.6, ease: 'power2.out' }, 0.1)
+        .to(glowRef.current, { opacity: 1, duration: 1.6, ease: 'power2.out' }, 0.1)
 
       // Foto: parallax rápido
       gsap.to(imgInnerRef.current, {
@@ -178,7 +180,7 @@ export default function Hero() {
             className="mb-5 flex items-center gap-3 before:block before:w-8 before:h-px before:bg-coral"
           >
             <span className="text-[13px] tracking-[0.3em] uppercase text-muted">
-              Frontend Developer
+              {t.hero.label}
             </span>
           </div>
 
@@ -198,9 +200,9 @@ export default function Hero() {
             ref={descRef}
             className="max-w-[460px] text-[16px] text-[var(--dim)] leading-[1.75] mt-7"
           >
-            Construyo interfaces donde{' '}
-            <strong className="text-cream font-medium">diseño y arquitectura</strong> no se negocian
-            por separado. Código que no solo funciona, cuenta una historia.
+            {t.hero.taglineBefore}
+            <strong className="text-cream font-medium">{t.hero.taglineHighlight}</strong>
+            {t.hero.taglineAfter}
           </p>
 
           <div ref={ctasRef} className="flex mt-10">
@@ -208,13 +210,13 @@ export default function Hero() {
               href="#projects"
               className="bg-coral text-black font-mono text-[13px] font-medium tracking-[0.22em] uppercase px-7 py-3 border border-coral hover:bg-cream hover:border-cream transition-colors flex items-center gap-2.5"
             >
-              Ver trabajo <span aria-hidden="true">→</span>
+              {t.hero.cta1} <span aria-hidden="true">→</span>
             </a>
             <a
               href="#contact"
               className="text-muted font-mono text-[13px] tracking-[0.22em] uppercase px-7 py-3 border border-border border-l-0 hover:text-cream hover:border-muted transition-colors"
             >
-              Hablemos
+              {t.hero.cta2}
             </a>
           </div>
         </div>

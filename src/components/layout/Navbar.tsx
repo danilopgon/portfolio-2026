@@ -2,16 +2,9 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-
-const links = [
-  { href: '/#about', label: 'Sobre mí' },
-  { href: '/#skills', label: 'Servicios' },
-  { href: '/#projects', label: 'Trabajo' },
-  { href: '/#experience', label: 'Experiencia' },
-  { href: '/#contact', label: 'Contacto' },
-]
-
+import { useLanguage } from '@/lib/i18n/context'
 export default function Navbar() {
+  const { locale, setLocale, t } = useLanguage()
   const [active, setActive] = useState('')
   const [open, setOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -19,6 +12,14 @@ export default function Navbar() {
   const itemsRef = useRef<HTMLAnchorElement[]>([])
   const hamburgerRef = useRef<HTMLButtonElement>(null)
   const wasOpenRef = useRef(false)
+
+  const links = [
+    { href: '/#about', label: t.nav.about },
+    { href: '/#skills', label: t.nav.skills },
+    { href: '/#projects', label: t.nav.projects },
+    { href: '/#experience', label: t.nav.experience },
+    { href: '/#contact', label: t.nav.contact },
+  ]
 
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]'))
@@ -145,10 +146,12 @@ export default function Navbar() {
 
   const closeMenu = () => setOpen(false)
 
+  const toggleLocale = () => setLocale(locale === 'es' ? 'en' : 'es')
+
   return (
     <>
       <nav
-        aria-label="Navegación principal"
+        aria-label={t.nav.mainNav}
         className="fixed top-0 left-0 right-0 z-[999] flex justify-between items-stretch h-11 border-b border-border bg-black/90 backdrop-blur-sm"
       >
         <div className="px-5 flex items-center border-r border-border shrink-0">
@@ -174,7 +177,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-stretch overflow-x-auto">
+        <div className="hidden lg:flex items-stretch overflow-x-auto">
           {links.map(({ href, label }) => (
             <Link
               key={href}
@@ -189,25 +192,35 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center ml-auto md:ml-0">
+        <div className="flex items-center ml-auto lg:ml-0">
           {/* Disponible badge */}
-          <div className="flex items-center gap-2 px-4 md:px-5 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted shrink-0">
+          <div className="flex items-center gap-2 px-4 lg:px-5 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted shrink-0">
             <span
               aria-hidden="true"
               className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
             />
-            <span>Disponible</span>
+            <span>{t.nav.available}</span>
           </div>
+
+          {/* Language switcher */}
+          <button
+            type="button"
+            onClick={toggleLocale}
+            aria-label={t.nav.langLabel}
+            className="flex items-center px-3 lg:px-4 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted hover:text-cream transition-colors shrink-0"
+          >
+            {t.nav.lang}
+          </button>
 
           {/* Hamburger — mobile only */}
           <button
             ref={hamburgerRef}
             type="button"
-            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 border-l border-border shrink-0 group"
+            className="lg:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 border-l border-border shrink-0 group"
           >
             <span
               className={`block w-4 h-px bg-cream transition-transform duration-200 origin-center ${open ? 'translate-y-[6.5px] rotate-45' : ''}`}
@@ -227,7 +240,7 @@ export default function Navbar() {
         ref={overlayRef}
         onClick={closeMenu}
         aria-hidden="true"
-        className="fixed inset-0 z-[997] bg-black/60 md:hidden"
+        className="fixed inset-0 z-[997] bg-black/60 lg:hidden"
         style={{ opacity: 0, display: open ? 'block' : 'none' }}
       />
 
@@ -237,8 +250,8 @@ export default function Navbar() {
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
-        aria-label="Menú de navegación"
-        className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black/95 backdrop-blur-sm md:hidden"
+        aria-label={t.nav.mobileMenu}
+        className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black/95 backdrop-blur-sm lg:hidden"
         style={{ display: 'none' }}
       >
         {links.map(({ href, label }, i) => (

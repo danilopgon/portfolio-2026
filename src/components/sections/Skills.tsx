@@ -1,23 +1,17 @@
+'use client'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
-import { dev, foundations } from '@/lib/skills'
+import SectionHeader from '@/components/ui/SectionHeader'
+import { getDev, getFoundations } from '@/lib/skills'
+import { useLanguage } from '@/lib/i18n/context'
 
 export default function Skills() {
+  const { locale, t } = useLanguage()
+  const dev = getDev(locale)
+  const foundations = getFoundations(locale)
+
   return (
     <section id="skills" aria-labelledby="skills-heading" className="border-b border-border">
-      <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-        <h2
-          id="skills-heading"
-          className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
-        >
-          <span aria-hidden="true" className="text-coral mr-2">
-            {"//"}
-          </span>
-          Lo que hago
-        </h2>
-        <span aria-hidden="true" className="font-bebas text-[13px] text-muted tracking-[0.1em]">
-          02
-        </span>
-      </div>
+      <SectionHeader id="skills-heading" title={t.skills.title} number="02" />
 
       {/* Row 1: Desarrollo — 2 cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">

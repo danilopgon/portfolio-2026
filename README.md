@@ -68,3 +68,12 @@ src/
     ├── rate-limit.ts
     └── schemas/contact.ts      # schema Zod compartido
 ```
+
+## About this project
+
+Personal portfolio built by **Dani López González** ([@danilopgon](https://github.com/danilopgon)), frontend developer based in Cuenca, Spain.
+
+Designed with a brutalist aesthetic and built without component libraries — every element is intentional. The project demonstrates production-grade frontend architecture: typed forms with Zod + React Hook Form, scroll-driven animations with GSAP, accessible UI primitives via Radix, and transactional email via Resend and React Email.
+
+Stack: Next.js · TypeScript · Tailwind CSS · GSAP  
+Live: [danilopgon.com](https://danilopgon.com)

@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
       'Implementación y mantenimiento de pipelines CI/CD en Azure DevOps con entregas estables y sin regresiones',
       'Optimización de arquitectura frontend y mantenimiento de librerías internas en Angular',
     ],
-    stack: ['Angular', 'TypeScript', '.NET', 'Azure DevOps', 'Jest'],
+    stack: ['Angular', 'React', 'TypeScript', '.NET', 'Azure DevOps', 'Jest'],
   },
   {
     slug: 'dewedd',

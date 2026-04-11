@@ -1,16 +1,5 @@
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
-
-const stack = [
-  'TypeScript',
-  'Angular',
-  'React',
-  'Next.js',
-  'Node.js',
-  '.NET',
-  'UX/UI',
-  'Figma',
-  'GSAP',
-]
+import { stack } from '@/lib/about'
 
 export default function About() {
   return (
@@ -21,7 +10,7 @@ export default function About() {
           className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal"
         >
           <span aria-hidden="true" className="text-coral mr-2">
-            {"//"}
+            {'//'}
           </span>
           Sobre mí
         </h2>
@@ -35,7 +24,7 @@ export default function About() {
             Estudié periodismo y trabajé en{' '}
             <strong className="text-cream font-medium">medios digitales</strong>. El máster en
             narrativa transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso,
-            sin buscarlo demasiado, fue lo que me llevó a la programación.
+            sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.
           </p>
           <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
             Trabajo principalmente en <strong className="text-cream font-medium">frontend</strong>{' '}

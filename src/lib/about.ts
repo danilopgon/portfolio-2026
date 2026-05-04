@@ -4,7 +4,7 @@ export const stack = [
   'React',
   'Next.js',
   'Node.js',
-  '.NET',
+  'Python',
   'UX/UI',
   'Figma',
   'GSAP',

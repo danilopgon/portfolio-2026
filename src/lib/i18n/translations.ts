@@ -5,7 +5,7 @@ export const translations = {
     skipLink: 'Saltar al contenido',
     nav: {
       about: 'Sobre mí',
-      skills: 'Servicios',
+      skills: 'Cómo trabajo',
       projects: 'Trabajo',
       experience: 'Experiencia',
       contact: 'Contacto',
@@ -18,11 +18,11 @@ export const translations = {
       langLabel: 'Switch to English',
     },
     hero: {
-      label: 'Frontend Developer',
-      taglineBefore: 'Construyo interfaces donde ',
-      taglineHighlight: 'diseño y arquitectura',
+      label: 'Desarrollador Full-Stack',
+      taglineBefore: 'Construyo sistemas donde ',
+      taglineHighlight: 'la arquitectura y la experiencia',
       taglineAfter:
-        ' no se negocian por separado. Código que no solo funciona, cuenta una historia.',
+        ' se diseñan juntas. Del contrato de API al detalle de interacción, código con propósito.',
       cta1: 'Ver trabajo',
       cta2: 'Hablemos',
     },
@@ -32,20 +32,21 @@ export const translations = {
       p1Highlight: 'medios digitales',
       p1After:
         '. El máster en narrativa transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso, sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.',
-      p2Before: 'Trabajo principalmente en ',
-      p2Highlight: 'frontend',
+      p2Before:
+        'Trabajo en el stack completo: React, Next.js y Angular en frontend, NestJS y FastAPI en backend. ',
+      p2Highlight: 'El frontend es donde más afilado estoy',
       p2After:
-        ' con Angular, React y Next.js, y en backend con soltura. Me importa que el código sea claro, que la interfaz responda a quien la usa y que el resultado tenga coherencia de principio a fin.',
-      p3Before: 'Con más de dos años de experiencia, trabajo como mid-level en ',
+        ', pero los productos reales necesitan a alguien que pueda moverse entre capas sin perder el hilo. Me encargo de que lo que se diseña realmente se construya, y de que lo que se construye tenga sentido usarlo.',
+      p3Before: 'En ',
       p3Highlight: 'Servinet',
       p3After:
-        ', en Cuenca, en proyectos que me piden crecer, con la mirada puesta en arquitectura y decisiones técnicas de mayor alcance.',
+        ' trabajo en productos que abarcan arquitectura frontend, mantenimiento de librerías Angular, integraciones de backend y pipelines de CI/CD. También uso la IA como herramienta práctica, no como atajo, sino como forma de resolver problemas más difíciles con menos fricción.',
       stack: 'Stack técnico',
       directContact: 'Contacto directo',
       newTab: 'abre en nueva pestaña',
     },
     skills: {
-      title: 'Lo que hago',
+      title: 'Cómo trabajo',
     },
     projects: {
       title: 'Trabajo seleccionado',
@@ -93,7 +94,7 @@ export const translations = {
     skipLink: 'Skip to content',
     nav: {
       about: 'About',
-      skills: 'Services',
+      skills: 'How I work',
       projects: 'Work',
       experience: 'Experience',
       contact: 'Contact',
@@ -106,10 +107,10 @@ export const translations = {
       langLabel: 'Cambiar a Español',
     },
     hero: {
-      label: 'Frontend Developer',
-      taglineBefore: 'I build interfaces where ',
-      taglineHighlight: 'design and architecture',
-      taglineAfter: " aren't negotiated separately. Code that doesn't just work, tells a story.",
+      label: 'Full-Stack Developer',
+      taglineBefore: 'I build systems where ',
+      taglineHighlight: 'architecture and experience',
+      taglineAfter: ' are designed together. From the API contract to the interaction detail, code with purpose.',
       cta1: 'See work',
       cta2: "Let's talk",
     },
@@ -119,20 +120,21 @@ export const translations = {
       p1Highlight: 'digital media',
       p1After:
         ". My master's in transmedia narrative is where I learned to think about structure, flow, and purpose. That, without looking too hard for it, is what later led me to programming.",
-      p2Before: 'I work mainly in ',
-      p2Highlight: 'frontend',
+      p2Before:
+        'I work across the full stack: React, Next.js and Angular on the frontend, NestJS and FastAPI on the backend. ',
+      p2Highlight: "Frontend is where I'm sharpest",
       p2After:
-        ' with Angular, React and Next.js, and in backend with ease. I care about code being clear, the interface responding to whoever uses it, and the result being coherent from start to finish.',
-      p3Before: 'With more than two years of experience, I work as a mid-level developer at ',
+        ', but real products need someone who can move between layers without losing context. I make sure what gets designed actually gets built, and what gets built actually makes sense to use.',
+      p3Before: 'At ',
       p3Highlight: 'Servinet',
       p3After:
-        ', based in Cuenca, Spain, on projects that push me to grow, with my sights set on architecture and broader technical decisions.',
+        ' I work on products that span frontend architecture, Angular library maintenance, backend integrations and CI/CD pipelines. I also use AI as a practical tool, not as a shortcut, but as a way to solve harder problems with less overhead.',
       stack: 'Tech stack',
       directContact: 'Direct contact',
       newTab: 'opens in new tab',
     },
     skills: {
-      title: 'What I do',
+      title: 'How I work',
     },
     projects: {
       title: 'Selected work',

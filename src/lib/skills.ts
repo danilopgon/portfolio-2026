@@ -11,24 +11,24 @@ const devData: Record<Locale, Skill[]> = {
     {
       n: '01',
       name: 'Front-end',
-      desc: 'La interfaz es el producto. Construyo componentes que escalan, se comportan bien bajo presión y transmiten intención en cada detalle.',
+      desc: 'La interfaz es el producto. Construyo componentes que escalan, se mantienen accesibles y transmiten intención en cada detalle. Desde la fase de diseño hasta los casos límite.',
     },
     {
       n: '02',
       name: 'Back-end',
-      desc: 'De la base de datos al deploy con criterio. APIs sólidas, infraestructura que no da sorpresas y datos modelados con la vista puesta en el producto.',
+      desc: 'Del modelo de datos al deploy. APIs sólidas, contratos tipados entre capas e infraestructura que se puede razonar. Las decisiones de backend se toman con el frontend en mente, no después.',
     },
   ],
   en: [
     {
       n: '01',
       name: 'Front-end',
-      desc: 'The interface is the product. I build components that scale, hold up under pressure and convey intention in every detail.',
+      desc: 'The interface is the product. I build components that scale, stay accessible and convey intention in every detail. From the design stage through the edge cases.',
     },
     {
       n: '02',
       name: 'Back-end',
-      desc: 'From database to deploy with purpose. Solid APIs, infrastructure that never surprises and data modelled with the product in mind.',
+      desc: 'From data model to deploy. Solid APIs, typed contracts between layers and infrastructure you can reason about. Backend decisions made with the frontend in mind, not after the fact.',
     },
   ],
 }
@@ -42,13 +42,13 @@ const foundationsData: Record<Locale, Skill[]> = {
     },
     {
       n: '04',
-      name: 'Narrativa digital',
-      desc: 'Antes de programar, producía contenido. Esa mirada periodística es lo que convierte un producto funcional en uno que la gente recuerda.',
+      name: 'Pensamiento de producto',
+      desc: 'Antes de programar, era periodista. Eso marca cómo me acerco a los productos: quién los usa, qué intenta hacer y qué se lo impide. Que algo funcione no basta si nadie lo entiende.',
     },
     {
       n: '05',
       name: 'IA aplicada',
-      desc: 'Spec Driven Development, RAG y pipelines de IA como parte del flujo de desarrollo. Diseño de sistemas donde la inteligencia artificial amplifica la ingeniería, no la sustituye.',
+      desc: 'Uso la IA donde se gana su sitio: generación de specs, revisión de código con contexto y pipelines que reducen el trabajo repetitivo. Spec-Driven Development como práctica, no como palabra de moda. IA que mejora la ingeniería, no que la reemplaza.',
     },
   ],
   en: [
@@ -59,13 +59,13 @@ const foundationsData: Record<Locale, Skill[]> = {
     },
     {
       n: '04',
-      name: 'Digital narrative',
-      desc: 'Before programming, I produced content. That journalistic eye is what turns a functional product into one people remember.',
+      name: 'Product thinking',
+      desc: "Before programming, I was a journalist. That background shapes how I approach products: who uses it, what they're trying to do, and what gets in the way. Functional isn't enough if nobody understands it.",
     },
     {
       n: '05',
       name: 'Applied AI',
-      desc: 'I focus on Spec-Driven Development and AI pipelines, designing systems where artificial intelligence amplifies engineering instead of replacing it.',
+      desc: 'I use AI where it earns its place: spec generation, context-aware code review and pipelines that reduce repetitive overhead. Spec-Driven Development as a practice, not a buzzword. AI that makes the engineering better, not optional.',
     },
   ],
 }

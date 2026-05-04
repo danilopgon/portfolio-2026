@@ -1,7 +1,7 @@
 # Portfolio — Dani López González
 
-> Interfaces donde diseño y arquitectura no se negocian por separado.  
-> Código que no solo funciona, cuenta una historia.
+> Sistemas donde la arquitectura y la experiencia se diseñan juntas.  
+> Del contrato de API al detalle de interacción, código con propósito.
 
 ![Preview del portfolio](public/images/preview.png)
 
@@ -71,9 +71,9 @@ src/
 
 ## About this project
 
-Personal portfolio built by **Dani López González** ([@danilopgon](https://github.com/danilopgon)), frontend developer based in Cuenca, Spain.
+Personal portfolio built by **Dani López González** ([@danilopgon](https://github.com/danilopgon)), full-stack developer based in Cuenca, Spain.
 
-Designed with a brutalist aesthetic and built without component libraries — every element is intentional. The project demonstrates production-grade frontend architecture: typed forms with Zod + React Hook Form, scroll-driven animations with GSAP, accessible UI primitives via Radix, and transactional email via Resend and React Email.
+Designed with a brutalist aesthetic and built without component libraries — every element is intentional. The project demonstrates production-grade full-stack architecture: typed forms with Zod + React Hook Form, scroll-driven animations with GSAP, accessible UI primitives via Radix, and transactional email via Resend and React Email.
 
 Stack: Next.js · TypeScript · Tailwind CSS · GSAP  
 Live: [danilopgon.com](https://danilopgon.com)

@@ -51,7 +51,7 @@ export default function EnlacesPage() {
           <h1 className="font-bebas text-[40px] tracking-[0.06em] text-cream leading-none">
             Dani López González
           </h1>
-          <p className="text-[15px] text-muted mt-2 tracking-[0.05em]">Frontend Developer</p>
+          <p className="text-[15px] text-muted mt-2 tracking-[0.05em]">Full-Stack Developer</p>
         </div>
 
         {/* Links */}

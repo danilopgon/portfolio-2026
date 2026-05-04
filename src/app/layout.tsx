@@ -23,9 +23,9 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://danilopgon.com'),
-  title: 'Dani López González — Frontend Developer',
+  title: 'Dani López González — Full-Stack Developer',
   description:
-    'Frontend Developer based in Cuenca, Spain. TypeScript · Angular · React · Next.js · UX/UI · Node.js · .NET',
+    'Full-Stack Developer based in Cuenca, Spain. TypeScript · Angular · React · Next.js · Node.js · Python · UX/UI',
   alternates: {
     canonical: '/',
     languages: {
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'Dani López González — Frontend Developer',
+    title: 'Dani López González — Full-Stack Developer',
     description:
-      'Frontend Developer based in Cuenca, Spain. Interfaces where design and architecture are non-negotiable.',
+      'Full-Stack Developer based in Cuenca, Spain. Systems where architecture and experience are designed together.',
     url: 'https://danilopgon.com',
     siteName: 'Dani López González',
     locale: 'es_ES',
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dani López González — Frontend Developer',
+    title: 'Dani López González — Full-Stack Developer',
     description:
-      'Frontend Developer based in Cuenca, Spain. Interfaces where design and architecture are non-negotiable.',
+      'Full-Stack Developer based in Cuenca, Spain. Systems where architecture and experience are designed together.',
   },
 }
 
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Person',
               name: 'Dani López González',
               url: 'https://danilopgon.com',
-              jobTitle: 'Frontend Developer',
+              jobTitle: 'Full-Stack Developer',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Cuenca',

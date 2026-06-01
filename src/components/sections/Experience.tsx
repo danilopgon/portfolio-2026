@@ -77,7 +77,7 @@ export default function Experience() {
                     {/* Stack tags */}
                     <ul
                       aria-label={`${company} — ${t.experience.technologies}`}
-                      className="flex flex-wrap gap-1.5 pt-1"
+                      className="flex flex-wrap gap-1.5 pt-1 mt-auto"
                     >
                       {stack.map((tag) => (
                         <li

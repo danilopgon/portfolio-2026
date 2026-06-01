@@ -16,7 +16,7 @@ const devData: Record<Locale, Skill[]> = {
     {
       n: '02',
       name: 'Back-end',
-      desc: 'Del modelo de datos al deploy. APIs sólidas, contratos tipados entre capas e infraestructura que se puede razonar. Las decisiones de backend se toman con el frontend en mente, no después.',
+      desc: 'Del modelo de datos al deploy. APIs sólidas, contratos tipados entre capas e infraestructura solida. Las decisiones de backend se toman pensando en el producto, no a posteriori.',
     },
   ],
   en: [
@@ -28,7 +28,7 @@ const devData: Record<Locale, Skill[]> = {
     {
       n: '02',
       name: 'Back-end',
-      desc: 'From data model to deploy. Solid APIs, typed contracts between layers and infrastructure you can reason about. Backend decisions made with the frontend in mind, not after the fact.',
+      desc: 'From data model to deploy. Solid APIs, typed contracts between layers and infrastructure you can reason about. Backend decisions made with the product in mind, not as an afterthought.',
     },
   ],
 }

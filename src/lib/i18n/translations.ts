@@ -22,7 +22,7 @@ export const translations = {
       taglineBefore: 'Construyo sistemas donde ',
       taglineHighlight: 'la arquitectura y la experiencia',
       taglineAfter:
-        ' se diseñan juntas. Del contrato de API al detalle de interacción, código con propósito.',
+        ' se diseñan juntas. Del contrato de API al detalle de interacción: todo con un proposito.',
       cta1: 'Ver trabajo',
       cta2: 'Hablemos',
     },
@@ -31,16 +31,16 @@ export const translations = {
       p1Before: 'Estudié periodismo y trabajé en ',
       p1Highlight: 'medios digitales',
       p1After:
-        '. El máster en narrativa transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso, sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.',
+        '. El máster en documental transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso, sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.',
       p2Before:
         'Trabajo en el stack completo: React, Next.js y Angular en frontend, NestJS y FastAPI en backend. ',
-      p2Highlight: 'El frontend es donde más afilado estoy',
+      p2Highlight: 'El frontend es mi fuerte',
       p2After:
-        ', pero los productos reales necesitan a alguien que pueda moverse entre capas sin perder el hilo. Me encargo de que lo que se diseña realmente se construya, y de que lo que se construye tenga sentido usarlo.',
+        ', pero los productos reales necesitan a alguien que pueda moverse entre capas sin perder el hilo. Me encargo de que lo que se diseña realmente se construya, y de que lo que se construye tenga sentido en todo momento.',
       p3Before: 'En ',
       p3Highlight: 'Servinet',
       p3After:
-        ' trabajo en productos que abarcan arquitectura frontend, mantenimiento de librerías Angular, integraciones de backend y pipelines de CI/CD. También uso la IA como herramienta práctica, no como atajo, sino como forma de resolver problemas más difíciles con menos fricción.',
+        ' trabajo en productos que abarcan arquitectura frontend, mantenimiento de librerías Angular, arquitecturas complejas en backend y pipelines de CI/CD. También uso la IA como herramienta práctica, no como atajo, sino como forma de resolver problemas más difíciles de manera eficiente.',
       stack: 'Stack técnico',
       directContact: 'Contacto directo',
       newTab: 'abre en nueva pestaña',
@@ -119,7 +119,7 @@ export const translations = {
       p1Before: 'I studied journalism and worked in ',
       p1Highlight: 'digital media',
       p1After:
-        ". My master's in transmedia narrative is where I learned to think about structure, flow, and purpose. That, without looking too hard for it, is what later led me to programming.",
+        ". My master's in transmedia storytelling is where I learned to think about structure, flow, and purpose. That, without looking too hard for it, is what later led me to programming.",
       p2Before:
         'I work across the full stack: React, Next.js and Angular on the frontend, NestJS and FastAPI on the backend. ',
       p2Highlight: "Frontend is where I'm sharpest",
@@ -128,7 +128,7 @@ export const translations = {
       p3Before: 'At ',
       p3Highlight: 'Servinet',
       p3After:
-        ' I work on products that span frontend architecture, Angular library maintenance, backend integrations and CI/CD pipelines. I also use AI as a practical tool, not as a shortcut, but as a way to solve harder problems with less overhead.',
+        ' I work on products that span frontend architecture, Angular library maintenance, complex backend architectures and CI/CD pipelines. I also use AI as a practical tool, not as a shortcut, but as a way to solve harder problems with less overhead.',
       stack: 'Tech stack',
       directContact: 'Direct contact',
       newTab: 'opens in new tab',

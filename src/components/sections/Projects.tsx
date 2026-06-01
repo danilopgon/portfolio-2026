@@ -77,7 +77,7 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.012)_20px,rgba(255,255,255,0.012)_21px)]" />
                   {/* hover line */}
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-coral scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
-                  <span className="absolute top-4 left-4 text-[12px] tracking-[0.2em] uppercase text-white/40 z-10">
+                  <span className="absolute top-4 left-4 text-[12px] tracking-[0.2em] uppercase text-white/65 z-10">
                     {year}
                   </span>
                 </div>

@@ -40,7 +40,7 @@ export default function Experience() {
                     className={`px-6 md:px-8 py-6 md:py-8 flex flex-col gap-3 ${i === 0 ? 'border-b md:border-b-0 md:border-r border-border' : ''}`}
                   >
                     {/* Filename separator — decorative */}
-                    <div aria-hidden="true" className="text-[12px] text-border select-none">
+                    <div aria-hidden="true" className="text-[12px] text-[var(--dim)] select-none">
                       --- {filename}
                     </div>
 
@@ -66,7 +66,7 @@ export default function Experience() {
                     >
                       {description.map((line) => (
                         <li key={line} className="text-[13px] text-[var(--dim)] flex gap-2">
-                          <span aria-hidden="true" className="text-border select-none shrink-0">
+                          <span aria-hidden="true" className="text-[var(--dim)] select-none shrink-0">
                             {'>'}
                           </span>
                           <span>{line}</span>

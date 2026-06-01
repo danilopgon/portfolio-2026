@@ -1,7 +1,7 @@
 # Portfolio — Dani López González
 
-> Sistemas donde la arquitectura y la experiencia se diseñan juntas.  
-> Del contrato de API al detalle de interacción, código con propósito.
+> Construyo sistemas donde la arquitectura y la experiencia se diseñan juntas.
+> Del contrato de API al detalle de interacción: todo con un proposito.o.
 
 ![Preview del portfolio](public/images/preview.png)
 

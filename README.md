@@ -1,7 +1,7 @@
 # Portfolio — Dani López González
 
 > Full Stack Product Engineer | AI-powered products.
-> Sistemas donde la arquitectura, la experiencia y la IA útil se diseñan juntas.
+> Sistemas donde la arquitectura y la experiencia se diseñan juntas.
 
 ![Preview del portfolio](public/images/preview.png)
 

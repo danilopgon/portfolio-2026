@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Enlaces — Dani López González',
-  description: 'GitHub, LinkedIn, Instagram, Spotify y más.',
+  description: 'Portfolio, GitHub, LinkedIn y otros enlaces de Dani López González.',
   alternates: {
     canonical: '/enlaces',
   },
@@ -51,7 +51,7 @@ export default function EnlacesPage() {
           <h1 className="font-bebas text-[40px] tracking-[0.06em] text-cream leading-none">
             Dani López González
           </h1>
-          <p className="text-[15px] text-muted mt-2 tracking-[0.05em]">Full-Stack Developer</p>
+          <p className="text-[15px] text-muted mt-2 tracking-[0.05em]">Full Stack Product Engineer</p>
         </div>
 
         {/* Links */}

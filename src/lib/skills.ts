@@ -11,24 +11,24 @@ const devData: Record<Locale, Skill[]> = {
     {
       n: '01',
       name: 'Front-end',
-      desc: 'La interfaz es el producto. Construyo componentes que escalan, se mantienen accesibles y transmiten intención en cada detalle. Desde la fase de diseño hasta los casos límite.',
+      desc: 'La interfaz es el producto. Construyo frontends con Angular, React/Next.js y TypeScript que escalan, se mantienen accesibles y respetan la intención del diseño hasta producción.',
     },
     {
       n: '02',
       name: 'Back-end',
-      desc: 'Del modelo de datos al deploy. APIs sólidas, contratos tipados entre capas e infraestructura solida. Las decisiones de backend se toman pensando en el producto, no a posteriori.',
+      desc: 'Del modelo de datos al deploy. Diseño APIs, contratos entre capas e infraestructura con Node.js y Python/FastAPI. Las decisiones de backend se toman pensando en el producto, no a posteriori.',
     },
   ],
   en: [
     {
       n: '01',
       name: 'Front-end',
-      desc: 'The interface is the product. I build components that scale, stay accessible and convey intention in every detail. From the design stage through the edge cases.',
+      desc: 'The interface is the product. I build frontends with Angular, React/Next.js and TypeScript that scale, stay accessible and carry design intent into production.',
     },
     {
       n: '02',
       name: 'Back-end',
-      desc: 'From data model to deploy. Solid APIs, typed contracts between layers and infrastructure you can reason about. Backend decisions made with the product in mind, not as an afterthought.',
+      desc: 'From data model to deploy. I design APIs, layer contracts and infrastructure with Node.js and Python/FastAPI. Backend decisions made with the product in mind, not as an afterthought.',
     },
   ],
 }
@@ -48,7 +48,7 @@ const foundationsData: Record<Locale, Skill[]> = {
     {
       n: '05',
       name: 'IA aplicada',
-      desc: 'Uso la IA donde se gana su sitio: generación de specs, revisión de código con contexto y pipelines que reducen el trabajo repetitivo. Spec-Driven Development como práctica, no como palabra de moda. IA que mejora la ingeniería, no que la reemplaza.',
+      desc: 'Uso la IA donde se gana su sitio: revisión con contexto, automatización de criterio repetible y flujos human-in-the-loop. IA que mejora la ingeniería y reduce trabajo repetitivo, no que reemplaza criterio técnico.',
     },
   ],
   en: [
@@ -65,7 +65,7 @@ const foundationsData: Record<Locale, Skill[]> = {
     {
       n: '05',
       name: 'Applied AI',
-      desc: 'I use AI where it earns its place: spec generation, context-aware code review and pipelines that reduce repetitive overhead. Spec-Driven Development as a practice, not a buzzword. AI that makes the engineering better, not optional.',
+      desc: 'I use AI where it earns its place: context-aware review, repeatable judgment automation and human-in-the-loop flows. AI that improves engineering and reduces repetitive overhead, not technical judgment.',
     },
   ],
 }

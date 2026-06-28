@@ -18,11 +18,11 @@ export const translations = {
       langLabel: 'Switch to English',
     },
     hero: {
-      label: 'Desarrollador Full-Stack',
+      label: 'Full Stack Product Engineer | productos con IA',
       taglineBefore: 'Construyo sistemas donde ',
       taglineHighlight: 'la arquitectura y la experiencia',
       taglineAfter:
-        ' se diseñan juntas. Del contrato de API al detalle de interacción: todo con un proposito.',
+        ' se diseñan juntas. Del contrato de API al detalle de interacción: todo con propósito.',
       cta1: 'Ver trabajo',
       cta2: 'Hablemos',
     },
@@ -33,14 +33,14 @@ export const translations = {
       p1After:
         '. El máster en documental transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso, sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.',
       p2Before:
-        'Trabajo en el stack completo: React, Next.js y Angular en frontend, NestJS y FastAPI en backend. ',
+        'Trabajo en el stack completo: React, Next.js, Angular y TypeScript en frontend; Node.js y Python/FastAPI en backend. ',
       p2Highlight: 'El frontend es mi fuerte',
       p2After:
-        ', pero los productos reales necesitan a alguien que pueda moverse entre capas sin perder el hilo. Me encargo de que lo que se diseña realmente se construya, y de que lo que se construye tenga sentido en todo momento.',
+        ', pero los productos reales necesitan a alguien que pueda moverse entre capas sin perder el hilo. Construyo software mantenible, accesible y preparado para integrar IA cuando aporta valor real.',
       p3Before: 'En ',
       p3Highlight: 'Servinet',
       p3After:
-        ' trabajo en productos que abarcan arquitectura frontend, mantenimiento de librerías Angular, arquitecturas complejas en backend y pipelines de CI/CD. También uso la IA como herramienta práctica, no como atajo, sino como forma de resolver problemas más difíciles de manera eficiente.',
+        ' trabajo en productos que abarcan frontend con Angular y React, backend con .NET y Python/FastAPI, pipelines CI/CD y tooling interno. También aplico IA para convertir contexto, criterios y procesos repetitivos en herramientas útiles para el equipo: herramienta práctica, no atajo.',
       stack: 'Stack técnico',
       directContact: 'Contacto directo',
       newTab: 'abre en nueva pestaña',
@@ -107,7 +107,7 @@ export const translations = {
       langLabel: 'Cambiar a Español',
     },
     hero: {
-      label: 'Full-Stack Developer',
+      label: 'Full Stack Product Engineer | AI-powered products',
       taglineBefore: 'I build systems where ',
       taglineHighlight: 'architecture and experience',
       taglineAfter: ' are designed together. From the API contract to the interaction detail, code with purpose.',
@@ -121,14 +121,14 @@ export const translations = {
       p1After:
         ". My master's in transmedia storytelling is where I learned to think about structure, flow, and purpose. That, without looking too hard for it, is what later led me to programming.",
       p2Before:
-        'I work across the full stack: React, Next.js and Angular on the frontend, NestJS and FastAPI on the backend. ',
+        'I work across the full stack: React, Next.js, Angular and TypeScript on the frontend; Node.js and Python/FastAPI on the backend. ',
       p2Highlight: "Frontend is where I'm sharpest",
       p2After:
-        ', but real products need someone who can move between layers without losing context. I make sure what gets designed actually gets built, and what gets built actually makes sense to use.',
+        ', but real products need someone who can move between layers without losing context. I build maintainable, accessible software that brings AI in only where it adds real value.',
       p3Before: 'At ',
       p3Highlight: 'Servinet',
       p3After:
-        ' I work on products that span frontend architecture, Angular library maintenance, complex backend architectures and CI/CD pipelines. I also use AI as a practical tool, not as a shortcut, but as a way to solve harder problems with less overhead.',
+        ' I work on products that span Angular and React frontend, .NET and Python/FastAPI backend, CI/CD pipelines and internal tooling. I also apply AI to turn context, criteria and repetitive processes into useful team tools: a practical tool, not a shortcut.',
       stack: 'Tech stack',
       directContact: 'Direct contact',
       newTab: 'opens in new tab',

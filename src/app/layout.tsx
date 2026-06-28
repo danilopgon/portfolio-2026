@@ -23,9 +23,9 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://danilopgon.com'),
-  title: 'Dani López González — Full-Stack Developer',
+  title: 'Dani López González — Full Stack Product Engineer',
   description:
-    'Full-Stack Developer based in Cuenca, Spain. TypeScript · Angular · React · Next.js · Node.js · Python · UX/UI',
+    'Full Stack Product Engineer based in Cuenca, Spain. React · Next.js · Angular · TypeScript · Node.js · Python/FastAPI · AI-powered products',
   alternates: {
     canonical: '/',
     languages: {
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'Dani López González — Full-Stack Developer',
+    title: 'Dani López González — Full Stack Product Engineer',
     description:
-      'Full-Stack Developer based in Cuenca, Spain. Systems where architecture and experience are designed together.',
+      'Full Stack Product Engineer building AI-powered products where architecture and experience are designed together.',
     url: 'https://danilopgon.com',
     siteName: 'Dani López González',
     locale: 'es_ES',
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dani López González — Full-Stack Developer',
+    title: 'Dani López González — Full Stack Product Engineer',
     description:
-      'Full-Stack Developer based in Cuenca, Spain. Systems where architecture and experience are designed together.',
+      'Full Stack Product Engineer building AI-powered products where architecture and experience are designed together.',
   },
 }
 
@@ -66,7 +66,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Person',
               name: 'Dani López González',
               url: 'https://danilopgon.com',
-              jobTitle: 'Full-Stack Developer',
+              jobTitle: 'Full Stack Product Engineer',
+              description:
+                'Full Stack Product Engineer focused on React, Next.js, Angular, TypeScript, Node.js, Python/FastAPI and AI-powered products.',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Cuenca',

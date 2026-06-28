@@ -1,11 +1,9 @@
 export const stack = [
-  'TypeScript',
-  'Angular',
   'React',
   'Next.js',
+  'TypeScript',
   'Node.js',
   'Python',
-  'UX/UI',
-  'Figma',
-  'GSAP',
+  'FastAPI',
+  'Angular',
 ]

@@ -18,7 +18,7 @@ export const translations = {
       langLabel: 'Switch to English',
     },
     hero: {
-      label: 'Full Stack Product Engineer | productos con IA',
+      label: 'Full Stack Product Engineer',
       taglineBefore: 'Construyo sistemas donde ',
       taglineHighlight: 'la arquitectura y la experiencia',
       taglineAfter:
@@ -107,7 +107,7 @@ export const translations = {
       langLabel: 'Cambiar a Español',
     },
     hero: {
-      label: 'Full Stack Product Engineer | AI-powered products',
+      label: 'Full Stack Product Engineer',
       taglineBefore: 'I build systems where ',
       taglineHighlight: 'architecture and experience',
       taglineAfter: ' are designed together. From the API contract to the interaction detail, code with purpose.',

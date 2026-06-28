@@ -1,6 +1,7 @@
 # Portfolio — Dani López González
 
 > Full Stack Product Engineer | AI-powered products.
+> 
 > Sistemas donde la arquitectura y la experiencia se diseñan juntas.
 
 ![Preview del portfolio](public/images/preview.png)
@@ -73,7 +74,7 @@ src/
 
 Personal portfolio built by **Dani López González** ([@danilopgon](https://github.com/danilopgon)), Full Stack Product Engineer based in Cuenca, Spain.
 
-Designed with a brutalist aesthetic and built without component libraries — every element is intentional. The project presents work across React, Next.js, Angular, TypeScript, Node.js, Python/FastAPI and applied AI tooling, while the codebase demonstrates production-grade full-stack architecture: typed forms with Zod + React Hook Form, scroll-driven animations with GSAP, accessible UI primitives via Radix, and transactional email via Resend and React Email.
+Designed with a brutalist aesthetic and built without component libraries: every element is intentional. The project presents work across React, Next.js, Angular, TypeScript, Node.js, Python/FastAPI and applied AI tooling, while the codebase demonstrates production-grade full-stack architecture: typed forms with Zod + React Hook Form, scroll-driven animations with GSAP, accessible UI primitives via Radix, and transactional email via Resend and React Email.
 
 Stack: Next.js · TypeScript · Tailwind CSS · GSAP  
 Live: [danilopgon.com](https://danilopgon.com)

@@ -33,12 +33,17 @@ export default function Projects() {
       {/* Bento grid: columna grande izquierda + 2 apiladas derecha en desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {projects.map(({ slug, name, description, year, tags, gradient, image, url }, i) => {
-          const isLarge = i === 0
-          const borderCls = isLarge
-            ? 'border-b lg:border-b-0 lg:border-r border-border'
-            : i === 1
-              ? 'border-b border-border'
-              : ''
+          const isLeftCol = i % 2 === 0
+          const isTopRow = i < 2
+          const isLastMobile = i === projects.length - 1
+          const borderCls = [
+            'border-border',
+            !isLastMobile ? 'border-b' : '',
+            isTopRow ? 'lg:border-b' : 'lg:border-b-0',
+            isLeftCol ? 'lg:border-r' : '',
+          ]
+            .filter(Boolean)
+            .join(' ')
 
           const Wrapper = url ? 'a' : 'div'
           const wrapperProps = url
@@ -49,13 +54,11 @@ export default function Projects() {
             <RevealOnScroll
               key={slug}
               delay={i * 80}
-              className={`project-card group overflow-hidden flex flex-col ${borderCls} ${isLarge ? 'lg:row-span-2' : ''} ${url ? 'cursor-pointer' : 'cursor-default'}`}
+              className={`project-card group overflow-hidden flex flex-col ${borderCls} ${url ? 'cursor-pointer' : 'cursor-default'}`}
             >
               <Wrapper className="flex flex-col flex-1" {...wrapperProps}>
                 {/* Thumb */}
-                <div
-                  className={`relative overflow-hidden ${isLarge ? 'h-[320px] lg:flex-1 lg:min-h-[300px]' : 'h-[280px]'}`}
-                >
+                <div className="relative overflow-hidden h-[280px] lg:h-[300px]">
                   {image ? (
                     <Image
                       src={image}

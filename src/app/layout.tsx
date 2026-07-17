@@ -69,6 +69,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               jobTitle: 'Full Stack Product Engineer',
               description:
                 'Full Stack Product Engineer focused on React, Next.js, Angular, TypeScript, Node.js, Python/FastAPI and AI-powered products.',
+              knowsAbout: [
+                'Frontend development',
+                'Angular',
+                'React',
+                'Next.js',
+                'TypeScript',
+                'Full-stack development',
+                'Node.js',
+                'Python',
+                'FastAPI',
+                '.NET',
+                'AI workflows',
+                'Developer tooling',
+                'Web accessibility (WCAG)',
+              ],
+              knowsLanguage: ['Spanish', 'English'],
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Servinet Sistemas y Comunicación',
+              },
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Cuenca',

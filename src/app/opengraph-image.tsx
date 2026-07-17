@@ -41,7 +41,7 @@ export default async function OgImage() {
             fontFamily: 'sans-serif',
           }}
         >
-          Full Stack Product Engineer | AI-powered products
+          Full Stack Product Engineer
         </span>
       </div>
 

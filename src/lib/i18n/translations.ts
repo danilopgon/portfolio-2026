@@ -52,11 +52,6 @@ export const translations = {
       title: 'Trabajo seleccionado',
       ticker: 'PROYECTOS',
     },
-    projectModal: {
-      close: 'Cerrar',
-      process: 'Proceso',
-      visitSite: 'Visitar sitio',
-    },
     experience: {
       title: 'Experiencia',
       period: 'Periodo',
@@ -145,11 +140,6 @@ export const translations = {
     projects: {
       title: 'Selected work',
       ticker: 'PROJECTS',
-    },
-    projectModal: {
-      close: 'Close',
-      process: 'Process',
-      visitSite: 'Visit site',
     },
     experience: {
       title: 'Experience',

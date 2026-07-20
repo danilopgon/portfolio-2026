@@ -7,11 +7,12 @@ afterEach(() => {
 })
 
 describe('Projects', () => {
-  it('renders each project card as a Link into the project detail route, carrying a data-flip-id', () => {
+  it('renders each project card as a direct external link to project.url', () => {
     render(<Projects />)
 
     const link = screen.getByRole('link', { name: /Holy Seitan/ })
-    expect(link).toHaveAttribute('href', '/proyectos/holy-seitan')
-    expect(link).toHaveAttribute('data-flip-id', 'project-holy-seitan')
+    expect(link).toHaveAttribute('href', 'https://holy-seitan.danilopgon.com/')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
   })
 })

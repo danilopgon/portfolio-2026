@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 import SectionHeader from '@/components/ui/SectionHeader'
 import Ticker from '@/components/ui/Ticker'
@@ -33,7 +32,7 @@ export default function Projects() {
 
       {/* Bento grid: columna grande izquierda + 2 apiladas derecha en desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        {projects.map(({ slug, name, description, year, tags, gradient, image }, i) => {
+        {projects.map(({ slug, name, description, year, tags, gradient, image, url }, i) => {
           const isLeftCol = i % 2 === 0
           const isTopRow = i < 2
           const isLastMobile = i === projects.length - 1
@@ -46,17 +45,18 @@ export default function Projects() {
             .filter(Boolean)
             .join(' ')
 
+          const Wrapper = url ? 'a' : 'div'
+          const wrapperProps = url
+            ? { href: url, target: '_blank', rel: 'noopener noreferrer' }
+            : {}
+
           return (
             <RevealOnScroll
               key={slug}
               delay={i * 80}
-              className={`project-card group overflow-hidden flex flex-col ${borderCls} cursor-pointer`}
+              className={`project-card group overflow-hidden flex flex-col ${borderCls} ${url ? 'cursor-pointer' : 'cursor-default'}`}
             >
-              <Link
-                href={`/proyectos/${slug}`}
-                data-flip-id={`project-${slug}`}
-                className="flex flex-col flex-1"
-              >
+              <Wrapper className="flex flex-col flex-1" {...wrapperProps}>
                 {/* Thumb */}
                 <div className="relative overflow-hidden h-[280px] lg:h-[300px]">
                   {image ? (
@@ -104,14 +104,16 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  <span
-                    aria-hidden="true"
-                    className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4"
-                  >
-                    ↗
-                  </span>
+                  {url && (
+                    <span
+                      aria-hidden="true"
+                      className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4"
+                    >
+                      ↗
+                    </span>
+                  )}
                 </div>
-              </Link>
+              </Wrapper>
             </RevealOnScroll>
           )
         })}

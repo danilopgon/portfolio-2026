@@ -54,13 +54,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-  modal,
-}: {
-  children: React.ReactNode
-  modal: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${bebasNeue.variable} ${dmMono.variable}`}>
       <body>
@@ -112,7 +106,6 @@ export default function RootLayout({
           <main id="main-content">{children}</main>
           <Footer />
           <Toaster />
-          {modal}
         </LanguageProvider>
       </body>
     </html>

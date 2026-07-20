@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useLanguage } from '@/lib/i18n/context'
+import { dur, ease } from '@/lib/motion'
 export default function Navbar() {
   const { locale, setLocale, t } = useLanguage()
   const [active, setActive] = useState('')
@@ -60,23 +61,38 @@ export default function Navbar() {
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       if (open) {
         gsap.set(menu, { display: 'flex' })
-        gsap.fromTo(menu, { yPercent: -100 }, { yPercent: 0, duration: 0.35, ease: 'power3.out' })
-        gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'none' })
+        gsap.fromTo(
+          menu,
+          { yPercent: -100 },
+          { yPercent: 0, duration: dur.base.s, ease: ease.snap.gsap }
+        )
+        gsap.fromTo(
+          overlay,
+          { opacity: 0 },
+          { opacity: 1, duration: dur.snap.s, ease: ease.linear.gsap }
+        )
         gsap.fromTo(
           itemsRef.current,
           { opacity: 0, x: -12 },
-          { opacity: 1, x: 0, duration: 0.3, stagger: 0.06, ease: 'power2.out', delay: 0.1 }
+          {
+            opacity: 1,
+            x: 0,
+            duration: dur.snap.s,
+            stagger: 0.06,
+            ease: ease.snap.gsap,
+            delay: 0.1,
+          }
         )
       } else {
         gsap.to(menu, {
           yPercent: -100,
-          duration: 0.28,
-          ease: 'power3.in',
+          duration: dur.snap.s,
+          ease: ease.snap.gsap,
           onComplete: () => {
             gsap.set(menu, { display: 'none' })
           },
         })
-        gsap.to(overlay, { opacity: 0, duration: 0.2, ease: 'none' })
+        gsap.to(overlay, { opacity: 0, duration: dur.snap.s, ease: ease.linear.gsap })
       }
     })
 

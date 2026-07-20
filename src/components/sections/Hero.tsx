@@ -125,13 +125,16 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      data-motion={motionPending ? 'pending' : undefined}
       className="min-h-screen pt-11 flex flex-col justify-center relative overflow-hidden"
     >
-      {/* Grainy coral gradient — capa atmosférica independiente, anima a distinta velocidad que la foto */}
+      {/* Grainy coral gradient — capa atmosférica independiente, anima a distinta velocidad que la foto.
+          `data-motion` lives here (not on the section) because this element gets an
+          imperative `gsap.set(..., { opacity: 0 })` pre-hydration state and would
+          otherwise flash unstyled; it is never the LCP candidate. */}
       <svg
         ref={glowRef}
         aria-hidden="true"
+        data-motion={motionPending ? 'pending' : undefined}
         className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none"
         preserveAspectRatio="none"
       >
@@ -206,7 +209,14 @@ export default function Hero() {
         }}
       />
 
-      <div className="flex items-center relative z-10">
+      {/* Text-content wrapper: label, H1, description and CTAs all get an
+          imperative `gsap.set(..., { opacity: 0 })` pre-hydration state in
+          `full()`, so `data-motion` gates only this subtree — never the
+          section, and never the photo (the desktop LCP candidate). */}
+      <div
+        data-motion={motionPending ? 'pending' : undefined}
+        className="flex items-center relative z-10"
+      >
         <div className="flex flex-col justify-center flex-1 min-w-0 px-6 py-16 md:px-16 md:py-20">
           <div
             ref={labelRef}

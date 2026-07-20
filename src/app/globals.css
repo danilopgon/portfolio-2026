@@ -77,12 +77,16 @@ body {
 }
 
 /*
- * Hero entrance FOUC gate. The Hero SSRs `data-motion="pending"` and its
- * content is always in the markup; only *scripting-enabled* browsers hide it
- * pre-animation, so no-JS and pre-2023 browsers keep seeing the content
- * immediately. `prefers-reduced-motion: reduce` always wins and forces
- * visibility, since GSAP writes inline styles that this rule alone cannot
- * override once JS runs, but this prevents any flash before hydration.
+ * Hero entrance FOUC gate. The Hero SSRs `data-motion="pending"` only on the
+ * glow SVG and the text-content wrapper (the elements GSAP later sets to
+ * `opacity: 0` before animating in) — never on `#hero` itself, so the hero
+ * photo (the desktop LCP candidate) and the H1 (the mobile LCP candidate)
+ * are never hidden behind this gate. Content is always in the markup; only
+ * *scripting-enabled* browsers hide the gated elements pre-animation, so
+ * no-JS and pre-2023 browsers keep seeing the content immediately.
+ * `prefers-reduced-motion: reduce` always wins and forces visibility, since
+ * GSAP writes inline styles that this rule alone cannot override once JS
+ * runs, but this prevents any flash before hydration.
  */
 @media (scripting: enabled) {
   [data-motion='pending'] {

@@ -26,8 +26,7 @@ describe('Hero entrance', () => {
 
     const { container } = render(<Hero />)
 
-    const root = container.querySelector('#hero')
-    expect(root?.hasAttribute('data-motion')).toBe(false)
+    expect(container.querySelectorAll('[data-motion="pending"]').length).toBe(0)
   })
 
   it('removes the data-motion="pending" attribute after mount even with reduced motion', () => {
@@ -35,8 +34,31 @@ describe('Hero entrance', () => {
 
     const { container } = render(<Hero />)
 
-    const root = container.querySelector('#hero')
-    expect(root?.hasAttribute('data-motion')).toBe(false)
+    expect(container.querySelectorAll('[data-motion="pending"]').length).toBe(0)
+  })
+
+  it('never gates the hero photo behind the FOUC opacity gate (LCP-critical)', () => {
+    // renderToStaticMarkup reflects the pre-hydration state: the photo must
+    // be visible from first paint since it is the desktop LCP candidate.
+    const html = renderToStaticMarkup(<Hero />)
+    const dom = document.createElement('div')
+    dom.innerHTML = html
+
+    const img = dom.querySelector('img')
+    expect(img).not.toBeNull()
+    expect(img?.closest('[data-motion="pending"]')).toBeNull()
+  })
+
+  it('scopes data-motion="pending" to only the glow and text-content elements, never the section itself', () => {
+    const html = renderToStaticMarkup(<Hero />)
+    const dom = document.createElement('div')
+    dom.innerHTML = html
+
+    const section = dom.querySelector('#hero')
+    expect(section?.hasAttribute('data-motion')).toBe(false)
+
+    const gated = dom.querySelectorAll('[data-motion="pending"]')
+    expect(gated.length).toBeGreaterThan(0)
   })
 
   it('caps the H1 entrance duration at a short, LCP-safe value regardless of the editorial token retune', () => {

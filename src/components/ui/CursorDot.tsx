@@ -1,19 +1,29 @@
 'use client'
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useMotionMedia } from '@/lib/motion/useMotionMedia'
 
 export default function CursorDot() {
   const ref = useRef<HTMLDivElement>(null)
   // Seed a server-safe value so the first client render matches the SSR
-  // markup (the dot is always emitted). `useMotionMedia` runs after mount and
-  // flips this to `true` for reduced-motion users, unmounting the dot without
-  // a hydration mismatch.
+  // markup. useMotionMedia flips it after mount and on live OS preference
+  // changes, so the dot mounts/unmounts without a hydration mismatch.
   const [reduced, setReduced] = useState(false)
 
-  const full = useCallback(() => {
-    setReduced(false)
+  useMotionMedia(
+    useCallback(() => setReduced(false), []),
+    useCallback(() => setReduced(true), [])
+  )
 
+  // Attach pointer listeners from an effect keyed on `reduced` so that when the
+  // user turns reduced motion back off, the dot — remounted by the state change
+  // above — gets its listeners reattached instead of staying inert until reload.
+  useEffect(() => {
+    if (reduced) return
+    // Guard the first commit, where `reduced` is still the server-safe `false`
+    // before useMotionMedia has run: a reduced-motion user must never get
+    // listeners attached, even transiently.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     if (!window.matchMedia('(pointer: fine)').matches) return
 
     const dot = ref.current
@@ -58,11 +68,7 @@ export default function CursorDot() {
         el.removeEventListener('mouseleave', shrink)
       })
     }
-  }, [])
-
-  const reduce = useCallback(() => setReduced(true), [])
-
-  useMotionMedia(full, reduce)
+  }, [reduced])
 
   if (reduced) return null
 

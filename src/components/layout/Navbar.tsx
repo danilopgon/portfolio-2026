@@ -3,7 +3,14 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useLanguage } from '@/lib/i18n/context'
-import { dur, ease } from '@/lib/motion'
+import { ease } from '@/lib/motion'
+
+// The mobile menu is a direct-input tap response, not ambient motion, so it
+// intentionally does NOT consume `dur.base`/`dur.snap` (now 1.2s/0.9s under
+// the editorial retune) — it keeps its previous short timings locally.
+// See sdd/premium-motion-system/scope-decisions memory.
+const MENU_DURATION = { open: 0.4, snap: 0.25 }
+
 export default function Navbar() {
   const { locale, setLocale, t } = useLanguage()
   const [active, setActive] = useState('')
@@ -64,12 +71,12 @@ export default function Navbar() {
         gsap.fromTo(
           menu,
           { yPercent: -100 },
-          { yPercent: 0, duration: dur.base.s, ease: ease.snap.gsap }
+          { yPercent: 0, duration: MENU_DURATION.open, ease: ease.snap.gsap }
         )
         gsap.fromTo(
           overlay,
           { opacity: 0 },
-          { opacity: 1, duration: dur.snap.s, ease: ease.linear.gsap }
+          { opacity: 1, duration: MENU_DURATION.snap, ease: ease.linear.gsap }
         )
         gsap.fromTo(
           itemsRef.current,
@@ -77,7 +84,7 @@ export default function Navbar() {
           {
             opacity: 1,
             x: 0,
-            duration: dur.snap.s,
+            duration: MENU_DURATION.snap,
             stagger: 0.06,
             ease: ease.snap.gsap,
             delay: 0.1,
@@ -86,13 +93,13 @@ export default function Navbar() {
       } else {
         gsap.to(menu, {
           yPercent: -100,
-          duration: dur.snap.s,
+          duration: MENU_DURATION.snap,
           ease: ease.snap.gsap,
           onComplete: () => {
             gsap.set(menu, { display: 'none' })
           },
         })
-        gsap.to(overlay, { opacity: 0, duration: dur.snap.s, ease: ease.linear.gsap })
+        gsap.to(overlay, { opacity: 0, duration: MENU_DURATION.snap, ease: ease.linear.gsap })
       }
     })
 

@@ -3,13 +3,13 @@ import { dur, ease } from '../motion'
 
 describe('motion tokens', () => {
   it('exports duration tokens with s/ms shape', () => {
-    expect(dur.snap).toEqual({ s: 0.25, ms: 250 })
-    expect(dur.base).toEqual({ s: 0.4, ms: 400 })
-    expect(dur.slow).toEqual({ s: 0.6, ms: 600 })
+    expect(dur.snap).toEqual({ s: 0.9, ms: 900 })
+    expect(dur.base).toEqual({ s: 1.2, ms: 1200 })
+    expect(dur.slow).toEqual({ s: 1.8, ms: 1800 })
   })
 
   it('exports ease tokens with gsap/css shape', () => {
-    expect(ease.snap.gsap).toBe('power4.out')
+    expect(ease.snap.gsap).toBe('expo.out')
     expect(ease.punch.gsap).toBe('back.out(1.4)')
     expect(ease.linear.gsap).toBe('none')
     expect(typeof ease.snap.css).toBe('string')

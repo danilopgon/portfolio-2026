@@ -9,20 +9,26 @@
  * cubic-bezier approximation, since CSS cannot express GSAP's eases
  * directly).
  *
- * Art direction: Brutalist Swiss snap — hard cuts, no fades, no inertia.
+ * Art direction: Editorial, quiet and expensive — slow, contained motion,
+ * `expo.out` easing (long, no overshoot), subtle fades over hard cuts.
+ *
+ * Two latency-sensitive surfaces intentionally do NOT consume these tokens
+ * for duration: the Hero H1 entrance (mobile LCP element) and the Navbar
+ * mobile menu (direct-input tap response). Both keep short, locally-scoped
+ * duration constants — see `sdd/premium-motion-system/scope-decisions`.
  */
 
 export type MotionDuration = { s: number; ms: number }
 export type MotionEase = { gsap: string; css: string }
 
 export const dur: Record<'snap' | 'base' | 'slow', MotionDuration> = {
-  snap: { s: 0.25, ms: 250 },
-  base: { s: 0.4, ms: 400 },
-  slow: { s: 0.6, ms: 600 },
+  snap: { s: 0.9, ms: 900 },
+  base: { s: 1.2, ms: 1200 },
+  slow: { s: 1.8, ms: 1800 },
 }
 
 export const ease: Record<'snap' | 'punch' | 'linear', MotionEase> = {
-  snap: { gsap: 'power4.out', css: 'cubic-bezier(0.165, 0.84, 0.44, 1)' },
+  snap: { gsap: 'expo.out', css: 'cubic-bezier(0.16, 1, 0.3, 1)' },
   punch: { gsap: 'back.out(1.4)', css: 'cubic-bezier(0.34, 1.56, 0.64, 1)' },
   linear: { gsap: 'none', css: 'linear' },
 }

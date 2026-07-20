@@ -13,14 +13,18 @@ gsap.registerPlugin(ScrollTrigger)
 // The token set only covers short interaction/reveal timings; this ambient
 // entrance sequence and its slow atmospheric loop are intentionally longer.
 const HERO_EASE = {
-  entrance: 'power3.out',
+  entrance: ease.snap.gsap, // editorial primary ease (expo.out), shared timeline default
   photoParallaxEase: ease.linear.gsap, // exact match: gsap 'none'
   glowIn: 'power2.out',
   ambientPulse: 'sine.inOut',
 }
 const HERO_DURATION = {
+  // The H1 is the mobile LCP element (the photo is `hidden lg:block`), so it
+  // must stay short regardless of the editorial retune — it intentionally
+  // does NOT reference `dur.base` (now 1.2s). See scope-decisions memory.
+  h1: 0.4,
   label: 0.5,
-  desc: dur.slow.s, // exact match: 0.6s
+  desc: dur.slow.s, // intentionally uses the editorial ambient/slow tier now (1.8s)
   cta: 0.5,
   glowIn: 1.6,
   ambientPulse: 5,
@@ -48,10 +52,11 @@ export default function Hero() {
     const tl = gsap.timeline({ defaults: { ease: HERO_EASE.entrance } })
 
     // H1 (the mobile LCP element, since the photo is desktop-only) gets zero
-    // start delay and the token-capped `dur.base` (0.4s) duration.
+    // start delay and a short, locally-capped duration (0.4s) — it does not
+    // reference `dur.base`, which is now the slow editorial value (1.2s).
     tl.to(
       [daniRef.current, lopezRef.current],
-      { opacity: 1, y: 0, duration: dur.base.s, ease: ease.snap.gsap, stagger: 0.06 },
+      { opacity: 1, y: 0, duration: HERO_DURATION.h1, ease: ease.snap.gsap, stagger: 0.06 },
       0
     )
       .to(labelRef.current, { opacity: 1, y: 0, duration: HERO_DURATION.label }, 0)

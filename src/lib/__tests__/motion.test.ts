@@ -10,10 +10,8 @@ describe('motion tokens', () => {
 
   it('exports ease tokens with gsap/css shape', () => {
     expect(ease.snap.gsap).toBe('expo.out')
-    expect(ease.punch.gsap).toBe('back.out(1.4)')
     expect(ease.linear.gsap).toBe('none')
     expect(typeof ease.snap.css).toBe('string')
-    expect(typeof ease.punch.css).toBe('string')
     expect(typeof ease.linear.css).toBe('string')
   })
 })

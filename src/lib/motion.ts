@@ -27,8 +27,7 @@ export const dur: Record<'snap' | 'base' | 'slow', MotionDuration> = {
   slow: { s: 1.8, ms: 1800 },
 }
 
-export const ease: Record<'snap' | 'punch' | 'linear', MotionEase> = {
+export const ease: Record<'snap' | 'linear', MotionEase> = {
   snap: { gsap: 'expo.out', css: 'cubic-bezier(0.16, 1, 0.3, 1)' },
-  punch: { gsap: 'back.out(1.4)', css: 'cubic-bezier(0.34, 1.56, 0.64, 1)' },
   linear: { gsap: 'none', css: 'linear' },
 }

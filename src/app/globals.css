@@ -77,6 +77,26 @@ body {
   }
 }
 
+/*
+ * Hero entrance FOUC gate. The Hero SSRs `data-motion="pending"` and its
+ * content is always in the markup; only *scripting-enabled* browsers hide it
+ * pre-animation, so no-JS and pre-2023 browsers keep seeing the content
+ * immediately. `prefers-reduced-motion: reduce` always wins and forces
+ * visibility, since GSAP writes inline styles that this rule alone cannot
+ * override once JS runs, but this prevents any flash before hydration.
+ */
+@media (scripting: enabled) {
+  [data-motion='pending'] {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion='pending'] {
+    opacity: 1;
+  }
+}
+
 /* Sonner toast icon gap */
 [data-sonner-toast] [data-icon] {
   margin-right: 10px;

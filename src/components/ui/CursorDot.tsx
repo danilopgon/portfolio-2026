@@ -1,11 +1,29 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import { useMotionMedia } from '@/lib/motion/useMotionMedia'
 
 export default function CursorDot() {
   const ref = useRef<HTMLDivElement>(null)
+  // Seed a server-safe value so the first client render matches the SSR
+  // markup. useMotionMedia flips it after mount and on live OS preference
+  // changes, so the dot mounts/unmounts without a hydration mismatch.
+  const [reduced, setReduced] = useState(false)
 
+  useMotionMedia(
+    useCallback(() => setReduced(false), []),
+    useCallback(() => setReduced(true), [])
+  )
+
+  // Attach pointer listeners from an effect keyed on `reduced` so that when the
+  // user turns reduced motion back off, the dot — remounted by the state change
+  // above — gets its listeners reattached instead of staying inert until reload.
   useEffect(() => {
+    if (reduced) return
+    // Guard the first commit, where `reduced` is still the server-safe `false`
+    // before useMotionMedia has run: a reduced-motion user must never get
+    // listeners attached, even transiently.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     if (!window.matchMedia('(pointer: fine)').matches) return
 
     const dot = ref.current
@@ -21,7 +39,13 @@ export default function CursorDot() {
     }
 
     const grow = () => {
-      gsap.to(dot, { scale: 3, opacity: 0.4, duration: 0.15, ease: 'power2.out', overwrite: true })
+      gsap.to(dot, {
+        scale: 3,
+        opacity: 0.4,
+        duration: 0.15,
+        ease: 'power2.out',
+        overwrite: true,
+      })
     }
     const shrink = () => {
       gsap.to(dot, { scale: 1, opacity: 1, duration: 0.2, ease: 'power2.out', overwrite: true })
@@ -44,7 +68,9 @@ export default function CursorDot() {
         el.removeEventListener('mouseleave', shrink)
       })
     }
-  }, [])
+  }, [reduced])
+
+  if (reduced) return null
 
   return (
     <div

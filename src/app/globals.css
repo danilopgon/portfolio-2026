@@ -11,6 +11,14 @@
   --dim: #a0a0a0;
   --border: #2a2a28;
   --faint: #222220;
+
+  /* Motion tokens — single source of truth is src/lib/motion.ts.
+     GSAP consumes the .s/.gsap fields directly; CSS uses these vars. */
+  --dur-snap: 900ms;
+  --dur-base: 1200ms;
+  --dur-slow: 1800ms;
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-linear: linear;
 }
 
 *,
@@ -65,6 +73,30 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * Hero entrance FOUC gate. The Hero SSRs `data-motion="pending"` only on the
+ * glow SVG and the text-content wrapper (the elements GSAP later sets to
+ * `opacity: 0` before animating in) — never on `#hero` itself, so the hero
+ * photo (the desktop LCP candidate) and the H1 (the mobile LCP candidate)
+ * are never hidden behind this gate. Content is always in the markup; only
+ * *scripting-enabled* browsers hide the gated elements pre-animation, so
+ * no-JS and pre-2023 browsers keep seeing the content immediately.
+ * `prefers-reduced-motion: reduce` always wins and forces visibility, since
+ * GSAP writes inline styles that this rule alone cannot override once JS
+ * runs, but this prevents any flash before hydration.
+ */
+@media (scripting: enabled) {
+  [data-motion='pending'] {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion='pending'] {
+    opacity: 1;
   }
 }
 

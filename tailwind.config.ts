@@ -17,6 +17,16 @@ const config: Config = {
         bebas: ['var(--font-bebas)', 'sans-serif'],
         mono: ['var(--font-dm-mono)', 'monospace'],
       },
+      transitionDuration: {
+        snap: 'var(--dur-snap)',
+        base: 'var(--dur-base)',
+        slow: 'var(--dur-slow)',
+      },
+      transitionTimingFunction: {
+        snap: 'var(--ease-snap)',
+        punch: 'var(--ease-punch)',
+        linear: 'var(--ease-linear)',
+      },
     },
   },
   plugins: [],

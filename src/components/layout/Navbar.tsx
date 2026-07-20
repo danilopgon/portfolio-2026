@@ -3,6 +3,14 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useLanguage } from '@/lib/i18n/context'
+import { ease } from '@/lib/motion'
+
+// The mobile menu is a direct-input tap response, not ambient motion, so it
+// intentionally does NOT consume `dur.base`/`dur.snap` (now 1.2s/0.9s under
+// the editorial retune) — it keeps its previous short timings locally.
+// See sdd/premium-motion-system/scope-decisions memory.
+const MENU_DURATION = { open: 0.4, snap: 0.25 }
+
 export default function Navbar() {
   const { locale, setLocale, t } = useLanguage()
   const [active, setActive] = useState('')
@@ -60,23 +68,38 @@ export default function Navbar() {
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       if (open) {
         gsap.set(menu, { display: 'flex' })
-        gsap.fromTo(menu, { yPercent: -100 }, { yPercent: 0, duration: 0.35, ease: 'power3.out' })
-        gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'none' })
+        gsap.fromTo(
+          menu,
+          { yPercent: -100 },
+          { yPercent: 0, duration: MENU_DURATION.open, ease: ease.snap.gsap }
+        )
+        gsap.fromTo(
+          overlay,
+          { opacity: 0 },
+          { opacity: 1, duration: MENU_DURATION.snap, ease: ease.linear.gsap }
+        )
         gsap.fromTo(
           itemsRef.current,
           { opacity: 0, x: -12 },
-          { opacity: 1, x: 0, duration: 0.3, stagger: 0.06, ease: 'power2.out', delay: 0.1 }
+          {
+            opacity: 1,
+            x: 0,
+            duration: MENU_DURATION.snap,
+            stagger: 0.06,
+            ease: ease.snap.gsap,
+            delay: 0.1,
+          }
         )
       } else {
         gsap.to(menu, {
           yPercent: -100,
-          duration: 0.28,
-          ease: 'power3.in',
+          duration: MENU_DURATION.snap,
+          ease: ease.snap.gsap,
           onComplete: () => {
             gsap.set(menu, { display: 'none' })
           },
         })
-        gsap.to(overlay, { opacity: 0, duration: 0.2, ease: 'none' })
+        gsap.to(overlay, { opacity: 0, duration: MENU_DURATION.snap, ease: ease.linear.gsap })
       }
     })
 

@@ -1,15 +1,37 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '@/lib/i18n/context'
+import { dur, ease } from '@/lib/motion'
+import { useMotionMedia } from '@/lib/motion/useMotionMedia'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// Bespoke timings outside the 3-tier `dur`/`ease` token set (snap/base/slow).
+// The token set only covers short interaction/reveal timings; this ambient
+// entrance sequence and its slow atmospheric loop are intentionally longer.
+const HERO_EASE = {
+  entrance: ease.snap.gsap, // editorial primary ease (expo.out), shared timeline default
+  photoParallaxEase: ease.linear.gsap, // exact match: gsap 'none'
+  glowIn: 'power2.out',
+  ambientPulse: 'sine.inOut',
+}
+const HERO_DURATION = {
+  // The H1 is the mobile LCP element (the photo is `hidden lg:block`), so it
+  // must stay short regardless of the editorial retune — it intentionally
+  // does NOT reference `dur.base` (now 1.2s). See scope-decisions memory.
+  h1: 0.4,
+  label: 0.5,
+  desc: dur.slow.s, // intentionally uses the editorial ambient/slow tier now (1.8s)
+  cta: 0.5,
+  glowIn: 1.6,
+  ambientPulse: 5,
+}
+
 export default function Hero() {
   const { t } = useLanguage()
-  const photoRef = useRef<HTMLDivElement>(null)
   const imgInnerRef = useRef<HTMLDivElement>(null)
   const glowRef = useRef<SVGSVGElement>(null)
   const labelRef = useRef<HTMLDivElement>(null)
@@ -17,76 +39,87 @@ export default function Hero() {
   const lopezRef = useRef<HTMLSpanElement>(null)
   const descRef = useRef<HTMLParagraphElement>(null)
   const ctasRef = useRef<HTMLDivElement>(null)
+  const [motionPending, setMotionPending] = useState(true)
 
-  useEffect(() => {
+  const full = useCallback(() => {
+    setMotionPending(false)
+
     gsap.set(labelRef.current, { opacity: 0, y: 8 })
     gsap.set([daniRef.current, lopezRef.current], { opacity: 0, y: 20 })
     gsap.set([descRef.current, ctasRef.current], { opacity: 0, y: 10 })
-    gsap.set(photoRef.current, { opacity: 0, scale: 1.04 })
     gsap.set(glowRef.current, { opacity: 0, transformOrigin: '70% 38%' })
 
-    const mm = gsap.matchMedia()
+    const tl = gsap.timeline({ defaults: { ease: HERO_EASE.entrance } })
 
-    mm.add('(prefers-reduced-motion: no-preference)', () => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-
-      tl.to(labelRef.current, { opacity: 1, y: 0, duration: 0.5 }, 0.1)
-        .to(daniRef.current, { opacity: 1, y: 0, duration: 0.6 }, 0.4)
-        .to(lopezRef.current, { opacity: 1, y: 0, duration: 0.6 }, 0.55)
-        .to(descRef.current, { opacity: 1, y: 0, duration: 0.6 }, 0.9)
-        .to(ctasRef.current, { opacity: 1, y: 0, duration: 0.5 }, 1.1)
-        .to(photoRef.current, { opacity: 1, scale: 1, duration: 1.1, ease: 'power2.inOut' }, 0.3)
-        // Glow entra antes que la foto, más lento — sensación de que la luz precede a la persona
-        .to(glowRef.current, { opacity: 1, duration: 1.6, ease: 'power2.out' }, 0.1)
-
-      // Foto: parallax rápido
-      gsap.to(imgInnerRef.current, {
-        yPercent: -10,
-        scale: 1.2,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-        },
-      })
-
-      // Glow: parallax lento (mitad de velocidad) → la separación de capas crea profundidad real
-      gsap.to(glowRef.current, {
-        yPercent: -5,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1.5,
-        },
-      })
-
-      // Respiración ambient — el glow vive aunque no haya scroll
-      gsap.to(glowRef.current, {
-        scale: 1.1,
-        transformOrigin: '70% 38%',
-        duration: 5,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        delay: 1.8,
-      })
-    })
-
-    mm.add('(prefers-reduced-motion: reduce)', () => {
-      gsap.set(
-        [labelRef.current, daniRef.current, lopezRef.current, descRef.current, ctasRef.current],
-        { opacity: 1, y: 0 }
+    // H1 (the mobile LCP element, since the photo is desktop-only) gets zero
+    // start delay and a short, locally-capped duration (0.4s) — it does not
+    // reference `dur.base`, which is now the slow editorial value (1.2s).
+    tl.to(
+      [daniRef.current, lopezRef.current],
+      { opacity: 1, y: 0, duration: HERO_DURATION.h1, ease: ease.snap.gsap, stagger: 0.06 },
+      0
+    )
+      .to(labelRef.current, { opacity: 1, y: 0, duration: HERO_DURATION.label }, 0)
+      .to(descRef.current, { opacity: 1, y: 0, duration: HERO_DURATION.desc }, 0.5)
+      .to(ctasRef.current, { opacity: 1, y: 0, duration: HERO_DURATION.cta }, 0.7)
+      // Glow entra antes que la foto, más lento — sensación de que la luz precede a la persona
+      .to(
+        glowRef.current,
+        { opacity: 1, duration: HERO_DURATION.glowIn, ease: HERO_EASE.glowIn },
+        0
       )
-      gsap.set(photoRef.current, { opacity: 1, scale: 1 })
-      gsap.set(glowRef.current, { opacity: 1, scale: 1 })
+
+    // Photo is excluded from the entrance timeline entirely (desktop-only,
+    // `hidden lg:block`; static except for scroll parallax) so the mobile
+    // LCP path never waits on it.
+
+    // Foto: parallax rápido
+    gsap.to(imgInnerRef.current, {
+      yPercent: -10,
+      scale: 1.2,
+      ease: HERO_EASE.photoParallaxEase,
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
     })
 
-    return () => mm.revert()
+    // Glow: parallax lento (mitad de velocidad) → la separación de capas crea profundidad real
+    gsap.to(glowRef.current, {
+      yPercent: -5,
+      ease: HERO_EASE.photoParallaxEase,
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1.5,
+      },
+    })
+
+    // Respiración ambient — el glow vive aunque no haya scroll
+    gsap.to(glowRef.current, {
+      scale: 1.1,
+      transformOrigin: '70% 38%',
+      duration: HERO_DURATION.ambientPulse,
+      repeat: -1,
+      yoyo: true,
+      ease: HERO_EASE.ambientPulse,
+      delay: 1.8,
+    })
   }, [])
+
+  const reduced = useCallback(() => {
+    setMotionPending(false)
+    gsap.set(
+      [labelRef.current, daniRef.current, lopezRef.current, descRef.current, ctasRef.current],
+      { opacity: 1, y: 0 }
+    )
+    gsap.set(glowRef.current, { opacity: 1, scale: 1 })
+  }, [])
+
+  useMotionMedia(full, reduced)
 
   return (
     <section
@@ -94,10 +127,14 @@ export default function Hero() {
       aria-labelledby="hero-heading"
       className="min-h-screen pt-11 flex flex-col justify-center relative overflow-hidden"
     >
-      {/* Grainy coral gradient — capa atmosférica independiente, anima a distinta velocidad que la foto */}
+      {/* Grainy coral gradient — capa atmosférica independiente, anima a distinta velocidad que la foto.
+          `data-motion` lives here (not on the section) because this element gets an
+          imperative `gsap.set(..., { opacity: 0 })` pre-hydration state and would
+          otherwise flash unstyled; it is never the LCP candidate. */}
       <svg
         ref={glowRef}
         aria-hidden="true"
+        data-motion={motionPending ? 'pending' : undefined}
         className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none"
         preserveAspectRatio="none"
       >
@@ -130,11 +167,10 @@ export default function Hero() {
         <rect width="100%" height="100%" fill="url(#hero-glow)" filter="url(#hero-grain)" />
       </svg>
 
-      {/* Photo — outer clips, inner se mueve con parallax */}
-      <div
-        ref={photoRef}
-        className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%] xl:w-[52%] overflow-hidden"
-      >
+      {/* Photo — outer clips, inner se mueve con parallax. Static (no entrance
+          animation): on desktop it is the LCP candidate, so it must paint
+          immediately; only the inner layer gets the scroll-parallax tween. */}
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%] xl:w-[52%] overflow-hidden">
         <div ref={imgInnerRef} className="absolute left-0 right-0 top-0 bottom-[-35%]">
           <Image
             src="/images/foto-portfolio.webp"
@@ -173,7 +209,14 @@ export default function Hero() {
         }}
       />
 
-      <div className="flex items-center relative z-10">
+      {/* Text-content wrapper: label, H1, description and CTAs all get an
+          imperative `gsap.set(..., { opacity: 0 })` pre-hydration state in
+          `full()`, so `data-motion` gates only this subtree — never the
+          section, and never the photo (the desktop LCP candidate). */}
+      <div
+        data-motion={motionPending ? 'pending' : undefined}
+        className="flex items-center relative z-10"
+      >
         <div className="flex flex-col justify-center flex-1 min-w-0 px-6 py-16 md:px-16 md:py-20">
           <div
             ref={labelRef}

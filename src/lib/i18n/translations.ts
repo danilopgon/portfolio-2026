@@ -110,7 +110,8 @@ export const translations = {
       label: 'Full Stack Product Engineer',
       taglineBefore: 'I build systems where ',
       taglineHighlight: 'architecture and experience',
-      taglineAfter: ' are designed together. From the API contract to the interaction detail, code with purpose.',
+      taglineAfter:
+        ' are designed together. From the API contract to the interaction detail, code with purpose.',
       cta1: 'See work',
       cta2: "Let's talk",
     },

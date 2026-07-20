@@ -29,9 +29,16 @@ export function flipOpen(panel: HTMLElement, flipId: string): (() => void) | nul
   const state = Flip.getState(panel)
   gsap.set(cardEl, { opacity: 0 })
   Flip.fit(panel, cardEl, { duration: 0 })
-  Flip.to(state, { duration: dur.base.s, ease: ease.snap.gsap })
+  const tween = Flip.to(state, { duration: dur.base.s, ease: ease.snap.gsap })
 
   return () => {
+    // React 19 + Next.js reactStrictMode double-invokes this effect in dev
+    // (mount -> cleanup -> mount). Without killing the in-flight tween and
+    // clearing the panel's Flip-applied inline styles, a remount's
+    // `Flip.getState` captures a mid-tween intermediate size instead of the
+    // panel's natural layout, leaving it visually stuck.
+    tween.kill()
+    gsap.set(panel, { clearProps: 'all' })
     gsap.set(cardEl, { opacity: '' })
   }
 }

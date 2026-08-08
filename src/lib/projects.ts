@@ -55,7 +55,7 @@ const projectsData: Record<Locale, Project[]> = {
       tags: ['Angular', 'Nest', 'PrimeNG', 'GSAP'],
       gradient: 'from-[#1a3a20] to-[#3a3a10]',
       image: '/images/projects/dia-de-gachas.webp',
-      url: 'https://www.diadegachas.com/',
+      url: 'https://www.diadegachas.danilopgon.com/',
     },
   ],
   en: [
@@ -101,7 +101,7 @@ const projectsData: Record<Locale, Project[]> = {
       tags: ['Angular', 'Nest', 'PrimeNG', 'GSAP'],
       gradient: 'from-[#1a3a20] to-[#3a3a10]',
       image: '/images/projects/dia-de-gachas.webp',
-      url: 'https://www.diadegachas.com/',
+      url: 'https://www.diadegachas.danilopgon.com/',
     },
   ],
 }

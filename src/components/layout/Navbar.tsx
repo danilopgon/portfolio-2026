@@ -201,7 +201,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex items-stretch overflow-x-auto">
+        <div className="hidden xl:flex items-stretch overflow-x-auto">
           {links.map(({ href, label }) => (
             <Link
               key={href}
@@ -216,7 +216,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center ml-auto lg:ml-0">
+        <div className="flex items-center ml-auto xl:ml-0">
           {/* Disponible badge */}
           <div className="flex items-center gap-2 px-4 lg:px-5 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted shrink-0">
             <span
@@ -244,7 +244,7 @@ export default function Navbar() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 border-l border-border shrink-0 group"
+            className="xl:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 border-l border-border shrink-0 group"
           >
             <span
               className={`block w-4 h-px bg-cream transition-transform duration-200 origin-center ${open ? 'translate-y-[6.5px] rotate-45' : ''}`}
@@ -264,7 +264,7 @@ export default function Navbar() {
         ref={overlayRef}
         onClick={closeMenu}
         aria-hidden="true"
-        className="fixed inset-0 z-[997] bg-black/60 lg:hidden"
+        className="fixed inset-0 z-[997] bg-black/60 xl:hidden"
         style={{ opacity: 0, display: open ? 'block' : 'none' }}
       />
 
@@ -275,7 +275,7 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
         aria-label={t.nav.mobileMenu}
-        className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black/95 backdrop-blur-sm lg:hidden"
+        className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black/95 backdrop-blur-sm xl:hidden"
         style={{ display: 'none' }}
       >
         {links.map(({ href, label }, i) => (

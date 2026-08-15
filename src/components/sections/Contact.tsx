@@ -52,7 +52,7 @@ export default function Contact() {
       <SectionHeader
         id="contact-heading"
         title={t.contact.title}
-        number="05"
+        number="06"
         numberClass="text-[15px]"
       />
 

@@ -7,6 +7,7 @@ export const translations = {
       about: 'Sobre mí',
       skills: 'Cómo trabajo',
       projects: 'Trabajo',
+      tooling: 'Tooling',
       experience: 'Experiencia',
       contact: 'Contacto',
       available: 'Disponible',
@@ -18,7 +19,7 @@ export const translations = {
       langLabel: 'Switch to English',
     },
     hero: {
-      label: 'Full Stack Product Engineer',
+      label: 'Full Stack Product Engineer | AI Engineering',
       taglineBefore: 'Construyo sistemas donde ',
       taglineHighlight: 'la arquitectura y la experiencia',
       taglineAfter:
@@ -52,11 +53,24 @@ export const translations = {
       title: 'Trabajo seleccionado',
       ticker: 'PROYECTOS',
     },
+    tooling: {
+      title: 'Developer Tooling',
+      thesis:
+        'Convierto procesos de ingeniería repetibles en herramientas que otros usan a diario: servidores MCP, workflows de revisión y automatizaciones de despliegue. Leen el contexto del proyecto, hablan con los sistemas que ya están en producción y devuelven un resultado verificable.',
+      toolsLabel: 'Herramientas propias',
+      expand: 'mostrar detalle técnico',
+      collapse: 'ocultar detalle técnico',
+      technologies: 'tecnologías',
+      contextBefore: 'Tooling interno construido en ',
+      contextLink: 'Servinet',
+      contextAfter: ', en uso por el equipo.',
+    },
     experience: {
       title: 'Experiencia',
       period: 'Periodo',
       highlights: 'highlights',
       technologies: 'tecnologías',
+      current: 'Puesto actual',
     },
     contact: {
       title: 'Contacto',
@@ -96,6 +110,7 @@ export const translations = {
       about: 'About',
       skills: 'How I work',
       projects: 'Work',
+      tooling: 'Tooling',
       experience: 'Experience',
       contact: 'Contact',
       available: 'Available',
@@ -107,7 +122,7 @@ export const translations = {
       langLabel: 'Cambiar a Español',
     },
     hero: {
-      label: 'Full Stack Product Engineer',
+      label: 'Full Stack Product Engineer | AI Engineering',
       taglineBefore: 'I build systems where ',
       taglineHighlight: 'architecture and experience',
       taglineAfter:
@@ -141,11 +156,24 @@ export const translations = {
       title: 'Selected work',
       ticker: 'PROJECTS',
     },
+    tooling: {
+      title: 'Developer Tooling',
+      thesis:
+        "I turn repeatable engineering processes into tools other people use daily: MCP servers, review workflows and deployment automations. They read the project's own context, talk to the systems already in production, and return a result you can verify.",
+      toolsLabel: 'Tools I built',
+      expand: 'show technical detail',
+      collapse: 'hide technical detail',
+      technologies: 'technologies',
+      contextBefore: 'Internal tooling built at ',
+      contextLink: 'Servinet',
+      contextAfter: ', in use by the team.',
+    },
     experience: {
       title: 'Experience',
       period: 'Period',
       highlights: 'highlights',
       technologies: 'technologies',
+      current: 'Current role',
     },
     contact: {
       title: 'Contact',

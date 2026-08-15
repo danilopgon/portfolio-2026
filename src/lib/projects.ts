@@ -17,7 +17,7 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'lazy-lands',
       name: 'Lazy Lands',
       description:
-        'Un compañero de campaña para directores de juego que mantiene la coherencia entre sesiones en partidas largas. Frontend en Next.js, backend en FastAPI, Supabase para datos y autenticación, y una abstracción de proveedor LLM para que la IA sea intercambiable, con un fake en desarrollo para tests deterministas. La regla de fondo: la IA propone recuerdos, el director decide. Nunca fija el canon por su cuenta.',
+        'Un asistente de campaña para DMs que mantiene la coherencia entre sesiones en campañas largas. Frontend en Next.js, backend en FastAPI, Supabase para datos y autenticación, y una abstracción de proveedor LLM para que la IA sea intercambiable. La regla de fondo: la IA propone recuerdos, el director decide. Nunca fija el canon por su cuenta.',
       year: 2026,
       tags: ['Next.js', 'FastAPI', 'Supabase', 'LLM'],
       gradient: 'from-[#0c2a1a] to-[#14361f]',
@@ -63,7 +63,7 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'lazy-lands',
       name: 'Lazy Lands',
       description:
-        'A campaign companion for Dungeon Masters that keeps long campaigns coherent between sessions. Next.js frontend, FastAPI backend, Supabase for data and auth, and an LLM provider abstraction so the AI stays swappable, with a fake in dev for deterministic tests. The core rule: the AI proposes memories, the DM decides. It never writes canon on its own.',
+        'A campaign companion for Dungeon Masters that keeps long campaigns coherent between sessions. Next.js frontend, FastAPI backend, Supabase for data and auth, and an LLM provider abstraction so the AI stays swappable. The core rule: the AI proposes memories, the DM decides. It never writes canon on its own.',
       year: 2026,
       tags: ['Next.js', 'FastAPI', 'Supabase', 'LLM'],
       gradient: 'from-[#0c2a1a] to-[#14361f]',

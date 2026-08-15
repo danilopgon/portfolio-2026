@@ -7,7 +7,7 @@ export const translations = {
       about: 'Sobre mí',
       skills: 'Cómo trabajo',
       projects: 'Trabajo',
-      tooling: 'Tooling',
+      tooling: 'Herramientas',
       experience: 'Experiencia',
       contact: 'Contacto',
       available: 'Disponible',
@@ -29,19 +29,18 @@ export const translations = {
     },
     about: {
       title: 'Sobre mí',
-      p1Before: 'Estudié periodismo y trabajé en ',
-      p1Highlight: 'medios digitales',
+      p1Before: 'Soy Full-Stack Product Engineer y ',
+      p1Highlight: 'el frontend es mi especialidad',
       p1After:
-        '. El máster en documental transmedia fue donde aprendí a pensar en estructura, flujo y propósito. Eso, sin buscarlo demasiado, fue lo que me llevó más tarde a la programación.',
-      p2Before:
-        'Trabajo en el stack completo: React, Next.js, Angular y TypeScript en frontend; Node.js y Python/FastAPI en backend. ',
-      p2Highlight: 'El frontend es mi fuerte',
+        '. Convierto requisitos de producto y diseño en aplicaciones mantenibles y accesibles, sin separar la arquitectura de la experiencia de uso. Trabajo con Angular, React y TypeScript en frontend, y con Node.js y Python/FastAPI en backend.',
+      p2Before: 'Actualmente trabajo en ',
+      p2Highlight: 'Servinet',
       p2After:
-        ', pero los productos reales necesitan a alguien que pueda moverse entre capas sin perder el hilo. Construyo software mantenible, accesible y preparado para integrar IA cuando aporta valor real.',
-      p3Before: 'En ',
-      p3Highlight: 'Servinet',
+        ', donde participo en la modernización de aplicaciones, la arquitectura y puesta en marcha de nuevos proyectos, el testing y CI/CD. También diseño tooling para aplicar IA a procesos concretos de ingeniería: workflows que conectan modelos con el contexto del proyecto, las herramientas del equipo y validaciones deterministas, manteniendo las decisiones importantes bajo control humano.',
+      p3Before: 'Antes de dedicarme al desarrollo estudié ',
+      p3Highlight: 'periodismo',
       p3After:
-        ' trabajo en productos que abarcan frontend con Angular y React, backend con .NET y Python/FastAPI, pipelines CI/CD y tooling interno. También aplico IA para convertir contexto, criterios y procesos repetitivos en herramientas útiles para el equipo: herramienta práctica, no atajo.',
+        ', trabajé en medios digitales y cursé un máster en documental transmedia. Esa etapa todavía marca cómo trabajo: entender el problema antes de construir, estructurar información compleja y pensar en quién va a utilizar el producto.',
       stack: 'Stack técnico',
       directContact: 'Contacto directo',
       newTab: 'abre en nueva pestaña',
@@ -132,19 +131,18 @@ export const translations = {
     },
     about: {
       title: 'About me',
-      p1Before: 'I studied journalism and worked in ',
-      p1Highlight: 'digital media',
+      p1Before: "I'm a Full-Stack Product Engineer, and ",
+      p1Highlight: 'frontend is my specialty',
       p1After:
-        ". My master's in transmedia storytelling is where I learned to think about structure, flow, and purpose. That, without looking too hard for it, is what later led me to programming.",
-      p2Before:
-        'I work across the full stack: React, Next.js, Angular and TypeScript on the frontend; Node.js and Python/FastAPI on the backend. ',
-      p2Highlight: "Frontend is where I'm sharpest",
+        '. I turn product and design requirements into maintainable, accessible applications without separating architecture from user experience. I work with Angular, React and TypeScript on the frontend, and Node.js and Python/FastAPI on the backend.',
+      p2Before: 'I currently work at ',
+      p2Highlight: 'Servinet',
       p2After:
-        ', but real products need someone who can move between layers without losing context. I build maintainable, accessible software that brings AI in only where it adds real value.',
-      p3Before: 'At ',
-      p3Highlight: 'Servinet',
+        ', where I contribute to application modernization, architecture and new project setup, testing and CI/CD. I also design tooling that applies AI to specific engineering processes: workflows that connect models to project context, team tools and deterministic checks, while keeping important decisions under human control.',
+      p3Before: 'Before moving into software development, I studied ',
+      p3Highlight: 'journalism',
       p3After:
-        ' I work on products that span Angular and React frontend, .NET and Python/FastAPI backend, CI/CD pipelines and internal tooling. I also apply AI to turn context, criteria and repetitive processes into useful team tools: a practical tool, not a shortcut.',
+        ", worked in digital media and completed a master's in transmedia storytelling. That background still shapes how I work: understanding the problem before building, structuring complex information and thinking about the person who will use the product.",
       stack: 'Tech stack',
       directContact: 'Direct contact',
       newTab: 'opens in new tab',

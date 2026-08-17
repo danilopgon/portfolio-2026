@@ -32,7 +32,7 @@ const toolsData: Record<Locale, Tool[]> = {
       name: 'ApeReview',
       kind: 'Servidor MCP',
       summary:
-        'Convierte el conocimiento disperso de un proyecto (convenciones, criterios técnicos, aprendizajes de revisiones anteriores) en una base que los agentes consultan antes de responder. El criterio del equipo llega en el momento en que hace falta.',
+        'Convierte el conocimiento disperso de un proyecto (convenciones, criterios técnicos, aprendizajes de revisiones anteriores) en una base que los agentes consultan antes de responder.',
       detail:
         'Backend en Python/FastAPI con SQLite + FTS5 para búsqueda full-text sobre la base de conocimiento, expuesto como servidor MCP. La ingesta es dinámica, así que la base crece con cada revisión y un criterio acordado hace seis meses sigue disponible hoy.',
       stack: ['Python', 'FastAPI', 'MCP', 'SQLite + FTS5', 'Retrieval'],
@@ -74,7 +74,7 @@ const toolsData: Record<Locale, Tool[]> = {
       name: 'ApeReview',
       kind: 'MCP server',
       summary:
-        "Turns a project's scattered knowledge (conventions, technical criteria, lessons from earlier reviews) into a base agents query before they answer. The team's criteria reach the agent at the moment it needs them.",
+        "Turns a project's scattered knowledge (conventions, technical criteria, lessons from earlier reviews) into a base agents query before they answer.",
       detail:
         'Python/FastAPI backend with SQLite + FTS5 for full-text search over the knowledge base, exposed as an MCP server. Ingestion is dynamic, so the base grows with every review and a criterion agreed six months ago is still available today.',
       stack: ['Python', 'FastAPI', 'MCP', 'SQLite + FTS5', 'Retrieval'],

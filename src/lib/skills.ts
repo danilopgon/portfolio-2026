@@ -16,7 +16,7 @@ const devData: Record<Locale, Skill[]> = {
     {
       n: '02',
       name: 'Back-end',
-      desc: 'Del modelo de datos al deploy. Diseño APIs, contratos entre capas e infraestructura con Node.js y Python/FastAPI. Las decisiones de backend se toman pensando en el producto, no a posteriori.',
+      desc: 'Del modelo de datos al deploy. Diseño APIs, contratos entre capas e infraestructura con Node.js, Python/FastAPI y .NET. Las decisiones de backend se toman pensando en el producto, no a posteriori.',
     },
   ],
   en: [
@@ -28,7 +28,7 @@ const devData: Record<Locale, Skill[]> = {
     {
       n: '02',
       name: 'Back-end',
-      desc: 'From data model to deploy. I design APIs, layer contracts and infrastructure with Node.js and Python/FastAPI. Backend decisions made with the product in mind, not as an afterthought.',
+      desc: 'From data model to deploy. I design APIs, layer contracts and infrastructure with Node.js, Python/FastAPI and .NET. Backend decisions made with the product in mind, not as an afterthought.',
     },
   ],
 }

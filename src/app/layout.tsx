@@ -80,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'Python',
                 'FastAPI',
                 '.NET',
+                'AWS',
                 'AI workflows',
                 'Developer tooling',
                 'Web accessibility (WCAG)',

@@ -6,6 +6,6 @@ export const stack = [
   'Python',
   'FastAPI',
   'Angular',
-  '.NET',
   'C#',
+  '.NET',
 ]

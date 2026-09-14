@@ -19,7 +19,7 @@ export const translations = {
       langLabel: 'Switch to English',
     },
     hero: {
-      label: 'Full Stack Product Engineer | AI Engineering',
+      label: 'Product Engineer · Frontend & AI Engineering',
       taglineBefore: 'Construyo sistemas donde ',
       taglineHighlight: 'la arquitectura y la experiencia',
       taglineAfter:
@@ -29,7 +29,7 @@ export const translations = {
     },
     about: {
       title: 'Sobre mí',
-      p1Before: 'Soy Full-Stack Product Engineer y ',
+      p1Before: 'Soy Product Engineer full-stack y ',
       p1Highlight: 'el frontend es mi especialidad',
       p1After:
         '. Convierto requisitos de producto y diseño en aplicaciones mantenibles y accesibles, sin separar la arquitectura de la experiencia de uso. Trabajo con Angular, React y TypeScript en frontend, y con Node.js y Python/FastAPI en backend.',
@@ -121,7 +121,7 @@ export const translations = {
       langLabel: 'Cambiar a Español',
     },
     hero: {
-      label: 'Full Stack Product Engineer | AI Engineering',
+      label: 'Product Engineer · Frontend & AI Engineering',
       taglineBefore: 'I build systems where ',
       taglineHighlight: 'architecture and experience',
       taglineAfter:
@@ -131,7 +131,7 @@ export const translations = {
     },
     about: {
       title: 'About me',
-      p1Before: "I'm a Full-Stack Product Engineer, and ",
+      p1Before: "I'm a full-stack Product Engineer, and ",
       p1Highlight: 'frontend is my specialty',
       p1After:
         '. I turn product and design requirements into maintainable, accessible applications without separating architecture from user experience. I work with Angular, React and TypeScript on the frontend, and Node.js and Python/FastAPI on the backend.',

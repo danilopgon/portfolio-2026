@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
-export const alt = 'Dani López González — Full Stack Product Engineer'
+export const alt = 'Dani López González — Product Engineer · Frontend & AI'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -41,7 +41,7 @@ export default async function OgImage() {
             fontFamily: 'sans-serif',
           }}
         >
-          Full Stack Product Engineer
+          Product Engineer · Frontend & AI
         </span>
       </div>
 

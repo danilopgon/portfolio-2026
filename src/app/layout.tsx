@@ -23,9 +23,9 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://danilopgon.com'),
-  title: 'Dani López González — Full-Stack Product Engineer',
+  title: 'Dani López González — Product Engineer · Frontend & AI',
   description:
-    'Full-Stack Product Engineer especializado en frontend. Angular, React y TypeScript, backend con Node.js y Python/FastAPI, IA aplicada y developer tooling.',
+    'Product Engineer full-stack especializado en frontend. Angular, React y TypeScript, backend con Node.js y Python/FastAPI, IA aplicada y developer tooling.',
   alternates: {
     canonical: '/',
     languages: {
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'Dani López González — Full-Stack Product Engineer',
+    title: 'Dani López González — Product Engineer · Frontend & AI',
     description:
-      'Full-Stack Product Engineer especializado en frontend. Arquitectura, experiencia de usuario, IA aplicada y developer tooling.',
+      'Product Engineer full-stack especializado en frontend. Arquitectura, experiencia de usuario, IA aplicada y developer tooling.',
     url: 'https://danilopgon.com',
     siteName: 'Dani López González',
     locale: 'es_ES',
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dani López González — Full-Stack Product Engineer',
+    title: 'Dani López González — Product Engineer · Frontend & AI',
     description:
-      'Full-Stack Product Engineer especializado en frontend. Arquitectura, experiencia de usuario, IA aplicada y developer tooling.',
+      'Product Engineer full-stack especializado en frontend. Arquitectura, experiencia de usuario, IA aplicada y developer tooling.',
   },
 }
 
@@ -66,9 +66,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Person',
               name: 'Dani López González',
               url: 'https://danilopgon.com',
-              jobTitle: 'Full Stack Product Engineer',
+              jobTitle: 'Product Engineer',
               description:
-                'Full-Stack Product Engineer especializado en frontend. Arquitectura, experiencia de usuario, IA aplicada y developer tooling.',
+                'Product Engineer full-stack especializado en frontend. Arquitectura, experiencia de usuario, IA aplicada y developer tooling.',
               knowsAbout: [
                 'Frontend development',
                 'Angular',

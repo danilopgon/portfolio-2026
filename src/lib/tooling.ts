@@ -42,10 +42,10 @@ const toolsData: Record<Locale, Tool[]> = {
       name: 'figma-dom-audit',
       kind: 'Auditoría automatizada',
       summary:
-        'Compara la implementación en navegador con el diseño en Figma y devuelve cada desviación en píxeles y en nombres de token, con el valor exacto y el selector donde ocurre.',
+        'Mide la pantalla en navegador contra Figma y el design system, y señala cada desviación en píxeles y en tokens, con su selector y su responsable. Cada corrección guarda capturas de antes y después.',
       detail:
-        'Orquesta los MCPs de Figma y Chrome DevTools y cubre spacing, layout, tipografía, color, bordes, estructura y overflow. El comparador aporta las cifras contra las escalas de tokens del proyecto, y el modelo agrupa y prioriza el informe.',
-      stack: ['MCP', 'Figma', 'Chrome DevTools', 'Design tokens'],
+        'Orquesta los MCPs de Figma y Chrome DevTools y cubre spacing, layout, tipografía, color, bordes, estructura y overflow. Un comparador determinista lee las escalas de tokens en vivo y contrasta cada valor con el design system, porque el Figma de una pantalla puede ir desfasado. Cada hallazgo se asigna a código propio, componentes comunes, librería o diseño, y el informe sale como página compartible o como work item de Azure DevOps, siempre tras confirmar la vista previa.',
+      stack: ['MCP', 'Figma', 'Chrome DevTools', 'Design tokens', 'Azure DevOps'],
     },
     {
       slug: 'sonar-diff-review',
@@ -84,10 +84,10 @@ const toolsData: Record<Locale, Tool[]> = {
       name: 'figma-dom-audit',
       kind: 'Automated audit',
       summary:
-        'Compares the browser implementation against the Figma design and returns every deviation as a pixel value and a token name, with the exact number and the selector where it happens.',
+        'Measures the screen in the browser against Figma and the design system, and flags every deviation in pixels and tokens, with its selector and its owner. Every applied fix keeps before and after screenshots.',
       detail:
-        'It orchestrates the Figma and Chrome DevTools MCPs and covers spacing, layout, typography, color, borders, structure and overflow. The comparator produces the figures against the project token scales, and the model groups and prioritizes the report.',
-      stack: ['MCP', 'Figma', 'Chrome DevTools', 'Design tokens'],
+        "It orchestrates the Figma and Chrome DevTools MCPs and covers spacing, layout, typography, color, borders, structure and overflow. A deterministic comparator reads the token scales live and checks every value against the design system, because a screen's Figma can lag behind. Each finding is assigned to our code, shared components, a library or design, and the report ships as a shareable page or an Azure DevOps work item, always after the preview is confirmed.",
+      stack: ['MCP', 'Figma', 'Chrome DevTools', 'Design tokens', 'Azure DevOps'],
     },
     {
       slug: 'sonar-diff-review',

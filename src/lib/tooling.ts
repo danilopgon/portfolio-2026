@@ -32,9 +32,9 @@ const toolsData: Record<Locale, Tool[]> = {
       name: 'ApeReview',
       kind: 'Servidor MCP',
       summary:
-        'Convierte el conocimiento disperso de un proyecto (convenciones, criterios técnicos, aprendizajes de revisiones anteriores) en una base que los agentes consultan antes de responder.',
+        'Convierte el conocimiento disperso de un proyecto (convenciones, criterios técnicos y aprendizajes de revisiones anteriores) en una base que los agentes pueden consultar antes de responder.',
       detail:
-        'Backend en Python/FastAPI con SQLite + FTS5 para búsqueda full-text sobre la base de conocimiento, expuesto como servidor MCP. La ingesta es dinámica, así que la base crece con cada revisión y un criterio acordado hace seis meses sigue disponible hoy.',
+        'Backend en Python/FastAPI con SQLite + FTS5 para búsqueda full-text, expuesto como servidor MCP y preparado para ingesta dinámica. Así, convenciones, criterios y aprendizajes quedan disponibles como contexto recuperable para nuevas revisiones.',
       stack: ['Python', 'FastAPI', 'MCP', 'SQLite + FTS5', 'Retrieval'],
     },
     {
@@ -74,9 +74,9 @@ const toolsData: Record<Locale, Tool[]> = {
       name: 'ApeReview',
       kind: 'MCP server',
       summary:
-        "Turns a project's scattered knowledge (conventions, technical criteria, lessons from earlier reviews) into a base agents query before they answer.",
+        "Turns a project's scattered knowledge (conventions, technical criteria and lessons from earlier reviews) into a base agents can query before they answer.",
       detail:
-        'Python/FastAPI backend with SQLite + FTS5 for full-text search over the knowledge base, exposed as an MCP server. Ingestion is dynamic, so the base grows with every review and a criterion agreed six months ago is still available today.',
+        'Python/FastAPI backend with SQLite + FTS5 for full-text search, exposed as an MCP server and built for dynamic ingestion. This keeps conventions, criteria and lessons available as retrievable context for future reviews.',
       stack: ['Python', 'FastAPI', 'MCP', 'SQLite + FTS5', 'Retrieval'],
     },
     {

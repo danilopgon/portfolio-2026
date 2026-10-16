@@ -146,7 +146,7 @@ export default function Tooling() {
 
       {/*
         Asymmetric bento. The statement and the flagship share the first row so
-        the section leads with a named, shipped thing instead of a preamble; the
+        the section leads with a named, concrete tool instead of a preamble; the
         three supporting tools follow in an even row. The earlier six-step
         pipeline lived here and was cut: it restated the thesis in abstract
         nouns that no card ever referred back to, and the tools themselves

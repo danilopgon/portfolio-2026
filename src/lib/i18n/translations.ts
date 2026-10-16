@@ -19,24 +19,23 @@ export const translations = {
       langLabel: 'Switch to English',
     },
     hero: {
-      label: 'Product Engineer · Frontend & AI Engineering',
-      taglineBefore: 'Construyo sistemas donde ',
-      taglineHighlight: 'la arquitectura y la experiencia',
-      taglineAfter:
-        ' se diseñan juntas. Del contrato de API al detalle de interacción: todo con propósito.',
+      label: 'Full-Stack Product Engineer | AI Engineering',
+      taglineBefore: 'Construyo productos de extremo a extremo, desde ',
+      taglineHighlight: 'la experiencia y la arquitectura hasta las APIs y los datos',
+      taglineAfter: '. También me ocupo de llevarlos a producción.',
       cta1: 'Ver trabajo',
       cta2: 'Hablemos',
     },
     about: {
       title: 'Sobre mí',
-      p1Before: 'Soy Product Engineer full-stack y ',
-      p1Highlight: 'el frontend es mi especialidad',
+      p1Before: 'Soy ',
+      p1Highlight: 'Full-Stack Product Engineer con una fuerte especialización en frontend',
       p1After:
-        '. Convierto requisitos de producto y diseño en aplicaciones mantenibles y accesibles, sin separar la arquitectura de la experiencia de uso. Trabajo con Angular, React y TypeScript en frontend, y con Node.js y Python/FastAPI en backend.',
-      p2Before: 'Actualmente trabajo en ',
-      p2Highlight: 'Servinet',
+        '. Convierto requisitos de producto y diseño en aplicaciones mantenibles y accesibles. Mi mayor profundidad está en Angular, React y TypeScript. También desarrollo servicios y lógica de negocio con .NET/C#, Node.js y Python/FastAPI.',
+      p2Before: 'Desde octubre de 2026 trabajo en ',
+      p2Highlight: 'Tecnología y Personas',
       p2After:
-        ', donde participo en la modernización de aplicaciones, la arquitectura y puesta en marcha de nuevos proyectos, el testing y CI/CD. También diseño tooling para aplicar IA a procesos concretos de ingeniería: workflows que conectan modelos con el contexto del proyecto, las herramientas del equipo y validaciones deterministas, manteniendo las decisiones importantes bajo control humano.',
+        ' como Full-Stack Product Engineer, con Angular y .NET/C# como stack inicial. Antes, en Servinet, participé en la modernización de aplicaciones, la arquitectura y puesta en marcha de proyectos Angular, y la mejora del testing y CI/CD. También diseñé tooling para procesos concretos de ingeniería con contexto de proyecto, validaciones deterministas y control humano.',
       p3Before: 'Antes de dedicarme al desarrollo estudié ',
       p3Highlight: 'periodismo',
       p3After:
@@ -55,14 +54,14 @@ export const translations = {
     tooling: {
       title: 'Developer Tooling',
       thesis:
-        'Convierto procesos de ingeniería repetibles en herramientas que otros usan a diario: servidores MCP, workflows de revisión y automatizaciones de despliegue. Leen el contexto del proyecto, hablan con los sistemas que ya están en producción y devuelven un resultado verificable.',
+        'Convierto procesos repetibles en tooling que combina el contexto del proyecto con checks deterministas. Cuando una acción tiene consecuencias, mantengo la decisión bajo control humano. Así he construido servidores MCP, workflows de revisión y automatizaciones de despliegue.',
       toolsLabel: 'Herramientas propias',
       expand: 'mostrar detalle técnico',
       collapse: 'ocultar detalle técnico',
       technologies: 'tecnologías',
-      contextBefore: 'Tooling interno construido en ',
+      contextBefore: 'Tooling construido durante mi etapa en ',
       contextLink: 'Servinet',
-      contextAfter: ', en uso por el equipo.',
+      contextAfter: '.',
     },
     experience: {
       title: 'Experiencia',
@@ -121,24 +120,23 @@ export const translations = {
       langLabel: 'Cambiar a Español',
     },
     hero: {
-      label: 'Product Engineer · Frontend & AI Engineering',
-      taglineBefore: 'I build systems where ',
-      taglineHighlight: 'architecture and experience',
-      taglineAfter:
-        ' are designed together. From the API contract to the interaction detail, code with purpose.',
+      label: 'Full-Stack Product Engineer | AI Engineering',
+      taglineBefore: 'I build products end to end, from ',
+      taglineHighlight: 'experience and architecture to APIs and data',
+      taglineAfter: '. I also take them through deployment.',
       cta1: 'See work',
       cta2: "Let's talk",
     },
     about: {
       title: 'About me',
-      p1Before: "I'm a full-stack Product Engineer, and ",
-      p1Highlight: 'frontend is my specialty',
+      p1Before: "I'm a ",
+      p1Highlight: 'Full-Stack Product Engineer with a strong frontend specialization',
       p1After:
-        '. I turn product and design requirements into maintainable, accessible applications without separating architecture from user experience. I work with Angular, React and TypeScript on the frontend, and Node.js and Python/FastAPI on the backend.',
-      p2Before: 'I currently work at ',
-      p2Highlight: 'Servinet',
+        '. I turn product and design requirements into maintainable, accessible applications. My deepest expertise is in Angular, React and TypeScript. I also build services and business logic with .NET/C#, Node.js and Python/FastAPI.',
+      p2Before: 'Since October 2026, I have worked at ',
+      p2Highlight: 'Tecnología y Personas',
       p2After:
-        ', where I contribute to application modernization, architecture and new project setup, testing and CI/CD. I also design tooling that applies AI to specific engineering processes: workflows that connect models to project context, team tools and deterministic checks, while keeping important decisions under human control.',
+        ' as a Full-Stack Product Engineer, initially working with Angular and .NET/C#. Previously, at Servinet, I contributed to application modernization, Angular project architecture and setup, and improvements to testing and CI/CD. I also designed tooling for engineering processes with project context, deterministic checks and human oversight.',
       p3Before: 'Before moving into software development, I studied ',
       p3Highlight: 'journalism',
       p3After:
@@ -157,14 +155,14 @@ export const translations = {
     tooling: {
       title: 'Developer Tooling',
       thesis:
-        "I turn repeatable engineering processes into tools other people use daily: MCP servers, review workflows and deployment automations. They read the project's own context, talk to the systems already in production, and return a result you can verify.",
+        'I turn repeatable processes into tooling that combines project context with deterministic checks. When an action has consequences, I keep the decision under human control. This work includes MCP servers, review workflows and deployment automations.',
       toolsLabel: 'Tools I built',
       expand: 'show technical detail',
       collapse: 'hide technical detail',
       technologies: 'technologies',
-      contextBefore: 'Internal tooling built at ',
+      contextBefore: 'Tooling built during my time at ',
       contextLink: 'Servinet',
-      contextAfter: ', in use by the team.',
+      contextAfter: '.',
     },
     experience: {
       title: 'Experience',

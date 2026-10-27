@@ -50,9 +50,9 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'dia-de-gachas',
       name: 'Día de Gachas',
       description:
-        'Una app que detecta si hace tiempo de gachas. Frontend en Angular, backend en NestJS, API del tiempo en tiempo real. El objetivo era mantenerlo simple mientras hacía trabajo full-stack real, una prueba útil de cómo Angular y Nest se integran de principio a fin con facilidad.',
+        'Una app que te dice si hace tiempo de gachas. Frontend en Angular 22 sin librerías de componentes, backend en NestJS sobre Railway. La API no llama a AEMET en cada visita: un cron descarga cada tres horas la previsión de los más de 8.000 municipios, la valida y la publica como snapshot en un bucket, y la API sirve desde ahí. Empezó como prueba de Angular y Nest de punta a punta y acabó siendo un ejercicio de hacer robusto y barato algo pequeño.',
       year: 2025,
-      tags: ['Angular', 'Nest', 'PrimeNG', 'GSAP'],
+      tags: ['Angular', 'NestJS', 'Railway', 'GSAP'],
       gradient: 'from-[#1a3a20] to-[#3a3a10]',
       image: '/images/projects/dia-de-gachas.webp',
       url: 'https://www.diadegachas.danilopgon.com/',
@@ -96,9 +96,9 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'dia-de-gachas',
       name: 'Día de Gachas',
       description:
-        "A weather-aware app that tells you if it's gachas weather. Angular frontend, NestJS backend, live weather API. The goal was keeping it absurdly simple while doing real full-stack work, a useful test of how Angular and Nest integrate end-to-end easily.",
+        "A weather-aware app that tells you if it's gachas weather. Angular 22 frontend with no component library, NestJS backend on Railway. The API never calls AEMET per visit: a cron job pulls the forecast for all 8,000+ Spanish towns every three hours, validates it and publishes it as a snapshot to a bucket, and the API serves from there. It started as an end-to-end Angular and Nest test and became an exercise in making something small sturdy and cheap.",
       year: 2025,
-      tags: ['Angular', 'Nest', 'PrimeNG', 'GSAP'],
+      tags: ['Angular', 'NestJS', 'Railway', 'GSAP'],
       gradient: 'from-[#1a3a20] to-[#3a3a10]',
       image: '/images/projects/dia-de-gachas.webp',
       url: 'https://www.diadegachas.danilopgon.com/',

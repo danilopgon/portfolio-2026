@@ -50,8 +50,8 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'dia-de-gachas',
       name: 'Día de Gachas',
       description:
-        'Una app que te dice si hace tiempo de gachas. Frontend en Angular 22 sin librerías de componentes, backend en NestJS sobre Railway. La API no llama a AEMET en cada visita: un cron descarga cada tres horas la previsión de los más de 8.000 municipios, la valida y la publica como snapshot en un bucket, y la API sirve desde ahí. Empezó como prueba de Angular y Nest de punta a punta y acabó siendo un ejercicio de hacer robusto y barato algo pequeño.',
-      year: 2025,
+        'Una app que te dice si hace tiempo de gachas. Empezó como una prueba de Angular y Nest de punta a punta que preguntaba a AEMET en cada visita. Ahora un cron descarga cada tres horas la previsión de más de 8.000 municipios, la valida y la publica como snapshot, y la API sirve desde ahí: si AEMET falla un día, la web sigue con la última previsión válida. Angular 22 sin librerías de componentes, NestJS en Railway, menos de un dólar al mes.',
+      year: 2026,
       tags: ['Angular', 'NestJS', 'Railway', 'GSAP'],
       gradient: 'from-[#1a3a20] to-[#3a3a10]',
       image: '/images/projects/dia-de-gachas.webp',
@@ -96,8 +96,8 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'dia-de-gachas',
       name: 'Día de Gachas',
       description:
-        "A weather-aware app that tells you if it's gachas weather. Angular 22 frontend with no component library, NestJS backend on Railway. The API never calls AEMET per visit: a cron job pulls the forecast for all 8,000+ Spanish towns every three hours, validates it and publishes it as a snapshot to a bucket, and the API serves from there. It started as an end-to-end Angular and Nest test and became an exercise in making something small sturdy and cheap.",
-      year: 2025,
+        "A weather-aware app that tells you if it's gachas weather. It started as an end-to-end Angular and Nest test that called AEMET, Spain's weather service, on every visit. Now a cron job pulls the forecast for 8,000+ towns every three hours, validates it and publishes it as a snapshot, and the API serves from there: if AEMET goes down for a day, the site keeps the last good forecast. Angular 22 with no component library, NestJS on Railway, under a dollar a month.",
+      year: 2026,
       tags: ['Angular', 'NestJS', 'Railway', 'GSAP'],
       gradient: 'from-[#1a3a20] to-[#3a3a10]',
       image: '/images/projects/dia-de-gachas.webp',

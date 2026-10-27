@@ -32,7 +32,7 @@ export default function Projects() {
 
       {/* Bento grid: columna grande izquierda + 2 apiladas derecha en desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        {projects.map(({ slug, name, description, year, tags, gradient, image, url }, i) => {
+        {projects.map(({ slug, name, description, tags, gradient, image, url }, i) => {
           const isLeftCol = i % 2 === 0
           const isTopRow = i < 2
           const isLastMobile = i === projects.length - 1
@@ -80,9 +80,6 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.012)_20px,rgba(255,255,255,0.012)_21px)]" />
                   {/* hover line */}
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-coral scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
-                  <span className="absolute top-4 left-4 text-[12px] tracking-[0.2em] uppercase text-white/65 z-10">
-                    {year}
-                  </span>
                 </div>
                 {/* Info */}
                 <div className="flex justify-between items-end px-6 py-5 border-t border-border shrink-0">

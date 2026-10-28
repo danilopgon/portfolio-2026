@@ -36,8 +36,8 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'holy-seitan',
       name: 'Holy Seitan',
       description:
-        'Un recetario vegano para dos personas que cocinan juntas, pensado para leerlo desde la encimera: la pantalla puede quedarse encendida mientras sigues la receta. Empezó con cada receta como un único Markdown en Supabase; ahora los ingredientes son datos aparte, que se pueden reducir a la mitad, doblar o triplicar. Pasar las 27 recetas obligó a revisar once a mano: «1 o 2 botes», «media tableta», cantidades escondidas en los pasos. La usamos cada semana.',
-      tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'Shadcn/UI'],
+        'Un recetario vegano para dos personas que cocinan juntas, pensado para leerlo desde la encimera: la pantalla puede quedarse encendida mientras sigues la receta. Empezó con cada receta como un único Markdown en Supabase; ahora los ingredientes son datos aparte, que se pueden reducir a la mitad, doblar o triplicar. Desde una conversación con Claude o ChatGPT se le puede pedir un cambio a una receta: el agente lo propone con su diff, solo se guarda si lo apruebas y cada versión queda en el historial. La usamos cada semana.',
+      tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'MCP'],
       gradient: 'from-[#3a0a0a] to-[#1a1a0a]',
       image: '/images/projects/holy-seitan.webp',
       url: 'https://holy-seitan.danilopgon.com/',
@@ -78,8 +78,8 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'holy-seitan',
       name: 'Holy Seitan',
       description:
-        'A vegan recipe book for two people who cook together, built to be read from the counter: the screen can stay on while you follow a recipe. It started with each recipe as a single Markdown document in Supabase; now the ingredients are separate data you can halve, double or triple. Moving all 27 recipes meant reviewing eleven by hand: "1 or 2 jars", "half a tablet", amounts buried in the steps. We use it weekly.',
-      tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'Shadcn/UI'],
+        'A vegan recipe book for two people who cook together, built to be read from the counter: the screen can stay on while you follow a recipe. It started with each recipe as a single Markdown document in Supabase; now the ingredients are separate data you can halve, double or triple. From a chat with Claude or ChatGPT you can ask for a change to a recipe: the agent proposes it as a diff, nothing is saved until you approve it, and every version stays in the history. We use it weekly.',
+      tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'MCP'],
       gradient: 'from-[#3a0a0a] to-[#1a1a0a]',
       image: '/images/projects/holy-seitan.webp',
       url: 'https://holy-seitan.danilopgon.com/',

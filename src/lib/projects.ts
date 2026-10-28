@@ -36,7 +36,7 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'holy-seitan',
       name: 'Holy Seitan',
       description:
-        'Una app de recetas que busca ante todo ser útil. Las recetas viven como archivos Markdown, Supabase maneja el backend y Drizzle ORM mantiene las consultas con tipos seguros. El tradeoff: Markdown frente a un CMS cambia flexibilidad por un formato rápido de escribir y fácil de versionar. La uso cada semana.',
+        'Un recetario vegano para dos personas que cocinan juntas, pensado para leerlo desde la encimera: la pantalla puede quedarse encendida mientras sigues la receta. Empezó con cada receta como un único Markdown en Supabase; ahora los ingredientes son datos aparte, que se pueden reducir a la mitad, doblar o triplicar. Pasar las 27 recetas obligó a revisar once a mano: «1 o 2 botes», «media tableta», cantidades escondidas en los pasos. La usamos cada semana.',
       tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'Shadcn/UI'],
       gradient: 'from-[#3a0a0a] to-[#1a1a0a]',
       image: '/images/projects/holy-seitan.webp',
@@ -78,7 +78,7 @@ const projectsData: Record<Locale, Project[]> = {
       slug: 'holy-seitan',
       name: 'Holy Seitan',
       description:
-        "A recipe app that keeps it simple. Recipes live as Markdown files, Supabase handles the backend and Drizzle ORM keeps the queries type-safe. The tradeoff: Markdown over a CMS trades flexibility for a format that's fast to write and easy to version. I use it weekly.",
+        'A vegan recipe book for two people who cook together, built to be read from the counter: the screen can stay on while you follow a recipe. It started with each recipe as a single Markdown document in Supabase; now the ingredients are separate data you can halve, double or triple. Moving all 27 recipes meant reviewing eleven by hand: "1 or 2 jars", "half a tablet", amounts buried in the steps. We use it weekly.',
       tags: ['Next.js', 'Supabase', 'Drizzle ORM', 'Shadcn/UI'],
       gradient: 'from-[#3a0a0a] to-[#1a1a0a]',
       image: '/images/projects/holy-seitan.webp',

@@ -1,7 +1,7 @@
 # Portfolio — Dani López González
 
 > Product Engineer · Frontend & AI Engineering.
-> 
+>
 > Sistemas donde la arquitectura y la experiencia se diseñan juntas.
 
 ![Preview del portfolio](public/images/preview.png)
@@ -11,25 +11,34 @@ Stack: Next.js 16 · TypeScript · Tailwind CSS · GSAP
 ## Arrancar
 
 ```bash
-npm install
+pnpm install
 cp .env.local.example .env.local
 # rellenar RESEND_API_KEY, FROM_EMAIL y CONTACT_EMAIL
-npm run dev
+pnpm dev
 ```
+
+Usamos **pnpm como gestor único de dependencias** (`pnpm@10.18.0`): `pnpm-lock.yaml` es el lockfile canónico. En CI/Vercel, instalar con `pnpm install --frozen-lockfile` para respetar las versiones fijadas.
 
 ## Dependencias externas (mínimas y justificadas)
 
-| Paquete                   | Por qué                                            |
-| ------------------------- | -------------------------------------------------- |
-| `@radix-ui/react-label`   | `<Label>` accesible con `htmlFor` y ARIA correctos |
-| `sonner`                  | Toast de feedback del formulario                   |
-| `clsx` + `tailwind-merge` | `cn()` helper para clases condicionales            |
-| `zod`                     | Validación del formulario de contacto              |
-| `react-hook-form`         | Gestión de estado y errores del formulario         |
-| `resend`                  | Envío de emails desde el API route                 |
-| `@react-email/*`          | Template HTML del email de contacto                |
+| Paquete                   | Por qué                                              |
+| ------------------------- | ---------------------------------------------------- |
+| `@radix-ui/react-label`   | `<Label>` accesible con `htmlFor` y ARIA correctos   |
+| `sonner`                  | Toast de feedback del formulario                     |
+| `clsx` + `tailwind-merge` | `cn()` helper para clases condicionales              |
+| `zod`                     | Validación del formulario de contacto                |
+| `gray-matter`             | Leer metadatos de las fichas Markdown de trayectoria |
+| `react-hook-form`         | Gestión de estado y errores del formulario           |
+| `resend`                  | Envío de emails desde el API route                   |
+| `@react-email/*`          | Template HTML del email de contacto                  |
 
 Todo lo demás es vanilla — sin shadcn, sin component libraries.
+
+## Trayectoria profesional mantenible
+
+La trayectoria completa se mantiene en [`content/career/`](content/career/README.md) como Markdown editable. Las fichas con `featured: true` alimentan las experiencias ES/EN de la home y, junto al perfil y los proyectos, generan el endpoint público `/career.md`.
+
+La home conserva su selección breve y ofrece solo un enlace discreto a **Trayectoria completa (.md)**. `/llms.txt` sirve como índice para agentes que descubran el sitio; no hay una página HTML adicional.
 
 ## Estructura
 

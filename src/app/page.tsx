@@ -5,6 +5,7 @@ import Experience from '@/components/sections/Experience'
 import Projects from '@/components/sections/Projects'
 import Tooling from '@/components/sections/Tooling'
 import Contact from '@/components/sections/Contact'
+import { getExperiencesByLocale } from '@/lib/career'
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Tooling />
-      <Experience />
+      <Experience experiencesByLocale={getExperiencesByLocale()} />
       <Contact />
     </>
   )

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     'Full-Stack Product Engineer con especialización frontend. Angular, React y TypeScript; APIs y backend con .NET/C#, Node.js y Python/FastAPI.',
   alternates: {
     canonical: '/',
+    types: {
+      'text/markdown': '/career.md',
+    },
     languages: {
       'es-ES': '/',
       'en-US': '/',
@@ -84,6 +87,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'AWS',
                 'AI workflows',
                 'Developer tooling',
+                'Journalism',
+                'Digital communication',
+                'Audiovisual production',
                 'Web accessibility (WCAG)',
               ],
               knowsLanguage: ['Spanish', 'English'],
@@ -98,6 +104,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 addressCountry: 'ES',
               },
               sameAs: ['https://linkedin.com/in/danilopgon', 'https://github.com/danilopgon'],
+              subjectOf: {
+                '@type': 'CreativeWork',
+                name: 'Trayectoria profesional completa de Dani López González',
+                url: 'https://danilopgon.com/career.md',
+                encodingFormat: 'text/markdown',
+              },
             }),
           }}
         />

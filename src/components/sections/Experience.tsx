@@ -1,15 +1,24 @@
 'use client'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 import SectionHeader from '@/components/ui/SectionHeader'
-import { getExperiences } from '@/lib/experience'
+import type { Experience as ExperienceEntry } from '@/lib/experience'
 import { useLanguage } from '@/lib/i18n/context'
+import type { Locale } from '@/lib/i18n/translations'
 
-export default function Experience() {
+export default function Experience({
+  experiencesByLocale,
+}: {
+  experiencesByLocale: Record<Locale, ExperienceEntry[]>
+}) {
   const { locale, t } = useLanguage()
-  const experiences = getExperiences(locale)
+  const experiences = experiencesByLocale[locale]
 
   return (
-    <section id="experience" aria-labelledby="experience-heading" className="border-b border-border">
+    <section
+      id="experience"
+      aria-labelledby="experience-heading"
+      className="border-b border-border"
+    >
       <SectionHeader id="experience-heading" title={t.experience.title} number="05" />
 
       <RevealOnScroll className="experience-card">
@@ -56,7 +65,9 @@ export default function Experience() {
                             <p className="text-[12px] text-muted tracking-[0.08em]">
                               <span className="sr-only">{t.experience.period}: </span>
                               {period}
-                              {current && <span className="sr-only"> ({t.experience.current})</span>}
+                              {current && (
+                                <span className="sr-only"> ({t.experience.current})</span>
+                              )}
                             </p>
                             <p className="text-[14px] text-cream font-medium tracking-[0.04em]">
                               {role}
@@ -119,6 +130,15 @@ export default function Experience() {
                   <span className="absolute left-0 bottom-[9px] w-2 h-px bg-border" />
                 </div>
               </div>
+            </div>
+            <div className="mt-4 flex justify-end">
+              <a
+                href="/career.md"
+                type="text/markdown"
+                className="text-[12px] text-muted hover:text-coral focus-visible:text-coral transition-colors underline underline-offset-4"
+              >
+                {t.experience.fullCareerMd} ↗
+              </a>
             </div>
           </div>
         </div>

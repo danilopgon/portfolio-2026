@@ -69,6 +69,7 @@ export const translations = {
       highlights: 'highlights',
       technologies: 'tecnologías',
       current: 'Puesto actual',
+      fullCareerMd: 'Trayectoria completa (.md)',
     },
     contact: {
       title: 'Contacto',
@@ -170,6 +171,7 @@ export const translations = {
       highlights: 'highlights',
       technologies: 'technologies',
       current: 'Current role',
+      fullCareerMd: 'Full career history (.md)',
     },
     contact: {
       title: 'Contact',

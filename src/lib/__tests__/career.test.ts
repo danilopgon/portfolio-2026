@@ -8,6 +8,7 @@ describe('career source of truth', () => {
     expect(es.map(({ slug }) => slug)).toEqual(['tecnologia-y-personas', 'servinet', 'dewedd'])
     expect(en.map(({ slug }) => slug)).toEqual(es.map(({ slug }) => slug))
     expect(es[0].current).toBe(true)
+    expect(es[0].role).toBe('Full Stack Developer')
     expect(en[0].description.join(' ')).toContain('legaltech')
   })
 
@@ -21,6 +22,10 @@ describe('career source of truth', () => {
     expect(markdown).toContain('www.rtve.es/play/noticias/')
     expect(markdown).toContain('eldiario.es/castilla-la-mancha/')
     expect(markdown).toContain('proyecto del sector legaltech')
+    expect(markdown).toContain('Pirineos sin bus')
+    expect(markdown).toContain('El Rincón del Trabajador')
+    expect(markdown).toContain('DTFetris')
+    expect(markdown).not.toContain('Jaibu')
     expect(markdown).not.toContain('PENDIENTE DE DANI')
     expect(markdown).not.toContain('borrador público propuesto')
   })

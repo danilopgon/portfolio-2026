@@ -17,6 +17,8 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
+Usamos **npm como gestor único de dependencias**: `package-lock.json` es el lockfile canónico. En CI/Vercel, instalar con `npm ci` para respetar exactamente las versiones fijadas.
+
 ## Dependencias externas (mínimas y justificadas)
 
 | Paquete                   | Por qué                                              |

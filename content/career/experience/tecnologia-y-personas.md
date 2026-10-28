@@ -2,8 +2,8 @@
 slug: tecnologia-y-personas
 company: Tecnología y Personas
 role:
-  es: Full-Stack Product Engineer
-  en: Full-Stack Product Engineer
+  es: Full Stack Developer
+  en: Full Stack Developer
 period:
   es: octubre 2026 — presente
   en: October 2026 — present

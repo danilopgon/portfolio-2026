@@ -11,13 +11,13 @@ Stack: Next.js 16 · TypeScript · Tailwind CSS · GSAP
 ## Arrancar
 
 ```bash
-npm install
+pnpm install
 cp .env.local.example .env.local
 # rellenar RESEND_API_KEY, FROM_EMAIL y CONTACT_EMAIL
-npm run dev
+pnpm dev
 ```
 
-Usamos **npm como gestor único de dependencias**: `package-lock.json` es el lockfile canónico. En CI/Vercel, instalar con `npm ci` para respetar exactamente las versiones fijadas.
+Usamos **pnpm como gestor único de dependencias** (`pnpm@10.18.0`): `pnpm-lock.yaml` es el lockfile canónico. En CI/Vercel, instalar con `pnpm install --frozen-lockfile` para respetar las versiones fijadas.
 
 ## Dependencias externas (mínimas y justificadas)
 

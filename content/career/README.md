@@ -34,8 +34,8 @@ Esta carpeta es la fuente editorial de la experiencia profesional, no una nueva 
 ## Comprobación
 
 ```bash
-npm run test:run
-npm run build
+pnpm test:run
+pnpm build
 ```
 
 Tras desplegar, comprobar que `https://danilopgon.com/career.md` responde con `text/markdown`, `https://danilopgon.com/llms.txt` con `text/plain` y que el enlace discreto aparece bajo la experiencia en la home.

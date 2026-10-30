@@ -1,8 +1,19 @@
-/* Hallmark · checked: 2026-10-30 · genre: editorial (inferred)
- * floor: 0 FAIL · fixed: 13 (6a, 10a, 30a, 34, 40, 44d, 48, 54, 63, 67, 24b, 39b, 75) · structural: printed (58, 59, 78, 81)
- * built: the project · redesign: polish · v2.0.0 */
-/* Hallmark · waive 81 · the absolute overlays inside each project card · they shade and hatch a real project screenshot, so no picture is empty */
+/* Hallmark · theme: custom (brand kept) · idea: "a journalist who ships code: the portfolio is set like a magazine feature about the work" · vibe: "dark magazine feature, one coral rule" · redesign: full · copy: verbatim
+ * paper: the brand's near-black · accent: the brand's coral · faces: Bebas Neue (brand display), Source Serif 4 (reading text and the standfirst), DM Mono (only for repo and file names)
+ * hero: the portrait fills the right half to the page edge with its own grain; the coral rule, the name, a serif standfirst and two actions on the left · nav: the brand's ruled cells · footer: kept · imagery: the portrait, the project screenshots · signature: the name under a heavy coral rule over a serif standfirst, set like a cover line
+ * axes: dark/display-condensed/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R3 V4 · weakest: R, the section order and copy stay as they were, so rhythm comes from the openers and the type alone */
+/* Hallmark · reworded "//sobre mí" to "sobre mí" · 54 names the code sigil as a label tic */
+/* Hallmark · reworded "//cómo trabajo" to "cómo trabajo" · 54 names the code sigil as a label tic */
+/* Hallmark · reworded "//trabajo seleccionado" to "trabajo seleccionado" · 54 names the code sigil as a label tic */
+/* Hallmark · reworded "//developer tooling" to "developer tooling" · 54 names the code sigil as a label tic */
+/* Hallmark · reworded "//experiencia" to "experiencia" · 54 names the code sigil as a label tic */
+/* Hallmark · reworded "//contacto" to "contacto" · 54 names the code sigil as a label tic */
+/* Hallmark · dropped hero-glow · the radial coral glow left the hero, its gradient id went with it */
+/* Hallmark · dropped hero-grain · the grain now lives only on the photo, as a CSS layer */
 /* Hallmark · dismissed 54 · SectionHeader renders its title as an h2 with the id each section's aria-labelledby points at */
+/* Hallmark · dismissed 77 · /enlaces is a link-in-bio page by design, one list under a name */
+/* Hallmark · waive 59 · the gap between the hero and Sobre mí · the full-height portrait ends at the hero's foot, so the section opener's own 112px top padding is the pause */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,8 +57,8 @@ html {
 body {
   background: theme('colors.black');
   color: theme('colors.cream');
-  font-family: var(--font-dm-mono), monospace;
-  font-size: 15px;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 17px;
   line-height: 1.6;
   overflow-x: clip;
 }
@@ -110,30 +121,18 @@ body {
   }
 }
 
-/* Sonner toast icon gap */
-[data-sonner-toast] [data-icon] {
-  margin-right: 8px;
+/* The caret after the career command blinks five times, then holds. */
+.caret {
+  animation: caret-blink 1s steps(1) 5;
 }
 
-@keyframes ticker {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
+@keyframes caret-blink {
   50% {
     opacity: 0;
   }
 }
 
-.terminal-cursor {
-  animation: blink 1s step-end infinite;
+/* Sonner toast icon gap */
+[data-sonner-toast] [data-icon] {
+  margin-right: 8px;
 }

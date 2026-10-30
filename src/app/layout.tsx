@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Bebas_Neue, DM_Mono } from 'next/font/google'
+import { Bebas_Neue, DM_Mono, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -12,6 +12,13 @@ const bebasNeue = Bebas_Neue({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-bebas',
+  display: 'swap',
+})
+const sourceSerif = Source_Serif_4({
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-serif',
   display: 'swap',
 })
 const dmMono = DM_Mono({
@@ -59,7 +66,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${bebasNeue.variable} ${dmMono.variable}`}>
+    <html lang="es" className={`${bebasNeue.variable} ${sourceSerif.variable} ${dmMono.variable}`}>
       <body>
         <script
           type="application/ld+json"

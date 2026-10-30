@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 import SectionHeader from '@/components/ui/SectionHeader'
+import BalancedChips from '@/components/ui/BalancedChips'
 import { getTools, type Tool } from '@/lib/tooling'
 import { useLanguage } from '@/lib/i18n/context'
 
@@ -34,18 +35,18 @@ function ToolCard({
   const identity = (
     <div className="flex flex-col gap-2">
       {/*
-        Tool names stay in DM Mono, never Bebas: Bebas is caps-only, and the
+        Tool names stay in DM Mono, never Bebas or the serif: Bebas is caps-only, and the
         lowercase hyphenated form is the whole signal that these are repo
         artifacts rather than product names.
       */}
       <h3
-        className={`text-cream font-medium tracking-[0.02em] leading-tight ${
-          lead ? 'text-[20px] md:text-[22px]' : 'text-[17px] md:text-[18px]'
+        className={`font-mono text-cream font-medium tracking-[0.02em] leading-tight ${
+          lead ? 'text-[22px] md:text-[24px]' : 'text-[18px] md:text-[19px]'
         }`}
       >
         {name}
       </h3>
-      <p className="text-[11px] text-muted">{kind}</p>
+      <p className="text-[15px] text-muted">{kind}</p>
     </div>
   )
 
@@ -55,20 +56,24 @@ function ToolCard({
     // a sibling with its disclosure open) the slack would otherwise pool under
     // a card that just stops mid-height. Anchored, the slack lands above a tag
     // row that reads as a footer, and the three rows line up across the grid.
-    <ul aria-label={`${name}, ${technologiesLabel}`} className="flex flex-wrap gap-1.5 mt-auto">
+    <BalancedChips
+      as="ul"
+      aria-label={`${name}, ${technologiesLabel}`}
+      className="flex flex-wrap gap-1.5 mt-auto"
+    >
       {stack.map((tag) => (
-        <li key={tag} className="text-[12px] px-1.5 py-0.5 border border-faint text-muted">
+        <li key={tag} className="text-[14px] px-2 py-0.5 border border-border text-[var(--dim)]">
           {tag}
         </li>
       ))}
-    </ul>
+    </BalancedChips>
   )
 
   const summaryAndTrigger = (
     <div className="flex flex-col gap-4">
       <p
-        className={`text-[var(--dim)] leading-[1.65] max-w-[62ch] ${
-          lead ? 'text-[15px] md:text-[16px]' : 'text-[14px]'
+        className={`text-[var(--dim)] leading-[1.6] max-w-[62ch] ${
+          lead ? 'text-[19px]' : 'text-[17px]'
         }`}
       >
         {summary}
@@ -86,7 +91,7 @@ function ToolCard({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={`${slug}-detail`}
-        className={`self-start inline-flex items-center gap-2 py-3.5 -my-3.5 text-[12px] text-[var(--dim)] hover:text-cream transition-[color,transform] ${DISCLOSURE_MS} ease-snap active:scale-[0.97] origin-left`}
+        className={`self-start inline-flex items-center gap-2 py-3 -my-3 text-[15px] text-[var(--dim)] hover:text-cream transition-[color,transform] ${DISCLOSURE_MS} ease-snap active:scale-[0.97] origin-left`}
       >
         <span aria-hidden="true" className="text-coral select-none w-2 text-center">
           {open ? '–' : '+'}
@@ -110,7 +115,7 @@ function ToolCard({
       }`}
     >
       <div className="overflow-hidden">
-        <p className="text-[14px] text-[var(--dim)] leading-[1.65] max-w-[62ch] border-l border-border pl-4">
+        <p className="text-[17px] text-[var(--dim)] leading-[1.6] max-w-[62ch] border-l border-border pl-4">
           {detail}
         </p>
       </div>
@@ -154,7 +159,7 @@ export default function Tooling() {
         <div className="grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] border-b border-border">
           <RevealOnScroll className="flex">
             <div className="px-6 py-9 md:px-16 md:py-12 lg:pr-12 flex flex-col gap-8 w-full">
-              <p className="text-[17px] md:text-[19px] leading-[1.6] text-cream max-w-[46ch]">
+              <p className="text-[22px] md:text-[26px] leading-[1.35] text-cream max-w-[34ch]">
                 {t.tooling.thesis}
               </p>
               {/*
@@ -162,10 +167,7 @@ export default function Tooling() {
                 links anywhere. The Servinet anchor gives the curious reader the
                 one destination that does exist.
               */}
-              <p className="text-[13px] text-muted leading-[1.6] max-w-[70ch] flex gap-2 mt-auto">
-                <span aria-hidden="true" className="text-coral select-none shrink-0">
-                  {'//'}
-                </span>
+              <p className="text-[16px] text-muted leading-[1.6] max-w-[70ch] mt-auto">
                 <span>
                   {t.tooling.contextBefore}
                   <Link

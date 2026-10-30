@@ -1,6 +1,7 @@
 'use client'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 import SectionHeader from '@/components/ui/SectionHeader'
+import BalancedChips from '@/components/ui/BalancedChips'
 import { stack } from '@/lib/about'
 import { useLanguage } from '@/lib/i18n/context'
 
@@ -10,40 +11,40 @@ export default function About() {
     <section id="about" aria-labelledby="about-heading" className="border-b border-border">
       <SectionHeader id="about-heading" title={t.about.title} number="01" />
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <RevealOnScroll className="px-6 py-8 md:px-16 md:py-12 border-b border-border lg:border-b-0 lg:border-r space-y-4">
-          <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
+        <RevealOnScroll className="px-6 py-12 md:px-16 md:py-16 border-b border-border lg:border-b-0 lg:border-r space-y-5">
+          <p className="text-[19px] text-[var(--dim)] leading-[1.65] max-w-[62ch]">
             {t.about.p1Before}
             <strong className="text-cream font-medium">{t.about.p1Highlight}</strong>
             {t.about.p1After}
           </p>
-          <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
+          <p className="text-[19px] text-[var(--dim)] leading-[1.65] max-w-[62ch]">
             {t.about.p2Before}
             <strong className="text-cream font-medium">{t.about.p2Highlight}</strong>
             {t.about.p2After}
           </p>
-          <p className="text-[16px] text-[var(--dim)] leading-[1.8]">
+          <p className="text-[19px] text-[var(--dim)] leading-[1.65] max-w-[62ch]">
             {t.about.p3Before}
             <strong className="text-cream font-medium">{t.about.p3Highlight}</strong>
             {t.about.p3After}
           </p>
         </RevealOnScroll>
 
-        <RevealOnScroll className="px-6 py-8 md:px-12 md:py-12 flex flex-col gap-8" delay={100}>
+        <RevealOnScroll className="px-6 py-12 md:px-12 md:py-16 flex flex-col gap-10" delay={100}>
           <div>
-            <p className="text-[12px] text-coral mb-3">{t.about.stack}</p>
-            <div className="flex flex-wrap gap-1.5">
+            <p className="text-[15px] text-muted mb-3">{t.about.stack}</p>
+            <BalancedChips className="flex flex-wrap gap-1.5">
               {stack.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[13px] px-2.5 py-1 border border-border text-muted hover:border-coral hover:text-cream transition-colors cursor-default"
+                  className="text-[15px] px-2.5 py-1 border border-border text-[var(--dim)]"
                 >
                   {tag}
                 </span>
               ))}
-            </div>
+            </BalancedChips>
           </div>
           <div>
-            <p className="text-[12px] text-coral mb-3">{t.about.directContact}</p>
+            <p className="text-[15px] text-muted mb-3">{t.about.directContact}</p>
             <div className="flex">
               {[
                 {
@@ -104,7 +105,7 @@ export default function About() {
                   aria-label={`${label} (${t.about.newTab})`}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="w-9 h-9 border border-border border-r-0 last:border-r flex items-center justify-center text-muted hover:bg-coral hover:text-black hover:border-coral transition-colors"
+                  className="w-11 h-11 border border-border border-r-0 last:border-r flex items-center justify-center text-[var(--dim)] hover:bg-coral hover:text-black hover:border-coral transition-colors"
                 >
                   {icon}
                 </a>

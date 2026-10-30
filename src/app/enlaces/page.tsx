@@ -66,7 +66,7 @@ export default function EnlacesPage() {
                   <span className="block text-[15px] font-medium text-cream group-hover:text-coral transition-colors">
                     {label}
                   </span>
-                  <span className="block text-[12px] text-muted mt-0.5">{sub}</span>
+                  <span className="block text-[15px] text-muted mt-0.5">{sub}</span>
                 </div>
                 <span className="text-[16px] text-border group-hover:text-coral group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[color,transform] leading-none">
                   ↗

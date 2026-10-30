@@ -5,23 +5,24 @@ type SectionHeaderProps = {
   numberClass?: string
 }
 
-export default function SectionHeader({
-  id,
-  title,
-  number,
-  numberClass = 'text-[13px]',
-}: SectionHeaderProps) {
+export default function SectionHeader({ id, title, number, numberClass = '' }: SectionHeaderProps) {
   return (
-    <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-      <h2 id={id} className="text-[12px] text-muted font-normal">
-        <span aria-hidden="true" className="text-coral mr-2">
-          {'//'}
+    <div className="px-6 pt-20 pb-10 md:px-16 md:pt-28 md:pb-12 border-b border-border">
+      <div aria-hidden="true" className="w-24 h-1 bg-coral mb-5" />
+      <div className="flex justify-between items-end gap-6">
+        <h2
+          id={id}
+          className="font-bebas font-normal text-cream leading-[0.9] text-[clamp(52px,6vw,88px)]"
+        >
+          {title}
+        </h2>
+        <span
+          aria-hidden="true"
+          className={`font-bebas text-[clamp(28px,3vw,40px)] leading-none text-muted ${numberClass}`}
+        >
+          {number}
         </span>
-        {title}
-      </h2>
-      <span aria-hidden="true" className={`font-bebas ${numberClass} text-muted tracking-[0.1em]`}>
-        {number}
-      </span>
+      </div>
     </div>
   )
 }

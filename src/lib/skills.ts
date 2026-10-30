@@ -43,12 +43,12 @@ const foundationsData: Record<Locale, Skill[]> = {
     {
       n: '04',
       name: 'Pensamiento de producto',
-      desc: 'Antes de programar, era periodista. Esa etapa marca cómo trabajo: identifico quién usa el producto, qué intenta hacer y dónde encuentra fricción antes de decidir qué construir.',
+      desc: 'Identifico quién usa el producto, qué intenta hacer y dónde encuentra fricción antes de decidir qué construir.',
     },
     {
       n: '05',
       name: 'IA aplicada',
-      desc: 'Uso IA para revisión con contexto, automatización de criterios repetibles y flujos human-in-the-loop. Los checks deterministas y la revisión humana conservan el control sobre las decisiones técnicas.',
+      desc: 'Uso IA para revisión con contexto, automatización de criterios repetibles y flujos human-in-the-loop.',
     },
   ],
   en: [
@@ -60,12 +60,12 @@ const foundationsData: Record<Locale, Skill[]> = {
     {
       n: '04',
       name: 'Product thinking',
-      desc: "Before programming, I was a journalist. That background shapes how I work: I identify who uses the product, what they're trying to do and where they encounter friction before deciding what to build.",
+      desc: "I identify who uses the product, what they're trying to do and where they encounter friction before deciding what to build.",
     },
     {
       n: '05',
       name: 'Applied AI',
-      desc: 'I use AI for context-aware review, repeatable criteria and human-in-the-loop workflows. Deterministic checks and human review keep technical decisions under control.',
+      desc: 'I use AI for context-aware review, repeatable criteria and human-in-the-loop workflows.',
     },
   ],
 }

@@ -21,7 +21,7 @@ export const translations = {
     hero: {
       label: 'Full-Stack Product Engineer | AI Engineering',
       taglineBefore: 'Construyo productos de extremo a extremo, desde ',
-      taglineHighlight: 'la experiencia y la arquitectura hasta las APIs y los datos',
+      taglineHighlight: 'la experiencia de usuario y la arquitectura hasta las APIs y los datos',
       taglineAfter: '. También me ocupo de llevarlos a producción.',
       cta1: 'Ver trabajo',
       cta2: 'Hablemos',
@@ -49,7 +49,6 @@ export const translations = {
     },
     projects: {
       title: 'Trabajo seleccionado',
-      ticker: 'PROYECTOS',
     },
     tooling: {
       title: 'Developer Tooling',
@@ -66,7 +65,7 @@ export const translations = {
     experience: {
       title: 'Experiencia',
       period: 'Periodo',
-      highlights: 'highlights',
+      highlights: 'puntos clave',
       technologies: 'tecnologías',
       current: 'Puesto actual',
       fullCareerMd: 'Trayectoria completa (.md)',
@@ -123,7 +122,7 @@ export const translations = {
     hero: {
       label: 'Full-Stack Product Engineer | AI Engineering',
       taglineBefore: 'I build products end to end, from ',
-      taglineHighlight: 'experience and architecture to APIs and data',
+      taglineHighlight: 'user experience and architecture to APIs and data',
       taglineAfter: '. I also take them through deployment.',
       cta1: 'See work',
       cta2: "Let's talk",
@@ -151,7 +150,6 @@ export const translations = {
     },
     projects: {
       title: 'Selected work',
-      ticker: 'PROJECTS',
     },
     tooling: {
       title: 'Developer Tooling',

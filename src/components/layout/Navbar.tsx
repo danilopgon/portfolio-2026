@@ -176,7 +176,7 @@ export default function Navbar() {
     <>
       <nav
         aria-label={t.nav.mainNav}
-        className="fixed top-0 left-0 right-0 z-[999] flex justify-between items-stretch h-11 border-b border-border bg-black/90 backdrop-blur-sm"
+        className="fixed top-0 left-0 right-0 z-[999] flex justify-between items-stretch h-11 border-b border-border bg-black"
       >
         <div className="px-5 flex items-center border-r border-border shrink-0">
           <Link href="/" aria-label="Dani López González — inicio" onClick={closeMenu}>
@@ -208,7 +208,7 @@ export default function Navbar() {
               href={href}
               onClick={() => setActive(href.slice(2))}
               aria-current={active === href.slice(2) ? 'page' : undefined}
-              className={`flex items-center px-4 text-[13px] tracking-[0.22em] uppercase border-l border-border transition-colors whitespace-nowrap
+              className={`flex items-center px-4 text-[15px] border-l border-border transition-colors whitespace-nowrap
                 ${active === href.slice(2) ? 'text-coral' : 'text-muted hover:text-cream hover:bg-faint'}`}
             >
               {label}
@@ -218,11 +218,7 @@ export default function Navbar() {
 
         <div className="flex items-center ml-auto xl:ml-0">
           {/* Disponible badge */}
-          <div className="flex items-center gap-2 px-4 lg:px-5 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted shrink-0">
-            <span
-              aria-hidden="true"
-              className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
-            />
+          <div className="flex items-center gap-2 px-4 lg:px-5 border-l border-border h-full text-[15px] text-cream shrink-0">
             <span>{t.nav.available}</span>
           </div>
 
@@ -231,7 +227,7 @@ export default function Navbar() {
             type="button"
             onClick={toggleLocale}
             aria-label={t.nav.langLabel}
-            className="flex items-center px-3 lg:px-4 border-l border-border h-full text-[12px] tracking-[0.15em] uppercase text-muted hover:text-cream transition-colors shrink-0"
+            className="flex items-center px-3 lg:px-4 border-l border-border h-full text-[15px] text-muted hover:text-cream transition-colors shrink-0"
           >
             {t.nav.lang}
           </button>
@@ -275,7 +271,7 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
         aria-label={t.nav.mobileMenu}
-        className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black/95 backdrop-blur-sm xl:hidden"
+        className="fixed top-11 left-0 right-0 z-[998] flex-col border-b border-border bg-black xl:hidden"
         style={{ display: 'none' }}
       >
         {links.map(({ href, label }, i) => (
@@ -290,7 +286,7 @@ export default function Navbar() {
               setActive(href.slice(2))
               closeMenu()
             }}
-            className={`flex items-center px-6 h-12 text-[13px] tracking-[0.22em] uppercase border-b border-border transition-colors
+            className={`flex items-center px-6 h-12 text-[17px] border-b border-border transition-colors
               ${active === href.slice(2) ? 'text-coral border-l-2 border-l-coral pl-[22px]' : 'text-muted hover:text-cream hover:bg-faint'}`}
           >
             {label}

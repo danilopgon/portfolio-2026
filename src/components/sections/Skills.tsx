@@ -19,17 +19,17 @@ export default function Skills() {
           <RevealOnScroll
             key={n}
             delay={i * 80}
-            className={`skill-card px-6 py-8 md:px-8 md:py-10 relative overflow-hidden group hover:bg-faint transition-colors
+            className={`skill-card px-6 py-10 md:px-10 md:py-12 relative overflow-hidden group hover:bg-faint transition-colors
               ${i === 0 ? 'border-b border-border md:border-b-0 md:border-r' : ''}`}
           >
-            <span className="absolute top-[-10px] right-4 font-bebas text-[80px] text-faint leading-none pointer-events-none group-hover:text-coral transition-colors">
+            <span className="absolute top-[-10px] right-4 font-bebas text-[96px] text-faint leading-none pointer-events-none group-hover:text-coral transition-colors">
               {n}
             </span>
-            <div className="w-6 h-0.5 bg-coral mb-4 transition-all duration-300 group-hover:w-10" />
-            <h3 className="text-[13px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
+            <div className="w-6 h-0.5 bg-coral mb-4 origin-left transition-transform duration-300 group-hover:scale-x-[1.67]" />
+            <h3 className="font-bebas font-normal text-[32px] leading-none text-cream mb-3">
               {name}
             </h3>
-            <p className="text-[14px] text-[var(--dim)] leading-[1.65]">{desc}</p>
+            <p className="text-[17px] text-[var(--dim)] leading-[1.6] max-w-[52ch]">{desc}</p>
           </RevealOnScroll>
         ))}
       </div>
@@ -40,17 +40,17 @@ export default function Skills() {
           <RevealOnScroll
             key={n}
             delay={i * 80}
-            className={`skill-card px-6 py-8 md:px-8 md:py-10 relative overflow-hidden group hover:bg-faint transition-colors
+            className={`skill-card px-6 py-10 md:px-10 md:py-12 relative overflow-hidden group hover:bg-faint transition-colors
               ${i < 2 ? 'border-b border-border md:border-b-0 md:border-r' : ''}`}
           >
-            <span className="absolute top-[-10px] right-4 font-bebas text-[80px] text-faint leading-none pointer-events-none group-hover:text-coral transition-colors">
+            <span className="absolute top-[-10px] right-4 font-bebas text-[96px] text-faint leading-none pointer-events-none group-hover:text-coral transition-colors">
               {n}
             </span>
-            <div className="w-6 h-0.5 bg-coral mb-4 transition-all duration-300 group-hover:w-10" />
-            <h3 className="text-[13px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
+            <div className="w-6 h-0.5 bg-coral mb-4 origin-left transition-transform duration-300 group-hover:scale-x-[1.67]" />
+            <h3 className="font-bebas font-normal text-[32px] leading-none text-cream mb-3">
               {name}
             </h3>
-            <p className="text-[14px] text-[var(--dim)] leading-[1.65]">{desc}</p>
+            <p className="text-[17px] text-[var(--dim)] leading-[1.6] max-w-[52ch]">{desc}</p>
           </RevealOnScroll>
         ))}
       </div>

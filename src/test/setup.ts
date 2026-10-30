@@ -9,7 +9,7 @@ import { mockMatchMedia } from './motion'
 mockMatchMedia(false)
 
 // jsdom does not implement the CSS Font Loading API (`document.fonts`),
-// which `Ticker` awaits before measuring layout. Stub a resolved promise so
+// which `BalancedChips` awaits before measuring layout. Stub a resolved promise so
 // components using it can mount under test without crashing.
 if (!document.fonts) {
   // @ts-expect-error -- jsdom doesn't type `document.fonts`; minimal stub only

@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         bebas: ['var(--font-bebas)', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
         mono: ['var(--font-dm-mono)', 'monospace'],
       },
       transitionDuration: {

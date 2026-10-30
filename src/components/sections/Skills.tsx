@@ -25,10 +25,8 @@ export default function Skills() {
             <span className="absolute top-[-10px] right-4 font-bebas text-[80px] text-faint leading-none pointer-events-none group-hover:text-coral transition-colors">
               {n}
             </span>
-            <div className="w-6 h-0.5 bg-coral mb-4 transition-all duration-300 group-hover:w-10" />
-            <h3 className="text-[13px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
-              {name}
-            </h3>
+            <div className="w-6 h-0.5 bg-coral mb-4 origin-left transition-transform duration-300 group-hover:scale-x-[1.67]" />
+            <h3 className="text-[13px] font-medium text-cream mb-2.5">{name}</h3>
             <p className="text-[14px] text-[var(--dim)] leading-[1.65]">{desc}</p>
           </RevealOnScroll>
         ))}
@@ -46,10 +44,8 @@ export default function Skills() {
             <span className="absolute top-[-10px] right-4 font-bebas text-[80px] text-faint leading-none pointer-events-none group-hover:text-coral transition-colors">
               {n}
             </span>
-            <div className="w-6 h-0.5 bg-coral mb-4 transition-all duration-300 group-hover:w-10" />
-            <h3 className="text-[13px] font-medium tracking-[0.08em] uppercase text-cream mb-2.5">
-              {name}
-            </h3>
+            <div className="w-6 h-0.5 bg-coral mb-4 origin-left transition-transform duration-300 group-hover:scale-x-[1.67]" />
+            <h3 className="text-[13px] font-medium text-cream mb-2.5">{name}</h3>
             <p className="text-[14px] text-[var(--dim)] leading-[1.65]">{desc}</p>
           </RevealOnScroll>
         ))}

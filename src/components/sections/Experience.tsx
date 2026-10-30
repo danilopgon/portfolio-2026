@@ -62,16 +62,14 @@ export default function Experience({
                         <div className="grid gap-4 md:grid-cols-[minmax(0,200px)_minmax(0,1fr)] md:gap-10">
                           {/* Meta */}
                           <div className="flex flex-col gap-0.5 md:gap-1">
-                            <p className="text-[12px] text-muted tracking-[0.08em]">
+                            <p className="text-[12px] text-muted">
                               <span className="sr-only">{t.experience.period}: </span>
                               {period}
                               {current && (
                                 <span className="sr-only"> ({t.experience.current})</span>
                               )}
                             </p>
-                            <p className="text-[14px] text-cream font-medium tracking-[0.04em]">
-                              {role}
-                            </p>
+                            <p className="text-[14px] text-cream font-medium">{role}</p>
                             <p className="text-[13px] text-muted">
                               <span aria-hidden="true" className="text-coral select-none">
                                 @{' '}
@@ -112,7 +110,7 @@ export default function Experience({
                               {stack.map((tag) => (
                                 <li
                                   key={tag}
-                                  className="text-[12px] px-1.5 py-0.5 border border-faint text-muted tracking-[0.1em]"
+                                  className="text-[12px] px-1.5 py-0.5 border border-faint text-muted"
                                 >
                                   {tag}
                                 </li>

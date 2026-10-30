@@ -10,7 +10,7 @@ import { makeContactSchema, type ContactFormData } from '@/lib/schemas/contact'
 import { useLanguage } from '@/lib/i18n/context'
 
 const inputClass =
-  'bg-transparent border-b border-border py-2 px-2 text-[14px] text-cream placeholder:text-[#777] outline-none focus:border-coral transition-colors font-mono w-full'
+  'bg-transparent border-b border-muted py-3 px-2 text-[14px] text-cream placeholder:text-muted outline-none focus:border-coral transition-colors font-mono w-full'
 
 export default function Contact() {
   const { locale, t } = useLanguage()
@@ -67,18 +67,64 @@ export default function Contact() {
           <div className="mt-auto flex flex-col gap-3">
             {[
               {
-                icon: '✉',
+                icon: (
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="14" />
+                    <path d="m3 6 9 7 9-7" />
+                  </svg>
+                ),
                 text: 'contacto@danilopgon.com',
                 href: 'mailto:contacto@danilopgon.com',
               },
-              { icon: '☎', text: '+34 685 014 718', href: 'tel:+34685014718' },
-              { icon: '◎', text: t.contact.location, href: undefined },
+              {
+                icon: (
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1" />
+                  </svg>
+                ),
+                text: '+34 685 014 718',
+                href: 'tel:+34685014718',
+              },
+              {
+                icon: (
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z" />
+                    <circle cx="12" cy="9" r="2.5" />
+                  </svg>
+                ),
+                text: t.contact.location,
+                href: undefined,
+              },
             ].map(({ icon, text, href }) => {
               const cls =
                 'flex items-center gap-3 text-[14px] text-muted hover:text-cream transition-colors group'
               const inner = (
                 <>
-                  <span className="w-7 h-7 border border-border flex items-center justify-center group-hover:bg-coral group-hover:border-coral group-hover:text-black transition-all shrink-0">
+                  <span className="w-7 h-7 border border-border flex items-center justify-center group-hover:bg-coral group-hover:border-coral group-hover:text-black transition-colors shrink-0">
                     {icon}
                   </span>
                   {text}
@@ -153,10 +199,9 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-2 bg-coral text-black font-mono text-[15px] font-medium tracking-[0.22em] uppercase px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-2 bg-coral text-black font-mono text-[15px] font-medium px-6 py-3.5 border border-coral hover:bg-cream hover:border-cream transition-colors flex justify-between items-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span>{isSubmitting ? t.contact.submitting : t.contact.submit}</span>
-              <span aria-hidden="true">→</span>
             </button>
           </form>
         </RevealOnScroll>

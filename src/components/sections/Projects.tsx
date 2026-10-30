@@ -64,7 +64,7 @@ export default function Projects() {
                       src={image}
                       alt={name}
                       fill
-                      className="object-cover transition-all duration-500 group-hover:scale-[1.03] [filter:grayscale(0.65)_saturate(0.5)] group-hover:[filter:grayscale(0.2)_saturate(1.1)]"
+                      className="object-cover transition-[filter] duration-500 [filter:grayscale(0.65)_saturate(0.5)] group-hover:[filter:grayscale(0.2)_saturate(1.1)]"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   ) : (
@@ -77,7 +77,7 @@ export default function Projects() {
                   {/* gradient shadow top for label legibility */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
                   {/* hatch overlay */}
-                  <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.012)_20px,rgba(255,255,255,0.012)_21px)]" />
+                  <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,var(--hatch)_20px,var(--hatch)_21px)]" />
                   {/* hover line */}
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-coral scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
                 </div>
@@ -94,7 +94,7 @@ export default function Projects() {
                       {tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[12px] px-1.5 py-0.5 border border-faint text-muted tracking-[0.1em]"
+                          className="text-[12px] px-1.5 py-0.5 border border-faint text-muted"
                         >
                           {tag}
                         </span>
@@ -104,7 +104,7 @@ export default function Projects() {
                   {url && (
                     <span
                       aria-hidden="true"
-                      className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-all leading-none pb-0.5 shrink-0 ml-4"
+                      className="text-[18px] text-border group-hover:text-coral group-hover:translate-x-1 group-hover:-translate-y-1 transition-[color,transform] leading-none pb-0.5 shrink-0 ml-4"
                     >
                       ↗
                     </span>

@@ -6,13 +6,21 @@ export const alt = 'Dani López González — Product Engineer · Frontend & AI'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
+// Satori can't read CSS custom properties; mirrors the :root tokens in globals.css.
+const color = {
+  black: '#0c0c0b',
+  coral: '#f55033',
+  muted: '#8e8e8c',
+  cream: '#f0ede8',
+}
+
 export default async function OgImage() {
   const fontData = await readFile(join(process.cwd(), 'src/fonts/BebasNeue-Regular.ttf'))
 
   return new ImageResponse(
     <div
       style={{
-        background: '#0c0c0b',
+        background: color.black,
         width: '100%',
         height: '100%',
         display: 'flex',
@@ -31,13 +39,13 @@ export default async function OgImage() {
           marginBottom: '28px',
         }}
       >
-        <div style={{ width: '32px', height: '1px', background: '#f55033' }} />
+        <div style={{ width: '32px', height: '1px', background: color.coral }} />
         <span
           style={{
             fontSize: '14px',
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#8e8e8c',
+            color: color.muted,
             fontFamily: 'sans-serif',
           }}
         >
@@ -56,7 +64,7 @@ export default async function OgImage() {
         <span
           style={{
             fontSize: '172px',
-            color: '#f0ede8',
+            color: color.cream,
             letterSpacing: '0.01em',
             fontFamily: 'Bebas Neue',
             lineHeight: 1,
@@ -67,7 +75,7 @@ export default async function OgImage() {
         <span
           style={{
             fontSize: '172px',
-            color: '#f55033',
+            color: color.coral,
             letterSpacing: '0.01em',
             fontFamily: 'Bebas Neue',
             lineHeight: 1,
@@ -82,7 +90,7 @@ export default async function OgImage() {
         style={{
           fontSize: '13px',
           letterSpacing: '0.22em',
-          color: '#8e8e8c',
+          color: color.muted,
           textTransform: 'uppercase',
           fontFamily: 'sans-serif',
         }}

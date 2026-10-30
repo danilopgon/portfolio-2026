@@ -30,14 +30,12 @@ export default function About() {
 
         <RevealOnScroll className="px-6 py-8 md:px-12 md:py-12 flex flex-col gap-8" delay={100}>
           <div>
-            <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">
-              {t.about.stack}
-            </p>
+            <p className="text-[12px] text-coral mb-3">{t.about.stack}</p>
             <div className="flex flex-wrap gap-1.5">
               {stack.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[13px] tracking-[0.1em] px-2.5 py-1 border border-border text-muted hover:border-coral hover:text-cream transition-colors cursor-default"
+                  className="text-[13px] px-2.5 py-1 border border-border text-muted hover:border-coral hover:text-cream transition-colors cursor-default"
                 >
                   {tag}
                 </span>
@@ -45,9 +43,7 @@ export default function About() {
             </div>
           </div>
           <div>
-            <p className="text-[12px] tracking-[0.25em] uppercase text-coral mb-3">
-              {t.about.directContact}
-            </p>
+            <p className="text-[12px] text-coral mb-3">{t.about.directContact}</p>
             <div className="flex">
               {[
                 {
@@ -108,7 +104,7 @@ export default function About() {
                   aria-label={`${label} (${t.about.newTab})`}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="w-9 h-9 border border-border border-r-0 last:border-r flex items-center justify-center text-muted hover:bg-coral hover:text-black hover:border-coral transition-all"
+                  className="w-9 h-9 border border-border border-r-0 last:border-r flex items-center justify-center text-muted hover:bg-coral hover:text-black hover:border-coral transition-colors"
                 >
                   {icon}
                 </a>

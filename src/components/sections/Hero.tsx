@@ -34,7 +34,7 @@ export default function Hero() {
   const { t } = useLanguage()
   const imgInnerRef = useRef<HTMLDivElement>(null)
   const glowRef = useRef<SVGSVGElement>(null)
-  const labelRef = useRef<HTMLDivElement>(null)
+  const labelRef = useRef<HTMLParagraphElement>(null)
   const daniRef = useRef<HTMLSpanElement>(null)
   const lopezRef = useRef<HTMLSpanElement>(null)
   const descRef = useRef<HTMLParagraphElement>(null)
@@ -125,7 +125,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="min-h-screen pt-11 flex flex-col justify-center relative overflow-hidden"
+      className="min-h-svh pt-11 flex flex-col justify-center relative overflow-hidden"
     >
       {/* Grainy coral gradient — capa atmosférica independiente, anima a distinta velocidad que la foto.
           `data-motion` lives here (not on the section) because this element gets an
@@ -140,9 +140,9 @@ export default function Hero() {
       >
         <defs>
           <radialGradient id="hero-glow" cx="70%" cy="38%" r="56%">
-            <stop offset="0%" stopColor="#f55033" stopOpacity="0.38" />
-            <stop offset="45%" stopColor="#f55033" stopOpacity="0.1" />
-            <stop offset="100%" stopColor="#f55033" stopOpacity="0" />
+            <stop offset="0%" stopColor="var(--coral)" stopOpacity="0.38" />
+            <stop offset="45%" stopColor="var(--coral)" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="var(--coral)" stopOpacity="0" />
           </radialGradient>
           <filter
             id="hero-grain"
@@ -190,14 +190,14 @@ export default function Hero() {
         className="hidden lg:block absolute inset-0 pointer-events-none mix-blend-screen"
         style={{
           background:
-            'radial-gradient(ellipse 50% 60% at 72% 38%, rgba(245,80,51,0.12) 0%, rgba(245,80,51,0.03) 60%, transparent 85%)',
+            'radial-gradient(ellipse 50% 60% at 72% 38%, var(--coral-glow-strong) 0%, var(--coral-glow-faint) 60%, transparent 85%)',
         }}
       />
 
       {/* bg radial glow */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,rgba(245,80,51,0.06),transparent)] pointer-events-none"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_70%_50%,var(--coral-glow-soft),transparent)] pointer-events-none"
       />
       {/* grain */}
       <div
@@ -215,18 +215,9 @@ export default function Hero() {
           section, and never the photo (the desktop LCP candidate). */}
       <div
         data-motion={motionPending ? 'pending' : undefined}
-        className="flex items-center relative z-10"
+        className="flex items-center relative z-10 w-full max-w-[1520px] mx-auto"
       >
         <div className="flex flex-col justify-center flex-1 min-w-0 px-6 py-16 md:px-16 md:py-20">
-          <div
-            ref={labelRef}
-            className="mb-5 flex items-center gap-3 before:block before:w-8 before:h-px before:bg-coral"
-          >
-            <span className="text-[13px] tracking-[0.3em] uppercase text-muted">
-              {t.hero.label}
-            </span>
-          </div>
-
           <h1
             id="hero-heading"
             className="font-bebas leading-[0.88] tracking-[0.01em] text-[clamp(64px,10vw,140px)] select-none"
@@ -239,9 +230,13 @@ export default function Hero() {
             </span>
           </h1>
 
+          <p ref={labelRef} className="mt-6 text-[16px] text-cream">
+            {t.hero.label}
+          </p>
+
           <p
             ref={descRef}
-            className="max-w-[460px] text-[16px] text-[var(--dim)] leading-[1.75] mt-7"
+            className="max-w-[460px] text-[16px] text-[var(--dim)] leading-[1.75] mt-3"
           >
             {t.hero.taglineBefore}
             <strong className="text-cream font-medium">{t.hero.taglineHighlight}</strong>
@@ -251,13 +246,13 @@ export default function Hero() {
           <div ref={ctasRef} className="flex mt-10">
             <a
               href="#projects"
-              className="bg-coral text-black font-mono text-[13px] font-medium tracking-[0.22em] uppercase px-7 py-3 border border-coral hover:bg-cream hover:border-cream transition-colors flex items-center gap-2.5"
+              className="bg-coral text-black font-mono text-[13px] font-medium px-7 py-3 border border-coral hover:bg-cream hover:border-cream transition-colors flex items-center"
             >
-              {t.hero.cta1} <span aria-hidden="true">→</span>
+              {t.hero.cta1}
             </a>
             <a
               href="#contact"
-              className="text-muted font-mono text-[13px] tracking-[0.22em] uppercase px-7 py-3 border border-border border-l-0 hover:text-cream hover:border-muted transition-colors"
+              className="text-muted font-mono text-[13px] px-7 py-3 border border-border border-l-0 hover:text-cream hover:border-muted transition-colors"
             >
               {t.hero.cta2}
             </a>

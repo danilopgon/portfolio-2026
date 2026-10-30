@@ -13,7 +13,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="flex justify-between items-center px-6 py-4 md:px-16 md:py-5 border-b border-border">
-      <h2 id={id} className="text-[12px] tracking-[0.3em] uppercase text-muted font-normal">
+      <h2 id={id} className="text-[12px] text-muted font-normal">
         <span aria-hidden="true" className="text-coral mr-2">
           {'//'}
         </span>

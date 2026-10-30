@@ -45,7 +45,7 @@ function ToolCard({
       >
         {name}
       </h3>
-      <p className="text-[11px] uppercase tracking-[0.15em] text-muted">{kind}</p>
+      <p className="text-[11px] text-muted">{kind}</p>
     </div>
   )
 
@@ -57,10 +57,7 @@ function ToolCard({
     // row that reads as a footer, and the three rows line up across the grid.
     <ul aria-label={`${name}, ${technologiesLabel}`} className="flex flex-wrap gap-1.5 mt-auto">
       {stack.map((tag) => (
-        <li
-          key={tag}
-          className="text-[12px] px-1.5 py-0.5 border border-faint text-muted tracking-[0.1em]"
-        >
+        <li key={tag} className="text-[12px] px-1.5 py-0.5 border border-faint text-muted">
           {tag}
         </li>
       ))}
@@ -89,7 +86,7 @@ function ToolCard({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={`${slug}-detail`}
-        className={`self-start inline-flex items-center gap-2 py-2 -my-2 text-[11px] uppercase tracking-[0.15em] text-[var(--dim)] hover:text-cream transition-[color,transform] ${DISCLOSURE_MS} ease-snap active:scale-[0.97] origin-left`}
+        className={`self-start inline-flex items-center gap-2 py-3.5 -my-3.5 text-[12px] text-[var(--dim)] hover:text-cream transition-[color,transform] ${DISCLOSURE_MS} ease-snap active:scale-[0.97] origin-left`}
       >
         <span aria-hidden="true" className="text-coral select-none w-2 text-center">
           {open ? '–' : '+'}

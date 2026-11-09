@@ -43,7 +43,9 @@ export default function Projects() {
             >
               <Wrapper className="flex flex-col flex-1" {...wrapperProps}>
                 {/* Thumb */}
-                <div className="relative overflow-hidden h-[300px] lg:h-[380px]">
+                {/* The captures are 4:3 device mockups: the frame keeps their
+                    ratio so the screen is never cropped. */}
+                <div className="relative overflow-hidden aspect-[4/3]">
                   {image ? (
                     <Image
                       src={image}
@@ -65,11 +67,11 @@ export default function Projects() {
                 </div>
                 {/* Info */}
                 <div className="flex justify-between items-start px-6 py-8 md:px-10 border-t border-border shrink-0">
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-bebas font-normal text-[40px] text-cream mb-3 leading-none">
                       {name}
                     </h3>
-                    <p className="text-[17px] text-[var(--dim)] mb-4 leading-[1.6] pr-6 max-w-[60ch]">
+                    <p className="text-[17px] text-[var(--dim)] mb-4 leading-[1.6]">
                       {description}
                     </p>
                     <BalancedChips className="flex flex-wrap gap-1">

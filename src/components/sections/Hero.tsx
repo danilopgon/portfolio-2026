@@ -127,6 +127,12 @@ export default function Hero() {
               "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")",
           }}
         />
+        {/* The foot: the print sinks into the page instead of ending on a hard
+            edge over Sobre mí. Static, so the parallax never exposes it. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-[30%] pointer-events-none bg-gradient-to-t from-black via-black/60 to-transparent"
+        />
       </figure>
 
       {/* Text-content wrapper: the cover line, then the standfirst and the
@@ -136,7 +142,7 @@ export default function Hero() {
           the name has to blend with the photo beneath it. */}
       <div
         data-motion={motionPending ? 'pending' : undefined}
-        className="relative flex-1 flex flex-col justify-center gap-[clamp(28px,5svh,56px)] w-full max-w-[1520px] mx-auto px-6 md:px-16 pt-[clamp(32px,6svh,72px)] pb-[clamp(32px,6svh,64px)]"
+        className="relative flex-1 flex flex-col justify-center gap-[clamp(28px,5svh,56px)] w-full px-6 md:px-16 pt-[clamp(32px,6svh,72px)] pb-[clamp(32px,6svh,64px)]"
       >
         <div ref={nameRef}>
           <div
@@ -148,7 +154,7 @@ export default function Hero() {
               photo. `difference` keeps it legible over dark and light. */}
           <h1
             id="hero-heading"
-            className="font-bebas text-cream leading-[0.82] tracking-[0.005em] text-[clamp(68px,min(19vw,33svh),320px)] select-none whitespace-nowrap lg:mix-blend-difference"
+            className="font-bebas text-cream leading-[0.82] tracking-[0.005em] text-[clamp(68px,min(19vw,33svh),320px)] lg:text-[clamp(68px,min(16vw,33svh),320px)] select-none whitespace-nowrap lg:mix-blend-difference"
           >
             <span className="inline-block align-top [clip-path:inset(-0.5em_-0.1em_0_-0.1em)]">
               <span ref={daniRef} className="inline-block">

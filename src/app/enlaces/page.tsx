@@ -28,12 +28,6 @@ const links = [
     external: true,
   },
   {
-    label: 'Instagram',
-    sub: '@danilopgon',
-    href: 'https://www.instagram.com/danilopgon/',
-    external: true,
-  },
-  {
     label: 'Spotify',
     sub: 'Hotel Sur',
     href: 'https://open.spotify.com/intl-es/artist/5ZsW4wbMl8qYFZ0L9xvBeu',

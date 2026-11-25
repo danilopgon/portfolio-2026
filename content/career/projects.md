@@ -50,9 +50,19 @@ Los proyectos personales y las herramientas desarrolladas durante etapas laboral
 - Aplicación de escritorio en desarrollo para preparar planchas de impresión DTF, con **Tauri, React, TypeScript y Rust**.
 - Incluye estructura de interfaz, dominio y validación de entradas. El algoritmo de distribución automática de diseños todavía está pendiente de implementación.
 
-### Developer tooling durante la etapa en Servinet
+### IA aplicada y developer tooling
+
+Diseño de herramientas y flujos reutilizables para conectar requisitos y diseño con la implementación, verificar cambios y asistir en el diagnóstico y las operaciones de software. Ejemplos seleccionados de distintas etapas profesionales.
+
+**Servinet**
 
 - **ApeReview:** servidor MCP con Python/FastAPI, SQLite y FTS5 para recuperar conocimiento técnico de revisiones y convenciones.
 - **figma-dom-audit:** auditoría entre diseños Figma y el DOM, con comprobaciones medibles de dimensiones, tokens y estilos.
 - **sonar-diff-review:** revisión de hallazgos de Sonar acotada al diff con contexto de los cambios.
 - **docker-push-acr:** automatización de construcción y publicación de imágenes en Azure Container Registry, con confirmación humana previa.
+
+**Tecnología y Personas**
+
+- Flujos de contraste entre criterios de aceptación, tareas de desarrollo y código.
+- Recopilación de evidencias técnicas a través de la interfaz y las APIs.
+- Diagnóstico asistido por IA de incidencias de consumo de memoria en Azure, documentación de opciones de mitigación y encapsulación del proceso en una skill reutilizable.

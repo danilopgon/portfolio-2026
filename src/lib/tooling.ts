@@ -45,19 +45,19 @@ const areasData: Record<Locale, ToolingArea[]> = {
       slug: 'delivery',
       name: 'Requisitos y diseño',
       description:
-        'Contrasto escenarios Gherkin y tareas de desarrollo con el código, y comparo interfaces implementadas con diseños de Figma para detectar desviaciones y orientar correcciones.',
+        'Diseño flujos que conectan la intención de producto con la implementación, desde contrastar requisitos y criterios de aceptación con el código hasta auditar interfaces frente al diseño.',
     },
     {
       slug: 'quality',
       name: 'Calidad de software',
       description:
-        'Integro los hallazgos de análisis estático en la revisión de código y orquesto la recopilación de evidencias de interfaz y APIs con Playwright y Swagger.',
+        'Construyo herramientas para verificar cambios con criterios reproducibles y evidencias contrastables, combinando, por ejemplo, análisis estático, revisión contextual y comprobaciones de interfaz y APIs.',
     },
     {
       slug: 'operations',
       name: 'Fiabilidad y operaciones',
       description:
-        'He investigado reinicios de réplicas por consumo de memoria en Azure y documentado opciones de mitigación. También automatizo la publicación de imágenes Docker con confirmación humana.',
+        'Aplico IA al diagnóstico de incidencias y a la automatización de operaciones, desde investigar consumos anómalos de recursos y plantear mitigaciones hasta preparar despliegues con confirmación humana.',
     },
   ],
   en: [
@@ -65,19 +65,19 @@ const areasData: Record<Locale, ToolingArea[]> = {
       slug: 'delivery',
       name: 'Requirements & design',
       description:
-        'I check Gherkin scenarios and development tasks against code, and compare implemented interfaces with Figma designs to spot discrepancies and guide corrections.',
+        'I design workflows that connect product intent with implementation, from checking requirements and acceptance criteria against code to auditing interfaces against their designs.',
     },
     {
       slug: 'quality',
       name: 'Software quality',
       description:
-        'I bring static analysis findings into code reviews and orchestrate UI and API evidence collection using Playwright and Swagger.',
+        'I build tools to verify changes against repeatable criteria and verifiable evidence, combining approaches such as static analysis, context-aware reviews and UI and API checks.',
     },
     {
       slug: 'operations',
       name: 'Reliability & operations',
       description:
-        'I have investigated replica restarts caused by memory usage in Azure and documented mitigation options. I also automate Docker image publishing with human confirmation.',
+        'I apply AI to incident diagnosis and operational automation, from investigating abnormal resource usage and proposing mitigations to preparing deployments with human confirmation.',
     },
   ],
 }

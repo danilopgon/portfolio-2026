@@ -4,7 +4,7 @@ import Link from 'next/link'
 import RevealOnScroll from '@/components/ui/RevealOnScroll'
 import SectionHeader from '@/components/ui/SectionHeader'
 import BalancedChips from '@/components/ui/BalancedChips'
-import { getTools, type Tool } from '@/lib/tooling'
+import { getFeaturedTool, getToolingAreas, type Tool } from '@/lib/tooling'
 import { useLanguage } from '@/lib/i18n/context'
 
 // The detail disclosure is a direct-input tap response, not ambient motion, so
@@ -140,21 +140,14 @@ function ToolCard({
 
 export default function Tooling() {
   const { locale, t } = useLanguage()
-  const [lead, ...rest] = getTools(locale)
+  const lead = getFeaturedTool(locale)
+  const areas = getToolingAreas(locale)
 
   return (
     <section id="tooling" aria-labelledby="tooling-heading" className="border-b border-border">
       <SectionHeader id="tooling-heading" title={t.tooling.title} number="04" />
 
-      {/*
-        Asymmetric bento. The statement and the flagship share the first row so
-        the section leads with a named, concrete tool instead of a preamble; the
-        three supporting tools follow in an even row. The earlier six-step
-        pipeline lived here and was cut: it restated the thesis in abstract
-        nouns that no card ever referred back to, and the tools themselves
-        already carry the argument about deterministic checks and human
-        confirmation.
-      */}
+      {/* The flagship provides concrete evidence; the supporting row describes capabilities. */}
       <div aria-label={t.tooling.toolsLabel} role="group">
         <div className="grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] border-b border-border">
           <RevealOnScroll className="flex">
@@ -162,11 +155,7 @@ export default function Tooling() {
               <p className="text-[22px] md:text-[26px] leading-[1.35] text-cream max-w-[34ch]">
                 {t.tooling.thesis}
               </p>
-              {/*
-                States up front that this is internal work, which is why no card
-                links anywhere. The Servinet anchor gives the curious reader the
-                one destination that does exist.
-              */}
+              {/* Internal work is contextualized through the experience section. */}
               <p className="text-[16px] text-muted leading-[1.6] max-w-[70ch] mt-auto">
                 <span>
                   {t.tooling.contextBefore}
@@ -197,18 +186,20 @@ export default function Tooling() {
         </div>
 
         <div className="grid md:grid-cols-3">
-          {rest.map((tool, i) => (
+          {areas.map((area, i) => (
             <RevealOnScroll
-              key={tool.slug}
+              key={area.slug}
               delay={i * 80}
-              className={`border-border ${i < rest.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''}`}
+              className={`border-border ${i < areas.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''}`}
             >
-              <ToolCard
-                tool={tool}
-                expandLabel={t.tooling.expand}
-                collapseLabel={t.tooling.collapse}
-                technologiesLabel={t.tooling.technologies}
-              />
+              <div className="h-full px-6 py-8 md:px-8 md:py-9 flex flex-col gap-4 hover:bg-faint transition-colors">
+                <h3 className="font-bebas font-normal text-[32px] leading-none text-cream">
+                  {area.name}
+                </h3>
+                <p className="text-[17px] text-[var(--dim)] leading-[1.6] max-w-[62ch]">
+                  {area.description}
+                </p>
+              </div>
             </RevealOnScroll>
           ))}
         </div>

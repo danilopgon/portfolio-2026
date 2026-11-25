@@ -48,7 +48,7 @@ const foundationsData: Record<Locale, Skill[]> = {
     {
       n: '05',
       name: 'IA aplicada',
-      desc: 'Uso IA para revisión con contexto, automatización de criterios repetibles y flujos human-in-the-loop.',
+      desc: 'Diseño flujos asistidos por IA que conectan conocimiento de proyecto, herramientas y criterio técnico para resolver problemas de ingeniería de forma reproducible.',
     },
   ],
   en: [
@@ -65,7 +65,7 @@ const foundationsData: Record<Locale, Skill[]> = {
     {
       n: '05',
       name: 'Applied AI',
-      desc: 'I use AI for context-aware review, repeatable criteria and human-in-the-loop workflows.',
+      desc: 'I design AI-assisted workflows that connect project knowledge, tools and engineering judgment to solve problems in a repeatable way.',
     },
   ],
 }

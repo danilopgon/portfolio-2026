@@ -43,35 +43,41 @@ const areasData: Record<Locale, ToolingArea[]> = {
   es: [
     {
       slug: 'delivery',
-      name: 'Delivery',
-      description: 'Conecto requisitos, criterios de aceptación, diseño y código para detectar discrepancias y orientar la implementación.',
+      name: 'Requisitos y diseño',
+      description:
+        'Contrasto escenarios Gherkin y tareas de desarrollo con el código, y comparo interfaces implementadas con diseños de Figma para detectar desviaciones y orientar correcciones.',
     },
     {
       slug: 'quality',
-      name: 'Quality',
-      description: 'Combino revisión contextual, análisis estático y comprobaciones de interfaz y APIs para verificar cambios y documentar evidencias.',
+      name: 'Calidad de software',
+      description:
+        'Integro los hallazgos de análisis estático en la revisión de código y orquesto la recopilación de evidencias de interfaz y APIs con Playwright y Swagger.',
     },
     {
       slug: 'operations',
-      name: 'Operations',
-      description: 'Investigo incidencias y consumo de recursos, documento opciones de mitigación y automatizo operaciones con confirmación humana cuando procede.',
+      name: 'Fiabilidad y operaciones',
+      description:
+        'He investigado reinicios de réplicas por consumo de memoria en Azure y documentado opciones de mitigación. También automatizo la publicación de imágenes Docker con confirmación humana.',
     },
   ],
   en: [
     {
       slug: 'delivery',
-      name: 'Delivery',
-      description: 'I connect requirements, acceptance criteria, design and code to identify discrepancies and guide implementation.',
+      name: 'Requirements & design',
+      description:
+        'I check Gherkin scenarios and development tasks against code, and compare implemented interfaces with Figma designs to spot discrepancies and guide corrections.',
     },
     {
       slug: 'quality',
-      name: 'Quality',
-      description: 'I combine context-aware review, static analysis and UI and API checks to verify changes and document evidence.',
+      name: 'Software quality',
+      description:
+        'I bring static analysis findings into code reviews and orchestrate UI and API evidence collection using Playwright and Swagger.',
     },
     {
       slug: 'operations',
-      name: 'Operations',
-      description: 'I investigate incidents and resource usage, document mitigation options and automate operations with human confirmation where appropriate.',
+      name: 'Reliability & operations',
+      description:
+        'I have investigated replica restarts caused by memory usage in Azure and documented mitigation options. I also automate Docker image publishing with human confirmation.',
     },
   ],
 }

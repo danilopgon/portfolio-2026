@@ -57,7 +57,7 @@ const areasData: Record<Locale, ToolingArea[]> = {
       slug: 'operations',
       name: 'Fiabilidad y operaciones',
       description:
-        'Aplico IA al diagnóstico de incidencias y a la automatización de operaciones, desde investigar consumos anómalos de recursos y plantear mitigaciones hasta preparar despliegues con confirmación humana.',
+        'Aplico IA al diagnóstico de incidencias en producción y a la mejora de la fiabilidad de sistemas, convirtiendo hallazgos en mitigaciones accionables y validando las mejoras mediante pruebas y evidencias técnicas.',
     },
   ],
   en: [
@@ -77,7 +77,7 @@ const areasData: Record<Locale, ToolingArea[]> = {
       slug: 'operations',
       name: 'Reliability & operations',
       description:
-        'I apply AI to incident diagnosis and operational automation, from investigating abnormal resource usage and proposing mitigations to preparing deployments with human confirmation.',
+        'I apply AI to production incident diagnosis and system reliability, turning findings into actionable mitigations and validating improvements through tests and technical evidence.',
     },
   ],
 }

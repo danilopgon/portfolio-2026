@@ -4,7 +4,7 @@
 
 Su trayectoria profesional combina **desarrollo de software** con años previos de trabajo en **periodismo, comunicación digital, redes sociales, producción audiovisual y marketing**. No se trata solo de formación académica: trabajó para proyectos vinculados a RTVE, creó contenidos para medios y firmó artículos periodísticos publicados.
 
-Desde octubre de 2026 trabaja en **Tecnología y Personas** en un proyecto del sector legaltech, donde combina desarrollo full-stack con la creación de flujos reutilizables asistidos por IA para requisitos, verificación de cambios y diagnóstico de incidencias. Anteriormente participó en modernización de aplicaciones empresariales, arquitectura frontend, testing, CI/CD y herramientas de ingeniería asistida por IA en Servinet.
+Desde octubre de 2026 trabaja en **Tecnología y Personas** en un proyecto del sector legaltech, donde combina desarrollo full-stack con la creación de flujos reutilizables asistidos por IA para requisitos, verificación de cambios y diagnóstico de incidencias en producción. También convierte hallazgos técnicos en tareas de mitigación e implementa optimizaciones con mejoras cuantificadas en pruebas. Anteriormente participó en modernización de aplicaciones empresariales, arquitectura frontend, testing, CI/CD y herramientas de ingeniería asistida por IA en Servinet.
 
 ## Enlaces profesionales
 
